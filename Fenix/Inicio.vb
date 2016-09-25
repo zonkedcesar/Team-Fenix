@@ -231,7 +231,7 @@ Public Class Inicio
     End Sub
 
     Private Sub B_Crear_Click(sender As Object, e As EventArgs) Handles B_Crear.Click
-        New_Account.Show()
+        Crear_cuenta.Show()
         Me.Hide()
     End Sub
 

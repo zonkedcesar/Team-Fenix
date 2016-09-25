@@ -94,3 +94,6 @@ C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.vbproj.GenerateResource.Cache
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.exe.manifest
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.application
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Recuperar_Contraseña.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.SaveAccount.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ValidateAccount.resources

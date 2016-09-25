@@ -125,6 +125,24 @@
     <Compile Include="Fenix\Borrado Seguro\SecureRemove.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Fenix\Cuenta\Nueva Cuenta\SaveAccount.Designer.vb">
+      <DependentUpon>SaveAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Nueva Cuenta\SaveAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Nueva Cuenta\ValidateAccount.Designer.vb">
+      <DependentUpon>ValidateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Nueva Cuenta\ValidateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Recuperar Cuenta\Recuperar Contraseña.Designer.vb">
+      <DependentUpon>Recuperar Contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Recuperar Cuenta\Recuperar Contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Fenix\Global\Acerca.Designer.vb">
       <DependentUpon>Acerca.vb</DependentUpon>
     </Compile>
@@ -336,6 +354,15 @@
     <EmbeddedResource Include="Fenix\Borrado Seguro\SecureRemove.resx">
       <DependentUpon>SecureRemove.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Cuenta\Nueva Cuenta\SaveAccount.resx">
+      <DependentUpon>SaveAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Cuenta\Nueva Cuenta\ValidateAccount.resx">
+      <DependentUpon>ValidateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Cuenta\Recuperar Cuenta\Recuperar Contraseña.resx">
+      <DependentUpon>Recuperar Contraseña.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Global\Acerca.resx">
       <DependentUpon>Acerca.vb</DependentUpon>
     </EmbeddedResource>
@@ -483,7 +510,6 @@
     <Folder Include="Fenix\Credenciales\" />
     <Folder Include="Fenix\Cuenta\Cambio de Contraseña\" />
     <Folder Include="Fenix\Cuenta\Configuracion\" />
-    <Folder Include="Fenix\Cuenta\Recuperar Cuenta\" />
     <Folder Include="Fenix\Servidores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

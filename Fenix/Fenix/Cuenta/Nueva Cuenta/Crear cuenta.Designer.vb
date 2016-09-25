@@ -40,12 +40,22 @@ Partial Class Crear_cuenta
         Me.Back = New System.Windows.Forms.Button()
         Me.B_Registrar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TB_Pregunta = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TB_Respuesta = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TB_NIP = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TB_C_NIP = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(27, 78)
+        Me.Label1.Location = New System.Drawing.Point(27, 59)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 13)
         Me.Label1.TabIndex = 1
@@ -54,7 +64,7 @@ Partial Class Crear_cuenta
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(212, 78)
+        Me.Label2.Location = New System.Drawing.Point(212, 59)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 2
@@ -63,7 +73,7 @@ Partial Class Crear_cuenta
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(27, 158)
+        Me.Label3.Location = New System.Drawing.Point(27, 109)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 13)
         Me.Label3.TabIndex = 3
@@ -72,7 +82,7 @@ Partial Class Crear_cuenta
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(27, 184)
+        Me.Label4.Location = New System.Drawing.Point(27, 138)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 13)
         Me.Label4.TabIndex = 4
@@ -81,7 +91,7 @@ Partial Class Crear_cuenta
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(206, 184)
+        Me.Label5.Location = New System.Drawing.Point(206, 138)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(108, 13)
         Me.Label5.TabIndex = 5
@@ -90,43 +100,50 @@ Partial Class Crear_cuenta
         '
         'TB_Nombres
         '
-        Me.TB_Nombres.Location = New System.Drawing.Point(97, 75)
+        Me.TB_Nombres.Location = New System.Drawing.Point(97, 56)
+        Me.TB_Nombres.MaxLength = 30
         Me.TB_Nombres.Name = "TB_Nombres"
         Me.TB_Nombres.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Nombres.TabIndex = 7
+        Me.TB_Nombres.TabIndex = 1
         '
         'TB_Apellidos
         '
-        Me.TB_Apellidos.Location = New System.Drawing.Point(276, 75)
+        Me.TB_Apellidos.Location = New System.Drawing.Point(276, 56)
+        Me.TB_Apellidos.MaxLength = 30
         Me.TB_Apellidos.Name = "TB_Apellidos"
         Me.TB_Apellidos.Size = New System.Drawing.Size(169, 20)
-        Me.TB_Apellidos.TabIndex = 8
+        Me.TB_Apellidos.TabIndex = 2
         '
         'TB_Usuario
         '
-        Me.TB_Usuario.Location = New System.Drawing.Point(97, 155)
+        Me.TB_Usuario.Location = New System.Drawing.Point(97, 106)
+        Me.TB_Usuario.MaxLength = 8
         Me.TB_Usuario.Name = "TB_Usuario"
         Me.TB_Usuario.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Usuario.TabIndex = 9
+        Me.TB_Usuario.TabIndex = 3
         '
         'TB_pass
         '
-        Me.TB_pass.Location = New System.Drawing.Point(97, 181)
+        Me.TB_pass.Location = New System.Drawing.Point(97, 135)
+        Me.TB_pass.MaxLength = 8
         Me.TB_pass.Name = "TB_pass"
         Me.TB_pass.Size = New System.Drawing.Size(100, 20)
-        Me.TB_pass.TabIndex = 10
+        Me.TB_pass.TabIndex = 5
+        Me.TB_pass.UseSystemPasswordChar = True
         '
         'TB_password
         '
-        Me.TB_password.Location = New System.Drawing.Point(320, 181)
+        Me.TB_password.Location = New System.Drawing.Point(320, 135)
+        Me.TB_password.MaxLength = 8
         Me.TB_password.Name = "TB_password"
         Me.TB_password.Size = New System.Drawing.Size(125, 20)
-        Me.TB_password.TabIndex = 11
+        Me.TB_password.TabIndex = 6
+        Me.TB_password.UseSystemPasswordChar = True
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(27, 104)
+        Me.Label7.Location = New System.Drawing.Point(206, 109)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(35, 13)
         Me.Label7.TabIndex = 12
@@ -134,15 +151,16 @@ Partial Class Crear_cuenta
         '
         'TB_Email
         '
-        Me.TB_Email.Location = New System.Drawing.Point(97, 101)
+        Me.TB_Email.Location = New System.Drawing.Point(247, 106)
+        Me.TB_Email.MaxLength = 20
         Me.TB_Email.Name = "TB_Email"
-        Me.TB_Email.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Email.TabIndex = 13
+        Me.TB_Email.Size = New System.Drawing.Size(109, 20)
+        Me.TB_Email.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 54)
+        Me.Label6.Location = New System.Drawing.Point(9, 35)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(93, 13)
         Me.Label6.TabIndex = 14
@@ -151,7 +169,7 @@ Partial Class Crear_cuenta
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 134)
+        Me.Label8.Location = New System.Drawing.Point(12, 85)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(71, 13)
         Me.Label8.TabIndex = 15
@@ -159,7 +177,7 @@ Partial Class Crear_cuenta
         '
         'Back
         '
-        Me.Back.Location = New System.Drawing.Point(15, 225)
+        Me.Back.Location = New System.Drawing.Point(15, 271)
         Me.Back.Name = "Back"
         Me.Back.Size = New System.Drawing.Size(104, 24)
         Me.Back.TabIndex = 16
@@ -168,7 +186,7 @@ Partial Class Crear_cuenta
         '
         'B_Registrar
         '
-        Me.B_Registrar.Location = New System.Drawing.Point(370, 225)
+        Me.B_Registrar.Location = New System.Drawing.Point(370, 271)
         Me.B_Registrar.Name = "B_Registrar"
         Me.B_Registrar.Size = New System.Drawing.Size(75, 23)
         Me.B_Registrar.TabIndex = 17
@@ -178,17 +196,117 @@ Partial Class Crear_cuenta
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(9, 19)
+        Me.Label9.Location = New System.Drawing.Point(9, 11)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(237, 13)
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Por favor llena todos los campos para configurar."
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(9, 169)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(146, 13)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "Recuperacion de Contraseña"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(25, 196)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(116, 13)
+        Me.Label11.TabIndex = 20
+        Me.Label11.Text = "Pregunta de Seguridad"
+        '
+        'TB_Pregunta
+        '
+        Me.TB_Pregunta.Location = New System.Drawing.Point(147, 193)
+        Me.TB_Pregunta.MaxLength = 60
+        Me.TB_Pregunta.Name = "TB_Pregunta"
+        Me.TB_Pregunta.Size = New System.Drawing.Size(298, 20)
+        Me.TB_Pregunta.TabIndex = 7
+        Me.TB_Pregunta.Text = "¿Una pregunta que solo yo sepa la respuesta?"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(80, 222)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(61, 13)
+        Me.Label12.TabIndex = 22
+        Me.Label12.Text = "Respuesta:"
+        '
+        'TB_Respuesta
+        '
+        Me.TB_Respuesta.Location = New System.Drawing.Point(147, 219)
+        Me.TB_Respuesta.MaxLength = 30
+        Me.TB_Respuesta.Name = "TB_Respuesta"
+        Me.TB_Respuesta.Size = New System.Drawing.Size(167, 20)
+        Me.TB_Respuesta.TabIndex = 8
+        Me.TB_Respuesta.Text = "Solo deben ser dos palabras"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(116, 252)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(25, 13)
+        Me.Label13.TabIndex = 24
+        Me.Label13.Text = "NIP"
+        '
+        'TB_NIP
+        '
+        Me.TB_NIP.Location = New System.Drawing.Point(147, 249)
+        Me.TB_NIP.MaxLength = 4
+        Me.TB_NIP.Name = "TB_NIP"
+        Me.TB_NIP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TB_NIP.Size = New System.Drawing.Size(50, 20)
+        Me.TB_NIP.TabIndex = 9
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(219, 252)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(72, 13)
+        Me.Label14.TabIndex = 26
+        Me.Label14.Text = "Confirmar NIP"
+        '
+        'TB_C_NIP
+        '
+        Me.TB_C_NIP.Location = New System.Drawing.Point(297, 249)
+        Me.TB_C_NIP.MaxLength = 4
+        Me.TB_C_NIP.Name = "TB_C_NIP"
+        Me.TB_C_NIP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TB_C_NIP.Size = New System.Drawing.Size(50, 20)
+        Me.TB_C_NIP.TabIndex = 10
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(359, 109)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(86, 13)
+        Me.Label15.TabIndex = 28
+        Me.Label15.Text = "@ prosa.com.mx"
+        '
         'Crear_cuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(460, 261)
+        Me.ClientSize = New System.Drawing.Size(459, 303)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.TB_C_NIP)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.TB_NIP)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.TB_Respuesta)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.TB_Pregunta)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.B_Registrar)
         Me.Controls.Add(Me.Back)
@@ -230,4 +348,14 @@ Partial Class Crear_cuenta
     Friend WithEvents Back As System.Windows.Forms.Button
     Friend WithEvents B_Registrar As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents TB_Pregunta As System.Windows.Forms.TextBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents TB_Respuesta As System.Windows.Forms.TextBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents TB_NIP As System.Windows.Forms.TextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents TB_C_NIP As System.Windows.Forms.TextBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

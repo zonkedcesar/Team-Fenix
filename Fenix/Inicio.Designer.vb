@@ -71,6 +71,7 @@ Partial Class Inicio
         '
         resources.ApplyResources(Me.psw, "psw")
         Me.psw.Name = "psw"
+        Me.psw.UseSystemPasswordChar = True
         '
         'Login
         '

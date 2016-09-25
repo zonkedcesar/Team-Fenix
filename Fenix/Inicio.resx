@@ -909,9 +909,6 @@
   <data name="psw.MaxLength" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="psw.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
   <data name="psw.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
