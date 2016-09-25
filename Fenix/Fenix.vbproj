@@ -131,10 +131,10 @@
     <Compile Include="Fenix\Global\Acerca.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OLD\Introduccion\Crear\Crear cuenta.Designer.vb">
+    <Compile Include="Fenix\Cuenta\Nueva Cuenta\Crear cuenta.Designer.vb">
       <DependentUpon>Crear cuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="OLD\Introduccion\Crear\Crear cuenta.vb">
+    <Compile Include="Fenix\Cuenta\Nueva Cuenta\Crear cuenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Invitado\Analizar Contraseña Invitado.Designer.vb">
@@ -339,7 +339,7 @@
     <EmbeddedResource Include="Fenix\Global\Acerca.resx">
       <DependentUpon>Acerca.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Introduccion\Crear\Crear cuenta.resx">
+    <EmbeddedResource Include="Fenix\Cuenta\Nueva Cuenta\Crear cuenta.resx">
       <DependentUpon>Crear cuenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Invitado\Analizar Contraseña Invitado.resx">
@@ -479,7 +479,13 @@
       <DefaultIcon>FenixNew.ico</DefaultIcon>
     </FileAssociation>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Fenix\Credenciales\" />
+    <Folder Include="Fenix\Cuenta\Cambio de Contraseña\" />
+    <Folder Include="Fenix\Cuenta\Configuracion\" />
+    <Folder Include="Fenix\Cuenta\Recuperar Cuenta\" />
+    <Folder Include="Fenix\Servidores\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
