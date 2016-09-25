@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51D082AA-783D-46CB-8C1E-511F196F7E39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Fenix.My.MyApplication</StartupObject>
+    <RootNamespace>Fenix</RootNamespace>
+    <AssemblyName>Fenix</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Zonked Cesar\Desktop\Explorer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Fenix.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Fenix.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>91991530E75065D2A4BB9172D19ADE91C63BA204</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Fenix_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Fenix\Global\Recursos\FenixNew.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Fenix\Borrado Seguro\Borrado Seguro.Designer.vb">
+      <DependentUpon>Borrado Seguro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Borrado Seguro\Borrado Seguro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Borrado Seguro\ConfirmarSRM.Designer.vb">
+      <DependentUpon>ConfirmarSRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Borrado Seguro\ConfirmarSRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Borrado Seguro\SecureRemove.Designer.vb">
+      <DependentUpon>SecureRemove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Borrado Seguro\SecureRemove.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Global\Acerca.Designer.vb">
+      <DependentUpon>Acerca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Global\Acerca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Introduccion\Crear\Crear cuenta.Designer.vb">
+      <DependentUpon>Crear cuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Introduccion\Crear\Crear cuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Invitado\Analizar Contraseña Invitado.Designer.vb">
+      <DependentUpon>Analizar Contraseña Invitado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Invitado\Analizar Contraseña Invitado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Invitado\Generador Invitado.Designer.vb">
+      <DependentUpon>Generador Invitado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Invitado\Generador Invitado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Invitado\Invitado.Designer.vb">
+      <DependentUpon>Invitado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Invitado\Invitado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Introduccion\Crear\Contraseña.Designer.vb">
+      <DependentUpon>Contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Introduccion\Crear\Contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Introduccion\Crear\New Account.Designer.vb">
+      <DependentUpon>New Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Introduccion\Crear\New Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Herramientas\List Pass.Designer.vb">
+      <DependentUpon>List Pass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Herramientas\List Pass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo.Designer.vb">
+      <DependentUpon>Catalogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\useradd\add.Designer.vb">
+      <DependentUpon>add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\useradd\add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Reestructurar\Herramientas\Cifrar contraseña.Designer.vb">
+      <DependentUpon>Cifrar contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Reestructurar\Herramientas\Cifrar contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Reestructurar\Herramientas\Descifrar Contraseña.Designer.vb">
+      <DependentUpon>Descifrar Contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Reestructurar\Herramientas\Descifrar Contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\useradd.Designer.vb">
+      <DependentUpon>useradd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\useradd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\userdel.Designer.vb">
+      <DependentUpon>userdel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\userdel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\usermod.Designer.vb">
+      <DependentUpon>usermod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Credenciales\usermod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Global\Modulos\Cipher.vb" />
+    <Compile Include="Fenix\Generador de Contraseñas.Designer.vb">
+      <DependentUpon>Generador de Contraseñas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Generador de Contraseñas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Global\Modulos\Fecha.vb" />
+    <Compile Include="Fenix\Herramientas\TestPassword.Designer.vb">
+      <DependentUpon>TestPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Herramientas\TestPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Global\Modulos\LevelPassword.vb" />
+    <Compile Include="Fenix\Global\Presentacion.Designer.vb">
+      <DependentUpon>Presentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Global\Presentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OLD\Reestructurar\PruebasTEST\Complementador.Designer.vb">
+      <DependentUpon>Complementador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Reestructurar\PruebasTEST\Complementador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Info\Info Network.Designer.vb">
+      <DependentUpon>Info Network.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Info\Info Network.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Info\Info Procesador.Designer.vb">
+      <DependentUpon>Info Procesador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Info\Info Procesador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Info\Info Storage.Designer.vb">
+      <DependentUpon>Info Storage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Info\Info Storage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Ip\Añadir IP.Designer.vb">
+      <DependentUpon>Añadir IP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Ip\Añadir IP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Equipo.Designer.vb">
+      <DependentUpon>Registro Equipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Equipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Rack.Designer.vb">
+      <DependentUpon>Registro Rack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Rack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Servidor.Designer.vb">
+      <DependentUpon>Registro Servidor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Servidor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Site.Designer.vb">
+      <DependentUpon>Registro Site.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Site.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Servidores.Designer.vb">
+      <DependentUpon>Servidores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Servidores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Global\Modulos\SQL.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fenix\Borrado Seguro\Borrado Seguro.resx">
+      <DependentUpon>Borrado Seguro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Borrado Seguro\ConfirmarSRM.resx">
+      <DependentUpon>ConfirmarSRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Borrado Seguro\SecureRemove.resx">
+      <DependentUpon>SecureRemove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Global\Acerca.resx">
+      <DependentUpon>Acerca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Introduccion\Crear\Crear cuenta.resx">
+      <DependentUpon>Crear cuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Invitado\Analizar Contraseña Invitado.resx">
+      <DependentUpon>Analizar Contraseña Invitado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Invitado\Generador Invitado.resx">
+      <DependentUpon>Generador Invitado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Invitado\Invitado.resx">
+      <DependentUpon>Invitado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Introduccion\Crear\Contraseña.resx">
+      <DependentUpon>Contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Introduccion\Crear\New Account.resx">
+      <DependentUpon>New Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Herramientas\List Pass.resx">
+      <DependentUpon>List Pass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo.resx">
+      <DependentUpon>Catalogo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Credenciales\useradd.resx">
+      <DependentUpon>useradd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Credenciales\useradd\add.resx">
+      <DependentUpon>add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Credenciales\userdel.resx">
+      <DependentUpon>userdel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Credenciales\usermod.resx">
+      <DependentUpon>usermod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Generador de Contraseñas.resx">
+      <DependentUpon>Generador de Contraseñas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Reestructurar\Herramientas\Cifrar contraseña.resx">
+      <DependentUpon>Cifrar contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Reestructurar\Herramientas\Descifrar Contraseña.resx">
+      <DependentUpon>Descifrar Contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Herramientas\TestPassword.resx">
+      <DependentUpon>TestPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Global\Presentacion.resx">
+      <DependentUpon>Presentacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Reestructurar\PruebasTEST\Complementador.resx">
+      <DependentUpon>Complementador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Info\Info Network.resx">
+      <DependentUpon>Info Network.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Info\Info Procesador.resx">
+      <DependentUpon>Info Procesador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Info\Info Storage.resx">
+      <DependentUpon>Info Storage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Ip\Añadir IP.resx">
+      <DependentUpon>Añadir IP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Equipo.resx">
+      <DependentUpon>Registro Equipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Rack.resx">
+      <DependentUpon>Registro Rack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Servidor.resx">
+      <DependentUpon>Registro Servidor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Site.resx">
+      <DependentUpon>Registro Site.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Servidores.resx">
+      <DependentUpon>Servidores.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fenix_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Fenix\Global\Recursos\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FenixNew.ico" />
+    <Content Include="Fenix\Global\Recursos\FenixNew.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".znk">
+      <Visible>False</Visible>
+      <Description>Fenix Keys</Description>
+      <Progid>1</Progid>
+      <DefaultIcon>FenixNew.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
