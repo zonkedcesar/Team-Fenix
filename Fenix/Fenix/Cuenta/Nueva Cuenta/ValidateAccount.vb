@@ -2,26 +2,21 @@
 
 Public Class ValidateAccount
 
-    Private Sub TB_Correo_LostFocus(sender As Object, e As EventArgs) Handles TB_Correo.LostFocus
-        If Crear_cuenta.TB_Email.Text <> TB_Correo.Text Then
-            MsgBox("El correo no coincide con el registro")
-            TB_Correo.Clear()
-            TB_Correo.Focus()
-        End If
-    End Sub
+    
 
     Private Sub B_Validar_Click(sender As Object, e As EventArgs) Handles B_Inicio.Click
         MsgBox("Enviando Codigo de Validacion a su bandeja de entrada")
+        MsgBox(TB_Correo.Text + ":" + TB_PasswordSecure.Text)
         Try
 
             Dim smtpserver As New SmtpClient()
             Dim mail As New MailMessage()
-            smtpserver.Credentials = New Net.NetworkCredential(TB_Correo.Text.ToString, TB_PasswordSecure.Text.ToString)
+            smtpserver.Credentials = New Net.NetworkCredential(TB_Correo.Text, TB_PasswordSecure.Text)
             smtpserver.Port = 465
             smtpserver.Host = "mail.prosa.com.mx"
             mail = New MailMessage()
-            mail.From = New MailAddress("Fenix@prosa.com.mx")
-            mail.To.Add("Support Fenix")
+            mail.From = New MailAddress("fenix@prosa.com.mx")
+            mail.To.Add(TB_Correo.Text)
             mail.Subject = "Codigo de Activacion"
             mail.Body = "Su codigo de activacion es: 12345"
             smtpserver.Send(mail)
@@ -31,5 +26,10 @@ Public Class ValidateAccount
             MsgBox(ex.ToString)
             Close()
         End Try
+    End Sub
+
+    Private Sub ValidateAccount_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TB_Correo.Text = Crear_cuenta.TB_Email.Text + "@prosa.com.mx"
+        TB_Correo.Enabled = False
     End Sub
 End Class

@@ -24,7 +24,6 @@ Partial Class ValidateAccount
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ValidateAccount))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TB_Correo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -43,21 +42,12 @@ Partial Class ValidateAccount
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Iniciar Sesion"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(186, 36)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "@ prosa.com.mx"
-        '
         'TB_Correo
         '
         Me.TB_Correo.Location = New System.Drawing.Point(71, 33)
         Me.TB_Correo.MaxLength = 20
         Me.TB_Correo.Name = "TB_Correo"
-        Me.TB_Correo.Size = New System.Drawing.Size(109, 20)
+        Me.TB_Correo.Size = New System.Drawing.Size(201, 20)
         Me.TB_Correo.TabIndex = 1
         '
         'Label3
@@ -124,7 +114,6 @@ Partial Class ValidateAccount
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TB_Correo)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ValidateAccount"
@@ -134,7 +123,6 @@ Partial Class ValidateAccount
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TB_Correo As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
