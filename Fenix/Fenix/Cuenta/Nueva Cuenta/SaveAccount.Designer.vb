@@ -24,7 +24,7 @@ Partial Class SaveAccount
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SaveAccount))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TB_C_Codigo = New System.Windows.Forms.TextBox()
         Me.B_Validar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -34,17 +34,17 @@ Partial Class SaveAccount
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(71, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(135, 13)
+        Me.Label1.Size = New System.Drawing.Size(144, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Por favor Ingrese el Codigo"
+        Me.Label1.Text = "Ingrese Codigo de Seguridad"
         '
-        'TextBox1
+        'TB_C_Codigo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(55, 34)
-        Me.TextBox1.MaxLength = 10
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(164, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TB_C_Codigo.Location = New System.Drawing.Point(55, 34)
+        Me.TB_C_Codigo.MaxLength = 10
+        Me.TB_C_Codigo.Name = "TB_C_Codigo"
+        Me.TB_C_Codigo.Size = New System.Drawing.Size(164, 20)
+        Me.TB_C_Codigo.TabIndex = 1
         '
         'B_Validar
         '
@@ -71,7 +71,7 @@ Partial Class SaveAccount
         Me.ClientSize = New System.Drawing.Size(284, 111)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.B_Validar)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TB_C_Codigo)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SaveAccount"
@@ -81,7 +81,7 @@ Partial Class SaveAccount
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TB_C_Codigo As System.Windows.Forms.TextBox
     Friend WithEvents B_Validar As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
