@@ -7,8 +7,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles B_Registrar.Click
-        MsgBox("Debe tener acceso a su cuenta de correo")
-        ValidateAccount.Show()
+        
     End Sub
 
 
@@ -47,6 +46,15 @@
         TB_password.Text.Length > 0 And TB_Pregunta.Text.Length > 0 And TB_Respuesta.Text.Length > 0 And _
         TB_NIP.Text.Length > 0 And TB_C_NIP.Text.Length > 0
     End Sub
+
+    Private Sub TB_pass_LostFocus(sender As Object, e As EventArgs) Handles TB_pass.LostFocus
+        If TB_pass.TextLength < 6 Then
+            MsgBox("La contraseña debe contener un minimo de 6 caracteres")
+            TB_pass.Clear()
+            TB_pass.Focus()
+        End If
+    End Sub
+
 
     Private Sub TB_password_LostFocus(sender As Object, e As EventArgs) Handles TB_password.LostFocus
         If TB_pass.Text <> TB_password.Text Then
@@ -105,6 +113,14 @@
     Private Sub TB_C_NIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TB_C_NIP.KeyPress
         If Not IsNumeric(e.KeyChar) Then
             e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TB_NIP_LostFocus(sender As Object, e As EventArgs) Handles TB_NIP.LostFocus
+        If TB_NIP.TextLength < 4 Then
+            MsgBox("El NIP debe ser obligatoriamente de 4 digitos")
+            TB_NIP.Clear()
+            TB_NIP.Focus()
         End If
     End Sub
 

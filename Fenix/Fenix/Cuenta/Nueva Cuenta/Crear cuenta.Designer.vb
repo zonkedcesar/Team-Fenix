@@ -22,6 +22,7 @@ Partial Class Crear_cuenta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Crear_cuenta))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -50,6 +51,7 @@ Partial Class Crear_cuenta
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TB_C_NIP = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Label1
@@ -243,7 +245,7 @@ Partial Class Crear_cuenta
         Me.TB_Respuesta.Location = New System.Drawing.Point(147, 219)
         Me.TB_Respuesta.MaxLength = 30
         Me.TB_Respuesta.Name = "TB_Respuesta"
-        Me.TB_Respuesta.Size = New System.Drawing.Size(167, 20)
+        Me.TB_Respuesta.Size = New System.Drawing.Size(170, 20)
         Me.TB_Respuesta.TabIndex = 8
         Me.TB_Respuesta.Text = "Solo deben ser dos palabras"
         '
@@ -358,4 +360,5 @@ Partial Class Crear_cuenta
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents TB_C_NIP As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
