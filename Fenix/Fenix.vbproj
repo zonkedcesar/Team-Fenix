@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -135,6 +135,18 @@
       <DependentUpon>ChangePassword.vb</DependentUpon>
     </Compile>
     <Compile Include="Fenix\Cuenta\Cambio de Contraseña\ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Cambio de Contraseña\ChangeQuestion.Designer.vb">
+      <DependentUpon>ChangeQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Cambio de Contraseña\ChangeQuestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Configuracion\Configuracion.Designer.vb">
+      <DependentUpon>Configuracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Configuracion\Configuracion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OLD\SaveAccount.Designer.vb">
@@ -372,6 +384,12 @@
     <EmbeddedResource Include="Fenix\Cuenta\Cambio de Contraseña\ChangePassword.resx">
       <DependentUpon>ChangePassword.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Cuenta\Cambio de Contraseña\ChangeQuestion.resx">
+      <DependentUpon>ChangeQuestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Cuenta\Configuracion\Configuracion.resx">
+      <DependentUpon>Configuracion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OLD\SaveAccount.resx">
       <DependentUpon>SaveAccount.vb</DependentUpon>
     </EmbeddedResource>
@@ -526,7 +544,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fenix\Credenciales\" />
-    <Folder Include="Fenix\Cuenta\Configuracion\" />
     <Folder Include="Fenix\Servidores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

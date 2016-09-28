@@ -6,9 +6,7 @@
         Inicio.Show()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles B_Registrar.Click
-        
-    End Sub
+    
 
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TB_Nombres.TextChanged

@@ -97,3 +97,7 @@ C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Recuperar_Contraseña.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.SaveAccount.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ValidateAccount.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.changeNip.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ChangePassword.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ChangeQuestion.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Configuracion.resources

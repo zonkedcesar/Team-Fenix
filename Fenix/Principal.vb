@@ -99,4 +99,17 @@ Public Class Principal
         SecureRemove.Show()
         Me.Hide()
     End Sub
+
+    
+    Private Sub CambiarNIPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarNIPToolStripMenuItem.Click
+        changeNip.Show()
+    End Sub
+
+    Private Sub CambiarContraseñaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarContraseñaToolStripMenuItem.Click
+        ChangePassword.Show()
+    End Sub
+
+    Private Sub PreguntaSecretaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreguntaSecretaToolStripMenuItem.Click
+        ChangeQuestion.Show()
+    End Sub
 End Class
