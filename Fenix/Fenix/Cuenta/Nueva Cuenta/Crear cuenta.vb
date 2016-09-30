@@ -137,4 +137,40 @@
         TB_password.Text.Length > 0 And TB_Pregunta.Text.Length > 0 And TB_Respuesta.Text.Length > 0 And _
         TB_NIP.Text.Length > 0 And TB_C_NIP.Text.Length > 0
     End Sub
+
+    Private Sub B_Registrar_Click(sender As Object, e As EventArgs) Handles B_Registrar.Click
+        Dim obj As Object
+        Dim archivo As Object
+        Dim x As Integer = 0
+        Dim Ruta As String
+        Try
+            obj = CreateObject("Scripting.FileSystemObject")
+            Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".xml"
+            archivo = obj.CreateTextFile(Ruta, True)
+            archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
+            archivo.WriteLine("<Fenix>")
+            archivo.WriteLine("<Personal>")
+            archivo.WriteLine("<Nombre>" + TB_Nombres.Text + "</Nombre>")
+            archivo.WriteLine("<Apellido>" + TB_Apellidos.Text + "</Apellido>")
+            archivo.WriteLine("</Personal>")
+            archivo.WriteLine("<Perfil>")
+            'USUARIO + CONTRASEÑA
+            archivo.WriteLine("<Usuario>" + TB_Usuario.Text + "</Usuario>")
+            archivo.WriteLine("<Email>" + TB_Email.Text + "@prosa.com.mx</Email>")
+            'CONTRASEÑA + USUARIO
+            archivo.WriteLine("<Password>" + TB_pass.Text + "</Password>")
+            archivo.WriteLine("</Perfil>")
+            archivo.WriteLine("<Seguridad>")
+            archivo.WriteLine("<Pregunta>" + TB_Pregunta.Text + "</Pregunta>")
+            archivo.WriteLine("<Respuesta>" + TB_Respuesta.Text + "</Respuesta>")
+            archivo.WriteLine("<NIP>" + TB_NIP.Text + "</NIP>")
+            archivo.WriteLine("</Seguridad>")
+            archivo.WriteLine("</Fenix>")
+        Catch ex As Exception
+            MessageBox.Show("No se pudo crear la cuenta " & ex.Message)
+        End Try
+        MsgBox("Usuario Creado Correctamente")
+        Me.Hide()
+        Inicio.Show()
+    End Sub
 End Class

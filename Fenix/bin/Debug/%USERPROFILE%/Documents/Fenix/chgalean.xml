@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Fenix>
+<Cuenta>
+<Personal>
+<Nombre>
+Emmanuel
+Galeana
+</Personal>
+<Perfil>
+<Usuario>
+chgalean
+</Usuario>
+<Email>
+cesar.hernandez
+</Email>
+<Password>
+P455w0rd
+</Password>
+</Perfil>
+<Seguridad>
+<Pregunta>
+¿Quien Me gusta?
+</Pregunta>
+<Respuesta>
+Lety
+</Respuesta>
+<NIP>
+1234
+</NIP>
+</Seguridad>
+</Cuenta>
+</Fenix>
