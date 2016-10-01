@@ -63,21 +63,27 @@ Partial Class changeNip
         'TB_A_NIP
         '
         Me.TB_A_NIP.Location = New System.Drawing.Point(139, 23)
+        Me.TB_A_NIP.MaxLength = 4
         Me.TB_A_NIP.Name = "TB_A_NIP"
+        Me.TB_A_NIP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TB_A_NIP.Size = New System.Drawing.Size(100, 20)
         Me.TB_A_NIP.TabIndex = 3
         '
         'TB_N_NIP
         '
         Me.TB_N_NIP.Location = New System.Drawing.Point(139, 58)
+        Me.TB_N_NIP.MaxLength = 4
         Me.TB_N_NIP.Name = "TB_N_NIP"
+        Me.TB_N_NIP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TB_N_NIP.Size = New System.Drawing.Size(100, 20)
         Me.TB_N_NIP.TabIndex = 4
         '
         'TB_C_NIP
         '
         Me.TB_C_NIP.Location = New System.Drawing.Point(139, 94)
+        Me.TB_C_NIP.MaxLength = 4
         Me.TB_C_NIP.Name = "TB_C_NIP"
+        Me.TB_C_NIP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TB_C_NIP.Size = New System.Drawing.Size(100, 20)
         Me.TB_C_NIP.TabIndex = 5
         '

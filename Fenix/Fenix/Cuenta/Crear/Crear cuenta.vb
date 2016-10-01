@@ -1,4 +1,6 @@
-﻿Public Class Crear_cuenta
+﻿Imports System.Text
+
+Public Class Crear_cuenta
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Back.Click
@@ -6,7 +8,7 @@
         Inicio.Show()
     End Sub
 
-    
+
 
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TB_Nombres.TextChanged
@@ -145,7 +147,7 @@
         Dim Ruta As String
         Try
             obj = CreateObject("Scripting.FileSystemObject")
-            Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".xml"
+            Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".fnx"
             archivo = obj.CreateTextFile(Ruta, True)
             archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
             archivo.WriteLine("<Fenix>")
@@ -157,17 +159,35 @@
             'USUARIO + CONTRASEÑA
             archivo.WriteLine("<Usuario>" + LCase(SHA512(TB_Usuario.Text + TB_pass.Text)) + "</Usuario>")
 
-            archivo.WriteLine("<Email>" + TB_Email.Text + "@prosa.com.mx</Email>")
+            archivo.WriteLine("<Email>" + LCase(SHA512(TB_Email.Text)) + "</Email>")
             'CONTRASEÑA + USUARIO
             archivo.WriteLine("<Password>" + LCase(SHA512(TB_pass.Text + TB_Usuario.Text)) + "</Password>")
             archivo.WriteLine("</Perfil>")
             archivo.WriteLine("<Seguridad>")
-            archivo.WriteLine("<Pregunta>" + TB_Pregunta.Text + "</Pregunta>")
+            Dim Pregunta() As Byte = Encoding.Unicode.GetBytes(TB_Pregunta.Text)
+            archivo.WriteLine("<Pregunta>" + Convert.ToBase64String(Pregunta.ToArray()) + "</Pregunta>")
             'Respuesta + NIP + Usuario
             archivo.WriteLine("<Respuesta>" + Encrypt(TB_Respuesta.Text, TB_NIP.Text, TB_Usuario.Text) + "</Respuesta>")
-            archivo.WriteLine("<NIP>" + SHA512(TB_NIP.Text) + "</NIP>")
+            archivo.WriteLine("<NIP>" + LCase(SHA512(TB_NIP.Text + TB_Usuario.Text)) + "</NIP>")
             archivo.WriteLine("</Seguridad>")
             archivo.WriteLine("</Fenix>")
+        Catch ex As Exception
+            MessageBox.Show("No se pudo crear la cuenta " & ex.Message)
+        End Try
+        Try
+            obj = CreateObject("Scripting.FileSystemObject")
+            Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".Recovery"
+            archivo = obj.CreateTextFile(Ruta, True)
+            archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
+            archivo.WriteLine("<RecoveryFenix>")
+            archivo.WriteLine("<Usuario>" + LCase(SHA512(TB_Usuario.Text)) + "</Usuario>")
+            archivo.WriteLine("<Email>" + LCase(SHA512(TB_Email.Text)) + "</Email>")
+            Dim Pregunta() As Byte = Encoding.Unicode.GetBytes(TB_Pregunta.Text)
+            archivo.WriteLine("<Pregunta>" + Convert.ToBase64String(Pregunta.ToArray()) + "</Pregunta>")
+            archivo.WriteLine("<Respuesta>" + Encrypt(TB_Respuesta.Text, TB_NIP.Text, TB_Usuario.Text) + "</Respuesta>")
+            archivo.WriteLine("<NIP>" + LCase(SHA512(TB_NIP.Text + TB_Usuario.Text)) + "</NIP>")
+            archivo.WriteLine("<SecretKey>" + Encrypt(TB_pass.Text, (TB_Email.Text + TB_Respuesta.Text + TB_NIP.Text), TB_Usuario.Text) + "</SecretKey>")
+            archivo.WriteLine("</RecoveryFenix>")
         Catch ex As Exception
             MessageBox.Show("No se pudo crear la cuenta " & ex.Message)
         End Try
@@ -175,5 +195,20 @@
         Me.Hide()
         Inicio.Show()
         Inicio.usr.Text = TB_Usuario.Text
+    End Sub
+
+    Private Sub Crear_cuenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Limpia todas las variables y obtiene el foco en el primer elemento
+        TB_Nombres.Clear()
+        TB_Apellidos.Clear()
+        TB_Usuario.Clear()
+        TB_Email.Clear()
+        TB_pass.Clear()
+        TB_password.Clear()
+        TB_Pregunta.Clear()
+        TB_Respuesta.Clear()
+        TB_NIP.Clear()
+        TB_C_NIP.Clear()
+        TB_Nombres.Focus()
     End Sub
 End Class

@@ -3,6 +3,8 @@ Imports System.IO
 
 Public Class Inicio
 
+    Protected Friend UsuarioConect As String
+
     Dim PATHPROFILE As String = Nothing
 
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AyudaToolStripMenuItem.Click
@@ -49,6 +51,7 @@ Public Class Inicio
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Login.Click
 
+        UsuarioConect = usr.Text
         Principal.Show()
 
         ''Dim FileReader As String
@@ -183,7 +186,7 @@ Public Class Inicio
         End If
     End Sub
 
-    
+
 
     'Private Sub Inicio_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
     '    'Dim FileReader As String
@@ -222,7 +225,7 @@ Public Class Inicio
     '    End If
     'End Sub
 
-    
+
 
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles B_Invitado.Click
@@ -235,8 +238,8 @@ Public Class Inicio
         Me.Hide()
     End Sub
 
-    
-   
+
+
     Private Sub ConfigurarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConfigurarToolStripMenuItem.Click
         Configuracion.Show()
     End Sub
