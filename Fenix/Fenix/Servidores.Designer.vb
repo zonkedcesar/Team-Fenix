@@ -206,36 +206,36 @@ Partial Class Servidores
         Me.OutHostname.AutoSize = True
         Me.OutHostname.Location = New System.Drawing.Point(79, 50)
         Me.OutHostname.Name = "OutHostname"
-        Me.OutHostname.Size = New System.Drawing.Size(39, 13)
+        Me.OutHostname.Size = New System.Drawing.Size(30, 13)
         Me.OutHostname.TabIndex = 22
-        Me.OutHostname.Text = "Label9"
+        Me.OutHostname.Text = "NBU"
         '
         'OutIP
         '
         Me.OutIP.AutoSize = True
         Me.OutIP.Location = New System.Drawing.Point(41, 68)
         Me.OutIP.Name = "OutIP"
-        Me.OutIP.Size = New System.Drawing.Size(45, 13)
+        Me.OutIP.Size = New System.Drawing.Size(76, 13)
         Me.OutIP.TabIndex = 23
-        Me.OutIP.Text = "Label10"
+        Me.OutIP.Text = "10.255.207.69"
         '
         'OutSO
         '
         Me.OutSO.AutoSize = True
         Me.OutSO.Location = New System.Drawing.Point(219, 50)
         Me.OutSO.Name = "OutSO"
-        Me.OutSO.Size = New System.Drawing.Size(45, 13)
+        Me.OutSO.Size = New System.Drawing.Size(38, 13)
         Me.OutSO.TabIndex = 24
-        Me.OutSO.Text = "Label11"
+        Me.OutSO.Text = "Solaris"
         '
         'OutAmbiente
         '
         Me.OutAmbiente.AutoSize = True
         Me.OutAmbiente.Location = New System.Drawing.Point(219, 68)
         Me.OutAmbiente.Name = "OutAmbiente"
-        Me.OutAmbiente.Size = New System.Drawing.Size(45, 13)
+        Me.OutAmbiente.Size = New System.Drawing.Size(61, 13)
         Me.OutAmbiente.TabIndex = 25
-        Me.OutAmbiente.Text = "Label12"
+        Me.OutAmbiente.Text = "Produccion"
         '
         'Timer1
         '

@@ -32,7 +32,7 @@ Partial Class Configuracion
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(93, 41)
+        Me.Button3.Location = New System.Drawing.Point(61, 12)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(102, 23)
         Me.Button3.TabIndex = 2
@@ -41,7 +41,7 @@ Partial Class Configuracion
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(88, 80)
+        Me.Button1.Location = New System.Drawing.Point(57, 47)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(113, 23)
         Me.Button1.TabIndex = 3
@@ -50,7 +50,7 @@ Partial Class Configuracion
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(87, 123)
+        Me.Button2.Location = New System.Drawing.Point(58, 83)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(114, 23)
         Me.Button2.TabIndex = 4
@@ -61,7 +61,7 @@ Partial Class Configuracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.ClientSize = New System.Drawing.Size(231, 122)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)

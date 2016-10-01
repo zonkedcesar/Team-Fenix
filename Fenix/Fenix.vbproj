@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -173,10 +173,10 @@
     <Compile Include="Fenix\Global\Acerca.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fenix\Cuenta\Nueva Cuenta\Crear cuenta.Designer.vb">
+    <Compile Include="Fenix\Cuenta\Crear\Crear cuenta.Designer.vb">
       <DependentUpon>Crear cuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Fenix\Cuenta\Nueva Cuenta\Crear cuenta.vb">
+    <Compile Include="Fenix\Cuenta\Crear\Crear cuenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Invitado\Analizar Contraseña Invitado.Designer.vb">
@@ -402,7 +402,7 @@
     <EmbeddedResource Include="Fenix\Global\Acerca.resx">
       <DependentUpon>Acerca.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fenix\Cuenta\Nueva Cuenta\Crear cuenta.resx">
+    <EmbeddedResource Include="Fenix\Cuenta\Crear\Crear cuenta.resx">
       <DependentUpon>Crear cuenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Invitado\Analizar Contraseña Invitado.resx">

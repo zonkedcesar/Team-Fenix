@@ -155,15 +155,17 @@
             archivo.WriteLine("</Personal>")
             archivo.WriteLine("<Perfil>")
             'USUARIO + CONTRASEÑA
-            archivo.WriteLine("<Usuario>" + TB_Usuario.Text + "</Usuario>")
+            archivo.WriteLine("<Usuario>" + LCase(SHA512(TB_Usuario.Text + TB_pass.Text)) + "</Usuario>")
+
             archivo.WriteLine("<Email>" + TB_Email.Text + "@prosa.com.mx</Email>")
             'CONTRASEÑA + USUARIO
-            archivo.WriteLine("<Password>" + TB_pass.Text + "</Password>")
+            archivo.WriteLine("<Password>" + LCase(SHA512(TB_pass.Text + TB_Usuario.Text)) + "</Password>")
             archivo.WriteLine("</Perfil>")
             archivo.WriteLine("<Seguridad>")
             archivo.WriteLine("<Pregunta>" + TB_Pregunta.Text + "</Pregunta>")
-            archivo.WriteLine("<Respuesta>" + TB_Respuesta.Text + "</Respuesta>")
-            archivo.WriteLine("<NIP>" + TB_NIP.Text + "</NIP>")
+            'Respuesta + NIP + Usuario
+            archivo.WriteLine("<Respuesta>" + Encrypt(TB_Respuesta.Text, TB_NIP.Text, TB_Usuario.Text) + "</Respuesta>")
+            archivo.WriteLine("<NIP>" + SHA512(TB_NIP.Text) + "</NIP>")
             archivo.WriteLine("</Seguridad>")
             archivo.WriteLine("</Fenix>")
         Catch ex As Exception
@@ -172,5 +174,6 @@
         MsgBox("Usuario Creado Correctamente")
         Me.Hide()
         Inicio.Show()
+        Inicio.usr.Text = TB_Usuario.Text
     End Sub
 End Class

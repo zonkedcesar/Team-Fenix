@@ -9,4 +9,9 @@
         Me.Hide()
         Generador_Invitado.Show()
     End Sub
+
+    Private Sub B_Back_Click(sender As Object, e As EventArgs) Handles B_Back.Click
+        Me.Hide()
+        Inicio.Show()
+    End Sub
 End Class

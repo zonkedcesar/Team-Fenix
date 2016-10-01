@@ -237,4 +237,11 @@ Public Class Inicio
 
     
    
+    Private Sub ConfigurarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConfigurarToolStripMenuItem.Click
+        Configuracion.Show()
+    End Sub
+
+    Private Sub RecuperarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecuperarToolStripMenuItem.Click
+        Recuperar_Contraseña.Show()
+    End Sub
 End Class
