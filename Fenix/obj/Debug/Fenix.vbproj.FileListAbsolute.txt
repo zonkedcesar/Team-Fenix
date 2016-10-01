@@ -101,3 +101,5 @@ C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ChangePassword.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ChangeQuestion.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Configuracion.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Pruebas.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Confirmar_Operacion.resources

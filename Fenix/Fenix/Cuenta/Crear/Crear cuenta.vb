@@ -159,13 +159,13 @@ Public Class Crear_cuenta
             'USUARIO + CONTRASEÑA
             archivo.WriteLine("<Usuario>" + LCase(SHA512(TB_Usuario.Text + TB_pass.Text)) + "</Usuario>")
 
-            archivo.WriteLine("<Email>" + LCase(SHA512(TB_Email.Text)) + "</Email>")
+            archivo.WriteLine("<Email>" + Encode64(TB_Email.Text) + "</Email>")
             'CONTRASEÑA + USUARIO
             archivo.WriteLine("<Password>" + LCase(SHA512(TB_pass.Text + TB_Usuario.Text)) + "</Password>")
             archivo.WriteLine("</Perfil>")
             archivo.WriteLine("<Seguridad>")
-            Dim Pregunta() As Byte = Encoding.Unicode.GetBytes(TB_Pregunta.Text)
-            archivo.WriteLine("<Pregunta>" + Convert.ToBase64String(Pregunta.ToArray()) + "</Pregunta>")
+
+            archivo.WriteLine("<Pregunta>" + Encode64(TB_Pregunta.Text) + "</Pregunta>")
             'Respuesta + NIP + Usuario
             archivo.WriteLine("<Respuesta>" + Encrypt(TB_Respuesta.Text, TB_NIP.Text, TB_Usuario.Text) + "</Respuesta>")
             archivo.WriteLine("<NIP>" + LCase(SHA512(TB_NIP.Text + TB_Usuario.Text)) + "</NIP>")
@@ -181,23 +181,13 @@ Public Class Crear_cuenta
             archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
             archivo.WriteLine("<RecoveryFenix>")
             archivo.WriteLine("<Usuario>" + LCase(SHA512(TB_Usuario.Text)) + "</Usuario>")
-            archivo.WriteLine("<Email>" + LCase(SHA512(TB_Email.Text)) + "</Email>")
-            Dim Pregunta() As Byte = Encoding.Unicode.GetBytes(TB_Pregunta.Text)
-            archivo.WriteLine("<Pregunta>" + Convert.ToBase64String(Pregunta.ToArray()) + "</Pregunta>")
-            archivo.WriteLine("<Respuesta>" + Encrypt(TB_Respuesta.Text, TB_NIP.Text, TB_Usuario.Text) + "</Respuesta>")
-            archivo.WriteLine("<NIP>" + LCase(SHA512(TB_NIP.Text + TB_Usuario.Text)) + "</NIP>")
             archivo.WriteLine("<SecretKey>" + Encrypt(TB_pass.Text, (TB_Email.Text + TB_Respuesta.Text + TB_NIP.Text), TB_Usuario.Text) + "</SecretKey>")
             archivo.WriteLine("</RecoveryFenix>")
         Catch ex As Exception
-            MessageBox.Show("No se pudo crear la cuenta " & ex.Message)
+            MessageBox.Show("No se pudo generar llave de recuperacion la cuenta " & ex.Message)
         End Try
         MsgBox("Usuario Creado Correctamente")
         Me.Hide()
-        Inicio.Show()
-        Inicio.usr.Text = TB_Usuario.Text
-    End Sub
-
-    Private Sub Crear_cuenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Limpia todas las variables y obtiene el foco en el primer elemento
         TB_Nombres.Clear()
         TB_Apellidos.Clear()
@@ -210,5 +200,10 @@ Public Class Crear_cuenta
         TB_NIP.Clear()
         TB_C_NIP.Clear()
         TB_Nombres.Focus()
+        ' Establece foco en otro punto
+        Inicio.Show()
+        Inicio.usr.Text = TB_Usuario.Text
     End Sub
+
+    
 End Class

@@ -1,4 +1,6 @@
 ﻿Imports System.Xml
+Imports System.Text
+Imports System.IO
 
 Public Class changeNip
 
@@ -7,41 +9,52 @@ Public Class changeNip
         Principal.Focus()
     End Sub
 
-    Private Sub B_Actualizar_Click(sender As Object, e As EventArgs) Handles B_Actualizar.Click
+    Protected Friend Function ActualizacionNIP(ByVal PassPlaint As String) As String
         ' Obteniendo Ruta
-        Dim Ruta As String
+        Dim Ruta, Ruta2 As String
         Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + Inicio.UsuarioConect + ".fnx"
+        Ruta2 = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + Inicio.UsuarioConect + ".Recovery"
 
         'Dim nodelist As XmlNodeList
         'Dim nodo1 = nodo.ChildNodes(0).InnerText
 
         Try
-            Dim documentoxml As XmlDocument
-            Dim nodo As XmlNode
+            Dim documentoxml, documentoxml2 As XmlDocument
+            Dim nip, email, SecretQuestion, SecretKey As XmlNode
 
             documentoxml = New XmlDocument
             documentoxml.Load(Ruta)
-            nodo = documentoxml.SelectSingleNode("/Fenix/Seguridad/NIP")
+            nip = documentoxml.SelectSingleNode("/Fenix/Seguridad/NIP")
+
             'MsgBox(nodo.InnerText)
-            If nodo.InnerText <> LCase(SHA512(TB_A_NIP.Text + Inicio.UsuarioConect)) Then
+            If nip.InnerText <> LCase(SHA512(TB_A_NIP.Text + Inicio.UsuarioConect)) Then
                 MsgBox(LCase(SHA512(TB_A_NIP.Text + Inicio.UsuarioConect)))
                 MsgBox("Tu NIP es incorrecto")
                 TB_A_NIP.Clear()
                 TB_A_NIP.Focus()
             Else
                 ' PROCESO DE ACTUALIZACION DE NIP EN LA BASE DE DATOS
-                nodo.InnerText = LCase(SHA512(TB_C_NIP.Text + Inicio.UsuarioConect))
+                nip.InnerText = LCase(SHA512(TB_C_NIP.Text + Inicio.UsuarioConect))
 
-                ' PROCESO DE ACTUALIZACION DE CREDENCIALES DENTRO DE LAS CUALES SE VE AFECTADO 
+                ' PROCESO DE ACTUALIZACION DE CREDENCIALES DENTRO DE LAS CUALES SE VE AFECTADO
 
-                ' PASSRECOVERY
+                ' PASSRECOVERY ** PASSRECOVERY ** PASSRECOVERY ** PASSRECOVERY **
+                documentoxml2 = New XmlDocument
+                documentoxml2.Load(Ruta2)
 
-                ' PREGUNTA
+                email = documentoxml.SelectSingleNode("/Fenix/Perfil/Email")
+                SecretKey = documentoxml2.SelectSingleNode("/RecoveryFenix/SecretKey")
+                SecretQuestion = documentoxml.SelectSingleNode("/Fenix/Seguridad/Respuesta")
+                SecretKey.InnerText = Encrypt(PassPlaint, (Decode64(email.InnerText) + Decrypt(SecretQuestion.InnerText, TB_A_NIP.Text, Inicio.UsuarioConect) + TB_C_NIP.Text), Inicio.UsuarioConect)
 
-                ' BARRIDO DE CONTRASEÑAS
+                ' PREGUNTA ** PREGUNTA ** PREGUNTA ** PREGUNTA ** PREGUNTA **
+                SecretQuestion.InnerText = Encrypt(Decrypt(SecretQuestion.InnerText, TB_A_NIP.Text, Inicio.UsuarioConect), TB_C_NIP.Text, Inicio.UsuarioConect)
+
+                ' BARRIDO DE CONTRASEÑAS ** BARRIDO DE CONTRASEÑAS ** BARRIDO DE CONTRASEÑAS **
 
                 ' TERMINA ALMACENANDO TODOS LOS CAMBIOS
                 documentoxml.Save(Ruta)
+                documentoxml2.Save(Ruta2)
                 MsgBox("NIP Actualizado Correctamente")
                 Me.Hide()
                 Principal.Focus()
@@ -50,6 +63,12 @@ Public Class changeNip
         Catch ex As Exception
             MessageBox.Show("Error Inesperado " & ex.Message)
         End Try
+    End Function
+
+
+    Private Sub B_Actualizar_Click(sender As Object, e As EventArgs) Handles B_Actualizar.Click
+        Confirmar_Operacion.Interacion = 1
+        Confirmar_Operacion.Show()
     End Sub
 
     ' APARTADO PARA VALIDAR QUE SOLO SE INGRESEN NUMEROS EN NIP

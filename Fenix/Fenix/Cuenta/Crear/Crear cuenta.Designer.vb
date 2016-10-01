@@ -247,7 +247,7 @@ Partial Class Crear_cuenta
         Me.TB_Respuesta.Name = "TB_Respuesta"
         Me.TB_Respuesta.Size = New System.Drawing.Size(170, 20)
         Me.TB_Respuesta.TabIndex = 8
-        Me.TB_Respuesta.Text = "Solo deben ser dos palabras"
+        Me.TB_Respuesta.Text = "De una a dos palabras"
         '
         'Label13
         '

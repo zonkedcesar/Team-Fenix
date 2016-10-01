@@ -143,10 +143,23 @@
     <Compile Include="Fenix\Cuenta\Cambio de Contraseña\ChangeQuestion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Fenix\Cuenta\Cambio de Contraseña\Confirmar Operacion.Designer.vb">
+      <DependentUpon>Confirmar Operacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Cuenta\Cambio de Contraseña\Confirmar Operacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Fenix\Cuenta\Configuracion\Configuracion.Designer.vb">
       <DependentUpon>Configuracion.vb</DependentUpon>
     </Compile>
     <Compile Include="Fenix\Cuenta\Configuracion\Configuracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Global\Modulos\Base64.vb" />
+    <Compile Include="OLD\Pruebas.Designer.vb">
+      <DependentUpon>Pruebas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OLD\Pruebas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OLD\SaveAccount.Designer.vb">
@@ -387,8 +400,14 @@
     <EmbeddedResource Include="Fenix\Cuenta\Cambio de Contraseña\ChangeQuestion.resx">
       <DependentUpon>ChangeQuestion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Cuenta\Cambio de Contraseña\Confirmar Operacion.resx">
+      <DependentUpon>Confirmar Operacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Cuenta\Configuracion\Configuracion.resx">
       <DependentUpon>Configuracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLD\Pruebas.resx">
+      <DependentUpon>Pruebas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OLD\SaveAccount.resx">
       <DependentUpon>SaveAccount.vb</DependentUpon>
