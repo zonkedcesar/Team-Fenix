@@ -1,4 +1,5 @@
 ﻿Imports System.Text
+Imports System.IO
 
 Public Class Crear_cuenta
 
@@ -144,8 +145,12 @@ Public Class Crear_cuenta
         Dim obj As Object
         Dim archivo As Object
         Dim x As Integer = 0
-        Dim Ruta As String
+        Dim Ruta, PATHPROFILE As String
         Try
+            If Not My.Computer.FileSystem.DirectoryExists("%USERPROFILE%\Documents\Fenix\") Then
+                PATHPROFILE = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix"
+                Directory.CreateDirectory(PATHPROFILE)
+            End If
             obj = CreateObject("Scripting.FileSystemObject")
             Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".fnx"
             archivo = obj.CreateTextFile(Ruta, True)
@@ -171,6 +176,11 @@ Public Class Crear_cuenta
             archivo.WriteLine("<NIP>" + LCase(SHA512(TB_NIP.Text + TB_Usuario.Text)) + "</NIP>")
             archivo.WriteLine("</Seguridad>")
             archivo.WriteLine("</Fenix>")
+            archivo.Close()
+            MsgBox("Usuario Creado Correctamente")
+            ' Establece foco en otro punto
+            Inicio.Show()
+            Inicio.usr.Text = TB_Usuario.Text
         Catch ex As Exception
             MessageBox.Show("No se pudo crear la cuenta " & ex.Message)
         End Try
@@ -183,10 +193,11 @@ Public Class Crear_cuenta
             archivo.WriteLine("<Usuario>" + LCase(SHA512(TB_Usuario.Text)) + "</Usuario>")
             archivo.WriteLine("<SecretKey>" + Encrypt(TB_pass.Text, (TB_Email.Text + TB_Respuesta.Text + TB_NIP.Text), TB_Usuario.Text) + "</SecretKey>")
             archivo.WriteLine("</RecoveryFenix>")
+            archivo.close()
         Catch ex As Exception
             MessageBox.Show("No se pudo generar llave de recuperacion la cuenta " & ex.Message)
         End Try
-        MsgBox("Usuario Creado Correctamente")
+
         Me.Hide()
         'Limpia todas las variables y obtiene el foco en el primer elemento
         TB_Nombres.Clear()
@@ -200,10 +211,5 @@ Public Class Crear_cuenta
         TB_NIP.Clear()
         TB_C_NIP.Clear()
         TB_Nombres.Focus()
-        ' Establece foco en otro punto
-        Inicio.Show()
-        Inicio.usr.Text = TB_Usuario.Text
     End Sub
-
-    
 End Class

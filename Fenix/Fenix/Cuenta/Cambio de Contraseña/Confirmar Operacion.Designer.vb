@@ -25,12 +25,13 @@ Partial Class Confirmar_Operacion
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Confirmar_Operacion))
         Me.TB_Conf_Pass = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.B_Confirmar_PSW = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TB_Conf_Pass
         '
         Me.TB_Conf_Pass.Location = New System.Drawing.Point(97, 35)
+        Me.TB_Conf_Pass.MaxLength = 8
         Me.TB_Conf_Pass.Name = "TB_Conf_Pass"
         Me.TB_Conf_Pass.Size = New System.Drawing.Size(100, 20)
         Me.TB_Conf_Pass.TabIndex = 0
@@ -45,21 +46,21 @@ Partial Class Confirmar_Operacion
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Por favor Ingrese su Contraseña para confirmar la operación"
         '
-        'Button1
+        'B_Confirmar_PSW
         '
-        Me.Button1.Location = New System.Drawing.Point(111, 64)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Confirmar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.B_Confirmar_PSW.Location = New System.Drawing.Point(111, 64)
+        Me.B_Confirmar_PSW.Name = "B_Confirmar_PSW"
+        Me.B_Confirmar_PSW.Size = New System.Drawing.Size(75, 23)
+        Me.B_Confirmar_PSW.TabIndex = 2
+        Me.B_Confirmar_PSW.Text = "Confirmar"
+        Me.B_Confirmar_PSW.UseVisualStyleBackColor = True
         '
         'Confirmar_Operacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(307, 99)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.B_Confirmar_PSW)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TB_Conf_Pass)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -71,5 +72,5 @@ Partial Class Confirmar_Operacion
     End Sub
     Friend WithEvents TB_Conf_Pass As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents B_Confirmar_PSW As System.Windows.Forms.Button
 End Class

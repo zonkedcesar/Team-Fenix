@@ -51,9 +51,7 @@ Public Class Inicio
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Login.Click
-        If (usr.Text.Length <= 0 And psw.Text.Length <= 0) Then
-            MsgBox("La contraseña y/o Usuario no deben estar vacios")
-        Else
+        If usr.TextLength > 0 And psw.TextLength > 0 Then
             Dim Ruta, Ruta2 As String
             Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + usr.Text + ".fnx"
             Ruta2 = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + usr.Text + ".Recovery"
@@ -90,14 +88,14 @@ Public Class Inicio
                     MessageBox.Show("Error Inesperado " & ex.Message)
                 End Try
             End If
+        Else
+            MsgBox("La contraseña y/o Usuario no deben estar vacios")
         End If
     End Sub
 
     Private Sub psw_KeyPress(sender As Object, e As KeyPressEventArgs) Handles psw.KeyPress
         If Asc(e.KeyChar) = 13 Then
-            If (usr.Text.Length <= 0 And psw.Text.Length <= 0) Then
-                MsgBox("La contraseña y/o Usuario no deben estar vacios")
-            Else
+            If usr.TextLength > 0 And psw.TextLength > 0 Then
                 Dim Ruta, Ruta2 As String
                 Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + usr.Text + ".fnx"
                 Ruta2 = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + usr.Text + ".Recovery"
@@ -134,6 +132,8 @@ Public Class Inicio
                         MessageBox.Show("Error Inesperado " & ex.Message)
                     End Try
                 End If
+            Else
+                MsgBox("La contraseña y/o Usuario no deben estar vacios")
             End If
         End If
     End Sub

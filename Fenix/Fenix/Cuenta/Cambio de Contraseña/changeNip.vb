@@ -28,7 +28,6 @@ Public Class changeNip
 
             'MsgBox(nodo.InnerText)
             If nip.InnerText <> LCase(SHA512(TB_A_NIP.Text + Inicio.UsuarioConect)) Then
-                MsgBox(LCase(SHA512(TB_A_NIP.Text + Inicio.UsuarioConect)))
                 MsgBox("Tu NIP es incorrecto")
                 TB_A_NIP.Clear()
                 TB_A_NIP.Focus()
@@ -55,14 +54,18 @@ Public Class changeNip
                 ' TERMINA ALMACENANDO TODOS LOS CAMBIOS
                 documentoxml.Save(Ruta)
                 documentoxml2.Save(Ruta2)
-                MsgBox("NIP Actualizado Correctamente")
                 Me.Hide()
                 Principal.Focus()
+                MsgBox("NIP Actualizado Correctamente")
+                'Limpiar valores
+                TB_A_NIP.Clear()
+                TB_N_NIP.Clear()
+                TB_C_NIP.Clear()
             End If
-
         Catch ex As Exception
             MessageBox.Show("Error Inesperado " & ex.Message)
         End Try
+        Return 0
     End Function
 
 
