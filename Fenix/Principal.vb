@@ -86,7 +86,9 @@ Public Class Principal
     End Sub
 
     Private Sub B_Cartera_Click(sender As Object, e As EventArgs) Handles B_Cartera.Click
-        
+        Cartera_de_Contraseñas.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub B_Sesion_Click(sender As Object, e As EventArgs) Handles B_Sesion.Click

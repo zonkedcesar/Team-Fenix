@@ -105,3 +105,6 @@ C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.xml
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.pdb
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ConfirmacionTotal.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Registrar_Servidor.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Almacenar_Contraseña.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Cartera_de_Contraseñas.resources

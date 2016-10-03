@@ -197,7 +197,46 @@ Public Class Crear_cuenta
         Catch ex As Exception
             MessageBox.Show("No se pudo generar llave de recuperacion la cuenta " & ex.Message)
         End Try
+        Try
+            obj = CreateObject("Scripting.FileSystemObject")
+            Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".Data"
+            archivo = obj.CreateTextFile(Ruta, True)
+            archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
+            archivo.WriteLine("<DataFenix>")
+            archivo.WriteLine("<Wallet>")
+            archivo.WriteLine("<Cartera id='0'>")
+            archivo.WriteLine("<Tipo>	</Tipo>")
+            archivo.WriteLine("<Usuario> 	</Usuario>")
+            archivo.WriteLine("<Contrasenia>	</Contrasenia>")
+            archivo.WriteLine("<URL>	</URL>")
+            archivo.WriteLine("<Comentarios>	</Comentarios>")
+            archivo.WriteLine("</Cartera>")
+            archivo.WriteLine("</Wallet>")
+            archivo.WriteLine("<Servers>")
+            archivo.WriteLine("<Servidor id='0'>")
+            archivo.WriteLine("<Hardware>")
+            archivo.WriteLine("<Site>	</Site>")
+            archivo.WriteLine("<Rack>	</Rack>")
+            archivo.WriteLine("<Modelo>	</Modelo>")
+            archivo.WriteLine("<Serial>	</Serial>")
+            archivo.WriteLine("</Hardware>")
+            archivo.WriteLine("<Logico>")
+            archivo.WriteLine("<Domain>	</Domain>")
+            archivo.WriteLine("<Ambiente>	</Ambiente>")
+            archivo.WriteLine("<Hostname>	</Hostname>")
+            archivo.WriteLine("<IP>	</IP>")
+            archivo.WriteLine("<Sistema>	</Sistema>")
+            archivo.WriteLine("<Version>	</Version>")
+            archivo.WriteLine("</Logico>")
+            archivo.WriteLine("</Servidor>")
+            archivo.WriteLine("</Servers>")
+            archivo.WriteLine("</DataFenix>")
+            archivo.Close()
 
+
+        Catch ex As Exception
+            MessageBox.Show("Error al generar la Base de datos " & ex.Message)
+        End Try
         Me.Hide()
         'Limpia todas las variables y obtiene el foco en el primer elemento
         TB_Nombres.Clear()
@@ -211,5 +250,9 @@ Public Class Crear_cuenta
         TB_NIP.Clear()
         TB_C_NIP.Clear()
         TB_Nombres.Focus()
+    End Sub
+
+    Private Sub Crear_cuenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

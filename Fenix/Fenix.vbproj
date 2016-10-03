@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -168,6 +168,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Global\Modulos\Base64.vb" />
+    <Compile Include="Fenix\Servidores\Registrar Servidor.Designer.vb">
+      <DependentUpon>Registrar Servidor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Servidores\Registrar Servidor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Wallet\Almacenar Contraseña.Designer.vb">
+      <DependentUpon>Almacenar Contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Wallet\Almacenar Contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Wallet\Cartera de Contraseñas.Designer.vb">
+      <DependentUpon>Cartera de Contraseñas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Wallet\Cartera de Contraseñas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OLD\Pruebas.Designer.vb">
       <DependentUpon>Pruebas.vb</DependentUpon>
     </Compile>
@@ -385,10 +403,10 @@
     <Compile Include="OLD\Principal\Catalogo\Registro\Registro Site.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fenix\Servidores.Designer.vb">
+    <Compile Include="Fenix\Servidores\Servidores.Designer.vb">
       <DependentUpon>Servidores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Fenix\Servidores.vb">
+    <Compile Include="Fenix\Servidores\Servidores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Global\Modulos\SQL.vb" />
@@ -423,6 +441,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Cuenta\Configuracion\Configuracion.resx">
       <DependentUpon>Configuracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Servidores\Registrar Servidor.resx">
+      <DependentUpon>Registrar Servidor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Wallet\Almacenar Contraseña.resx">
+      <DependentUpon>Almacenar Contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Wallet\Cartera de Contraseñas.resx">
+      <DependentUpon>Cartera de Contraseñas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OLD\Pruebas.resx">
       <DependentUpon>Pruebas.vb</DependentUpon>
@@ -529,7 +556,7 @@
     <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Site.resx">
       <DependentUpon>Registro Site.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fenix\Servidores.resx">
+    <EmbeddedResource Include="Fenix\Servidores\Servidores.resx">
       <DependentUpon>Servidores.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -579,10 +606,7 @@
       <DefaultIcon>FenixNew.ico</DefaultIcon>
     </FileAssociation>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Fenix\Credenciales\" />
-    <Folder Include="Fenix\Servidores\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
