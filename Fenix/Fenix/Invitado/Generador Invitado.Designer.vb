@@ -25,7 +25,6 @@ Partial Class Generador_Invitado
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Generador_Invitado))
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.B_Help = New System.Windows.Forms.Button()
         Me.Number_Gen = New System.Windows.Forms.NumericUpDown()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -54,22 +53,13 @@ Partial Class Generador_Invitado
         '
         Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Menu
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Location = New System.Drawing.Point(12, 12)
+        Me.RichTextBox1.Location = New System.Drawing.Point(21, 12)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(401, 41)
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(419, 41)
         Me.RichTextBox1.TabIndex = 61
-        Me.RichTextBox1.Text = "El generador de contraseñas contiene multiples opciones las cuales puede combinar" & _
-    " aumentando la seguridad en el algortimo aleatorio de la generacion de estas con" & _
-    "traseñas."
-        '
-        'B_Help
-        '
-        Me.B_Help.Location = New System.Drawing.Point(419, 12)
-        Me.B_Help.Name = "B_Help"
-        Me.B_Help.Size = New System.Drawing.Size(21, 23)
-        Me.B_Help.TabIndex = 60
-        Me.B_Help.Text = "?"
-        Me.B_Help.UseVisualStyleBackColor = True
+        Me.RichTextBox1.Text = "Para garantizar la seguridad de la contraseña a generar por favor de configurar s" & _
+    "u salida con el mayor uso de opciones disponibles."
         '
         'Number_Gen
         '
@@ -93,11 +83,11 @@ Partial Class Generador_Invitado
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(63, 61)
+        Me.Label5.Location = New System.Drawing.Point(42, 59)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 13)
+        Me.Label5.Size = New System.Drawing.Size(67, 13)
         Me.Label5.TabIndex = 57
-        Me.Label5.Text = "Permitido"
+        Me.Label5.Text = "Composición"
         '
         'Clear
         '
@@ -263,7 +253,6 @@ Partial Class Generador_Invitado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(456, 256)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.B_Help)
         Me.Controls.Add(Me.Number_Gen)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
@@ -293,7 +282,6 @@ Partial Class Generador_Invitado
 
     End Sub
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
-    Friend WithEvents B_Help As System.Windows.Forms.Button
     Friend WithEvents Number_Gen As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label

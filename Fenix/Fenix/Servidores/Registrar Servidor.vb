@@ -27,14 +27,18 @@ Public Class Registrar_Servidor
             Dim cuenta, recovery As XmlDocument
             Dim Variable As XmlNode
             Dim Conjunto As XmlNodeList
+            Dim NumeroNodos As String
             'Manipulacion de documentos XML con carga
             cuenta = New XmlDocument
             recovery = New XmlDocument
             cuenta.Load(Ruta)
             'Lectura de NODOS para acceder al panel principal
             Conjunto = cuenta.SelectNodes("DataFenix/Servers")
+            Variable = Conjunto.Item(0)
+            NumeroNodos = Conjunto.Count
+            MsgBox(NumeroNodos)
             For Each Variable In Conjunto
-                MsgBox(Variable.InnerText)
+                'MsgBox(Variable.Attributes.GetEnumerator)
             Next
             'Almacenar Cambios realizados
             'cuenta.Save(Ruta)

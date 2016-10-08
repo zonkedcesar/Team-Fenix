@@ -223,11 +223,11 @@ Partial Class Generador_de_Contraseñas
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(63, 61)
+        Me.Label4.Location = New System.Drawing.Point(47, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 13)
+        Me.Label4.Size = New System.Drawing.Size(67, 13)
         Me.Label4.TabIndex = 25
-        Me.Label4.Text = "Requerido"
+        Me.Label4.Text = "Composición"
         '
         'Label7
         '
@@ -256,9 +256,8 @@ Partial Class Generador_de_Contraseñas
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(401, 41)
         Me.RichTextBox1.TabIndex = 33
-        Me.RichTextBox1.Text = "El generador de contraseñas contiene multiples opciones las cuales puede combinar" & _
-    " aumentando la seguridad en el algortimo aleatorio de la generacion de estas con" & _
-    "traseñas."
+        Me.RichTextBox1.Text = "Para garantizar la seguridad de la contraseña a generar por favor de configurar s" & _
+    "u salida con el mayor uso de opciones disponibles."
         '
         'Generador_de_Contraseñas
         '
