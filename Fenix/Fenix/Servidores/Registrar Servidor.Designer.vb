@@ -47,6 +47,14 @@ Partial Class Registrar_Servidor
         Me.Label12 = New System.Windows.Forms.Label()
         Me.B_Registrar = New System.Windows.Forms.Button()
         Me.B_Cancelar = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -239,7 +247,7 @@ Partial Class Registrar_Servidor
         '
         'B_Registrar
         '
-        Me.B_Registrar.Location = New System.Drawing.Point(12, 212)
+        Me.B_Registrar.Location = New System.Drawing.Point(12, 295)
         Me.B_Registrar.Name = "B_Registrar"
         Me.B_Registrar.Size = New System.Drawing.Size(75, 23)
         Me.B_Registrar.TabIndex = 11
@@ -248,18 +256,95 @@ Partial Class Registrar_Servidor
         '
         'B_Cancelar
         '
-        Me.B_Cancelar.Location = New System.Drawing.Point(312, 212)
+        Me.B_Cancelar.Location = New System.Drawing.Point(300, 295)
         Me.B_Cancelar.Name = "B_Cancelar"
         Me.B_Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.B_Cancelar.TabIndex = 12
         Me.B_Cancelar.Text = "Cancelar"
         Me.B_Cancelar.UseVisualStyleBackColor = True
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(50, 263)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(43, 13)
+        Me.Label13.TabIndex = 22
+        Me.Label13.Text = "Usuario"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(104, 260)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 23
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(210, 263)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(61, 13)
+        Me.Label14.TabIndex = 24
+        Me.Label14.Text = "Contraseña"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(277, 260)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 25
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(53, 237)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(45, 13)
+        Me.Label15.TabIndex = 26
+        Me.Label15.Text = "Dominio"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(104, 234)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 27
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(220, 236)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(50, 17)
+        Me.CheckBox1.TabIndex = 28
+        Me.CheckBox1.Text = "Yes?"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(18, 211)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(68, 13)
+        Me.Label16.TabIndex = 29
+        Me.Label16.Text = "Credenciales"
+        '
         'Registrar_Servidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(399, 245)
+        Me.ClientSize = New System.Drawing.Size(392, 329)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.B_Cancelar)
         Me.Controls.Add(Me.B_Registrar)
         Me.Controls.Add(Me.Label12)
@@ -315,4 +400,12 @@ Partial Class Registrar_Servidor
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents B_Registrar As System.Windows.Forms.Button
     Friend WithEvents B_Cancelar As System.Windows.Forms.Button
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class

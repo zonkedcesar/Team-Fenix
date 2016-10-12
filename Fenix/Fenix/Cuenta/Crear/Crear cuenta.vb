@@ -224,7 +224,10 @@ Public Class Crear_cuenta
             archivo.WriteLine("<Domain>	</Domain>")
             archivo.WriteLine("<Ambiente>	</Ambiente>")
             archivo.WriteLine("<Hostname>	</Hostname>")
+            archivo.WriteLine("<Dominio>	</Dominio>")
             archivo.WriteLine("<IP>	</IP>")
+            archivo.WriteLine("<Usuario> 	</Usuario>")
+            archivo.WriteLine("<Contrasenia>	</Contrasenia>")
             archivo.WriteLine("<Sistema>	</Sistema>")
             archivo.WriteLine("<Version>	</Version>")
             archivo.WriteLine("</Logico>")
@@ -232,8 +235,6 @@ Public Class Crear_cuenta
             archivo.WriteLine("</Servers>")
             archivo.WriteLine("</DataFenix>")
             archivo.Close()
-
-
         Catch ex As Exception
             MessageBox.Show("Error al generar la Base de datos " & ex.Message)
         End Try

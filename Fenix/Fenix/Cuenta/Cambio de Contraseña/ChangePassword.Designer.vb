@@ -67,6 +67,7 @@ Partial Class ChangePassword
         Me.TB_A_PSW.Name = "TB_A_PSW"
         Me.TB_A_PSW.Size = New System.Drawing.Size(100, 20)
         Me.TB_A_PSW.TabIndex = 3
+        Me.TB_A_PSW.UseSystemPasswordChar = True
         '
         'TB_N_PSW
         '
@@ -75,6 +76,7 @@ Partial Class ChangePassword
         Me.TB_N_PSW.Name = "TB_N_PSW"
         Me.TB_N_PSW.Size = New System.Drawing.Size(100, 20)
         Me.TB_N_PSW.TabIndex = 4
+        Me.TB_N_PSW.UseSystemPasswordChar = True
         '
         'TB_C_PSW
         '
@@ -83,6 +85,7 @@ Partial Class ChangePassword
         Me.TB_C_PSW.Name = "TB_C_PSW"
         Me.TB_C_PSW.Size = New System.Drawing.Size(100, 20)
         Me.TB_C_PSW.TabIndex = 5
+        Me.TB_C_PSW.UseSystemPasswordChar = True
         '
         'B_Actualizar
         '
