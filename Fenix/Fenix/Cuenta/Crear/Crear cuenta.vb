@@ -225,6 +225,7 @@ Public Class Crear_cuenta
             archivo.WriteLine("<Ambiente>	</Ambiente>")
             archivo.WriteLine("<Hostname>	</Hostname>")
             archivo.WriteLine("<Dominio>	</Dominio>")
+            archivo.WriteLine("<UseDominio>	</UseDominio>")
             archivo.WriteLine("<IP>	</IP>")
             archivo.WriteLine("<Usuario> 	</Usuario>")
             archivo.WriteLine("<Contrasenia>	</Contrasenia>")
