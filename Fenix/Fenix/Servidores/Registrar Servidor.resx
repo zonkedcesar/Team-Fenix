@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="VerPass.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAATNJREFUSEvt
+        1GFNA0EQxfGTgAQkIAEJOAAn4AAcgAPqACTgAByAA5gfuddMl2sK6TdyL/mne3szb3Zn9zqtWhWdFZfF
+        9YyxuaPE4L54Lz734J2Y0+LXEvxUjGab4mbmeZ7rPBYHC10VWfFDcV5cFEvtMP9RiIMcuTwWlaC3gvGo
+        u4IBbouTIkWM5cjloW07irmtCybb7VvWGjFBQXopsmq5ad+2SMz9dqXfxESP0z4Yk0KJi+L5XWTnoakX
+        0IYYB3PU46Ifi86E25MW2bbtklV2c6RFbldvUW7g1jxKkdfCgQm2SgdpzNAzjM2J85yx3EXzyEokCNIy
+        gSkyiqFzEJNVi917TSM3x7YldJi4nv4qHPj4Xs7BD61LcHYwmgXvxPzJeEm+ZG3KjTE++s9u1b/QNH0B
+        I1WE9yjWla8AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAMDAAAAEACACoDgAAZgAAACAgAAABAAgAqAgAAA4PAAAQEAAAAQAIAGgFAAC2FwAAMDAAAAEA

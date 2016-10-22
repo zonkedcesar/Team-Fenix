@@ -202,7 +202,15 @@ Public Class Crear_cuenta
             Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".Data"
             archivo = obj.CreateTextFile(Ruta, True)
             archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
+            
             archivo.WriteLine("<DataFenix>")
+
+            archivo.WriteLine("<UsrFenix>" + LCase(Encode64(SHA512(TB_Usuario.Text))) + "</UsrFenix>")
+            archivo.WriteLine("<DefaultWallet>True</DefaultWallet>")
+            archivo.WriteLine("<CountWallet>0</CountWallet>")
+            archivo.WriteLine("<DefaultServer>True</DefaultServer>")
+            archivo.WriteLine("<CountServers>0</CountServers>")
+
             archivo.WriteLine("<Wallet>")
             archivo.WriteLine("<Cartera id='0'>")
             archivo.WriteLine("<Tipo>	</Tipo>")
@@ -214,13 +222,12 @@ Public Class Crear_cuenta
             archivo.WriteLine("</Wallet>")
             archivo.WriteLine("<Servers>")
             archivo.WriteLine("<Servidor id='0'>")
-            archivo.WriteLine("<Hardware>")
+
             archivo.WriteLine("<Site>	</Site>")
             archivo.WriteLine("<Rack>	</Rack>")
             archivo.WriteLine("<Modelo>	</Modelo>")
             archivo.WriteLine("<Serial>	</Serial>")
-            archivo.WriteLine("</Hardware>")
-            archivo.WriteLine("<Logico>")
+
             archivo.WriteLine("<Domain>	</Domain>")
             archivo.WriteLine("<Ambiente>	</Ambiente>")
             archivo.WriteLine("<Hostname>	</Hostname>")
@@ -231,7 +238,7 @@ Public Class Crear_cuenta
             archivo.WriteLine("<Contrasenia>	</Contrasenia>")
             archivo.WriteLine("<Sistema>	</Sistema>")
             archivo.WriteLine("<Version>	</Version>")
-            archivo.WriteLine("</Logico>")
+
             archivo.WriteLine("</Servidor>")
             archivo.WriteLine("</Servers>")
             archivo.WriteLine("</DataFenix>")

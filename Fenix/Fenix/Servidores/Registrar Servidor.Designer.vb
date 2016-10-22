@@ -48,13 +48,14 @@ Partial Class Registrar_Servidor
         Me.B_Registrar = New System.Windows.Forms.Button()
         Me.B_Cancelar = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TB_Usuario = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TB_Password = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.TB_Dominio = New System.Windows.Forms.TextBox()
+        Me.Check_Dominio = New System.Windows.Forms.CheckBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.VerPass = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -272,12 +273,12 @@ Partial Class Registrar_Servidor
         Me.Label13.TabIndex = 22
         Me.Label13.Text = "Usuario"
         '
-        'TextBox1
+        'TB_Usuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(104, 260)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 23
+        Me.TB_Usuario.Location = New System.Drawing.Point(104, 260)
+        Me.TB_Usuario.Name = "TB_Usuario"
+        Me.TB_Usuario.Size = New System.Drawing.Size(100, 20)
+        Me.TB_Usuario.TabIndex = 23
         '
         'Label14
         '
@@ -288,12 +289,13 @@ Partial Class Registrar_Servidor
         Me.Label14.TabIndex = 24
         Me.Label14.Text = "Contraseña"
         '
-        'TextBox2
+        'TB_Password
         '
-        Me.TextBox2.Location = New System.Drawing.Point(277, 260)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 25
+        Me.TB_Password.Location = New System.Drawing.Point(277, 260)
+        Me.TB_Password.Name = "TB_Password"
+        Me.TB_Password.Size = New System.Drawing.Size(100, 20)
+        Me.TB_Password.TabIndex = 25
+        Me.TB_Password.UseSystemPasswordChar = True
         '
         'Label15
         '
@@ -304,24 +306,24 @@ Partial Class Registrar_Servidor
         Me.Label15.TabIndex = 26
         Me.Label15.Text = "Dominio"
         '
-        'TextBox3
+        'TB_Dominio
         '
-        Me.TextBox3.Location = New System.Drawing.Point(104, 234)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 27
+        Me.TB_Dominio.Enabled = False
+        Me.TB_Dominio.Location = New System.Drawing.Point(104, 234)
+        Me.TB_Dominio.Name = "TB_Dominio"
+        Me.TB_Dominio.Size = New System.Drawing.Size(100, 20)
+        Me.TB_Dominio.TabIndex = 27
+        Me.TB_Dominio.Text = "PROSAMX"
         '
-        'CheckBox1
+        'Check_Dominio
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(220, 236)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(50, 17)
-        Me.CheckBox1.TabIndex = 28
-        Me.CheckBox1.Text = "Yes?"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.Check_Dominio.AutoSize = True
+        Me.Check_Dominio.Location = New System.Drawing.Point(220, 236)
+        Me.Check_Dominio.Name = "Check_Dominio"
+        Me.Check_Dominio.Size = New System.Drawing.Size(50, 17)
+        Me.Check_Dominio.TabIndex = 28
+        Me.Check_Dominio.Text = "Yes?"
+        Me.Check_Dominio.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -332,18 +334,30 @@ Partial Class Registrar_Servidor
         Me.Label16.TabIndex = 29
         Me.Label16.Text = "Credenciales"
         '
+        'VerPass
+        '
+        Me.VerPass.BackColor = System.Drawing.SystemColors.Control
+        Me.VerPass.Image = CType(resources.GetObject("VerPass.Image"), System.Drawing.Image)
+        Me.VerPass.Location = New System.Drawing.Point(347, 234)
+        Me.VerPass.Name = "VerPass"
+        Me.VerPass.Size = New System.Drawing.Size(30, 20)
+        Me.VerPass.TabIndex = 30
+        Me.VerPass.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.VerPass.UseVisualStyleBackColor = False
+        '
         'Registrar_Servidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(392, 329)
+        Me.Controls.Add(Me.VerPass)
         Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Check_Dominio)
+        Me.Controls.Add(Me.TB_Dominio)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TB_Password)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TB_Usuario)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.B_Cancelar)
         Me.Controls.Add(Me.B_Registrar)
@@ -401,11 +415,12 @@ Partial Class Registrar_Servidor
     Friend WithEvents B_Registrar As System.Windows.Forms.Button
     Friend WithEvents B_Cancelar As System.Windows.Forms.Button
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TB_Usuario As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TB_Password As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents TB_Dominio As System.Windows.Forms.TextBox
+    Friend WithEvents Check_Dominio As System.Windows.Forms.CheckBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents VerPass As System.Windows.Forms.Button
 End Class
