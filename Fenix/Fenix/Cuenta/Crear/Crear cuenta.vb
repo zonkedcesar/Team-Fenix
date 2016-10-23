@@ -205,11 +205,13 @@ Public Class Crear_cuenta
             
             archivo.WriteLine("<DataFenix>")
 
+            archivo.writeLine("<Settings>")
             archivo.WriteLine("<UsrFenix>" + LCase(Encode64(SHA512(TB_Usuario.Text))) + "</UsrFenix>")
             archivo.WriteLine("<DefaultWallet>True</DefaultWallet>")
             archivo.WriteLine("<CountWallet>0</CountWallet>")
             archivo.WriteLine("<DefaultServer>True</DefaultServer>")
             archivo.WriteLine("<CountServers>0</CountServers>")
+            archivo.writeLine("</Settings>")
 
             archivo.WriteLine("<Wallet>")
             archivo.WriteLine("<Cartera id='0'>")

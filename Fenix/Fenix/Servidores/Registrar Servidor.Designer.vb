@@ -22,9 +22,9 @@ Partial Class Registrar_Servidor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registrar_Servidor))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TB_Site = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TB_Rack = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,10 +39,7 @@ Partial Class Registrar_Servidor
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TB_IP = New System.Windows.Forms.TextBox()
-        Me.TB_Sistema = New System.Windows.Forms.TextBox()
-        Me.TB_Ambiente = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TB_Version = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.B_Registrar = New System.Windows.Forms.Button()
@@ -56,6 +53,11 @@ Partial Class Registrar_Servidor
         Me.Check_Dominio = New System.Windows.Forms.CheckBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.VerPass = New System.Windows.Forms.Button()
+        Me.TB_Site = New System.Windows.Forms.ComboBox()
+        Me.TB_Ambiente = New System.Windows.Forms.ComboBox()
+        Me.TB_Sistema = New System.Windows.Forms.ComboBox()
+        Me.TB_Version = New System.Windows.Forms.ComboBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Label1
@@ -66,14 +68,6 @@ Partial Class Registrar_Servidor
         Me.Label1.Size = New System.Drawing.Size(28, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Site:"
-        '
-        'TB_Site
-        '
-        Me.TB_Site.Location = New System.Drawing.Point(60, 36)
-        Me.TB_Site.MaxLength = 30
-        Me.TB_Site.Name = "TB_Site"
-        Me.TB_Site.Size = New System.Drawing.Size(94, 20)
-        Me.TB_Site.TabIndex = 1
         '
         'Label2
         '
@@ -90,7 +84,7 @@ Partial Class Registrar_Servidor
         Me.TB_Rack.MaxLength = 30
         Me.TB_Rack.Name = "TB_Rack"
         Me.TB_Rack.Size = New System.Drawing.Size(94, 20)
-        Me.TB_Rack.TabIndex = 2
+        Me.TB_Rack.TabIndex = 3
         '
         'Label3
         '
@@ -107,7 +101,7 @@ Partial Class Registrar_Servidor
         Me.TB_Modelo.MaxLength = 50
         Me.TB_Modelo.Name = "TB_Modelo"
         Me.TB_Modelo.Size = New System.Drawing.Size(129, 20)
-        Me.TB_Modelo.TabIndex = 3
+        Me.TB_Modelo.TabIndex = 2
         '
         'Label4
         '
@@ -195,22 +189,6 @@ Partial Class Registrar_Servidor
         Me.TB_IP.Size = New System.Drawing.Size(100, 20)
         Me.TB_IP.TabIndex = 8
         '
-        'TB_Sistema
-        '
-        Me.TB_Sistema.Location = New System.Drawing.Point(111, 176)
-        Me.TB_Sistema.MaxLength = 30
-        Me.TB_Sistema.Name = "TB_Sistema"
-        Me.TB_Sistema.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Sistema.TabIndex = 9
-        '
-        'TB_Ambiente
-        '
-        Me.TB_Ambiente.Location = New System.Drawing.Point(277, 120)
-        Me.TB_Ambiente.MaxLength = 30
-        Me.TB_Ambiente.Name = "TB_Ambiente"
-        Me.TB_Ambiente.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Ambiente.TabIndex = 6
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -219,14 +197,6 @@ Partial Class Registrar_Servidor
         Me.Label10.Size = New System.Drawing.Size(45, 13)
         Me.Label10.TabIndex = 18
         Me.Label10.Text = "Version:"
-        '
-        'TB_Version
-        '
-        Me.TB_Version.Location = New System.Drawing.Point(277, 176)
-        Me.TB_Version.MaxLength = 30
-        Me.TB_Version.Name = "TB_Version"
-        Me.TB_Version.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Version.TabIndex = 10
         '
         'Label11
         '
@@ -251,7 +221,7 @@ Partial Class Registrar_Servidor
         Me.B_Registrar.Location = New System.Drawing.Point(12, 295)
         Me.B_Registrar.Name = "B_Registrar"
         Me.B_Registrar.Size = New System.Drawing.Size(75, 23)
-        Me.B_Registrar.TabIndex = 11
+        Me.B_Registrar.TabIndex = 13
         Me.B_Registrar.Text = "Registrar"
         Me.B_Registrar.UseVisualStyleBackColor = True
         '
@@ -260,7 +230,7 @@ Partial Class Registrar_Servidor
         Me.B_Cancelar.Location = New System.Drawing.Point(300, 295)
         Me.B_Cancelar.Name = "B_Cancelar"
         Me.B_Cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.B_Cancelar.TabIndex = 12
+        Me.B_Cancelar.TabIndex = 14
         Me.B_Cancelar.Text = "Cancelar"
         Me.B_Cancelar.UseVisualStyleBackColor = True
         '
@@ -278,7 +248,7 @@ Partial Class Registrar_Servidor
         Me.TB_Usuario.Location = New System.Drawing.Point(104, 260)
         Me.TB_Usuario.Name = "TB_Usuario"
         Me.TB_Usuario.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Usuario.TabIndex = 23
+        Me.TB_Usuario.TabIndex = 11
         '
         'Label14
         '
@@ -294,7 +264,7 @@ Partial Class Registrar_Servidor
         Me.TB_Password.Location = New System.Drawing.Point(277, 260)
         Me.TB_Password.Name = "TB_Password"
         Me.TB_Password.Size = New System.Drawing.Size(100, 20)
-        Me.TB_Password.TabIndex = 25
+        Me.TB_Password.TabIndex = 12
         Me.TB_Password.UseSystemPasswordChar = True
         '
         'Label15
@@ -345,11 +315,53 @@ Partial Class Registrar_Servidor
         Me.VerPass.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.VerPass.UseVisualStyleBackColor = False
         '
+        'TB_Site
+        '
+        Me.TB_Site.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TB_Site.FormattingEnabled = True
+        Me.TB_Site.Items.AddRange(New Object() {"Chachalacas", "Santa Fe", "Triara"})
+        Me.TB_Site.Location = New System.Drawing.Point(60, 35)
+        Me.TB_Site.Name = "TB_Site"
+        Me.TB_Site.Size = New System.Drawing.Size(94, 21)
+        Me.TB_Site.TabIndex = 1
+        '
+        'TB_Ambiente
+        '
+        Me.TB_Ambiente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TB_Ambiente.FormattingEnabled = True
+        Me.TB_Ambiente.Items.AddRange(New Object() {"Desarrollo", "Producción", "Proveedor", "QA"})
+        Me.TB_Ambiente.Location = New System.Drawing.Point(277, 119)
+        Me.TB_Ambiente.Name = "TB_Ambiente"
+        Me.TB_Ambiente.Size = New System.Drawing.Size(100, 21)
+        Me.TB_Ambiente.TabIndex = 6
+        '
+        'TB_Sistema
+        '
+        Me.TB_Sistema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TB_Sistema.FormattingEnabled = True
+        Me.TB_Sistema.Items.AddRange(New Object() {"AIX", "RedHat", "Solaris SPARC", "Solaris X86", "Ubuntu Server", "Windows Server"})
+        Me.TB_Sistema.Location = New System.Drawing.Point(111, 176)
+        Me.TB_Sistema.Name = "TB_Sistema"
+        Me.TB_Sistema.Size = New System.Drawing.Size(100, 21)
+        Me.TB_Sistema.TabIndex = 9
+        '
+        'TB_Version
+        '
+        Me.TB_Version.FormattingEnabled = True
+        Me.TB_Version.Location = New System.Drawing.Point(277, 176)
+        Me.TB_Version.Name = "TB_Version"
+        Me.TB_Version.Size = New System.Drawing.Size(100, 21)
+        Me.TB_Version.TabIndex = 10
+        '
         'Registrar_Servidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(392, 329)
+        Me.Controls.Add(Me.TB_Version)
+        Me.Controls.Add(Me.TB_Sistema)
+        Me.Controls.Add(Me.TB_Ambiente)
+        Me.Controls.Add(Me.TB_Site)
         Me.Controls.Add(Me.VerPass)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Check_Dominio)
@@ -363,10 +375,7 @@ Partial Class Registrar_Servidor
         Me.Controls.Add(Me.B_Registrar)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TB_Version)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TB_Ambiente)
-        Me.Controls.Add(Me.TB_Sistema)
         Me.Controls.Add(Me.TB_IP)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -381,7 +390,6 @@ Partial Class Registrar_Servidor
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TB_Rack)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TB_Site)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Registrar_Servidor"
@@ -391,7 +399,6 @@ Partial Class Registrar_Servidor
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TB_Site As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TB_Rack As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -406,10 +413,7 @@ Partial Class Registrar_Servidor
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents TB_IP As System.Windows.Forms.TextBox
-    Friend WithEvents TB_Sistema As System.Windows.Forms.TextBox
-    Friend WithEvents TB_Ambiente As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TB_Version As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents B_Registrar As System.Windows.Forms.Button
@@ -423,4 +427,9 @@ Partial Class Registrar_Servidor
     Friend WithEvents Check_Dominio As System.Windows.Forms.CheckBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents VerPass As System.Windows.Forms.Button
+    Friend WithEvents TB_Site As System.Windows.Forms.ComboBox
+    Friend WithEvents TB_Ambiente As System.Windows.Forms.ComboBox
+    Friend WithEvents TB_Sistema As System.Windows.Forms.ComboBox
+    Friend WithEvents TB_Version As System.Windows.Forms.ComboBox
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class

@@ -16,6 +16,7 @@
         'Evita mantener el while activo
         If CB_MinLong.SelectedIndex <> -1 Then
             ' Contruir el Max CB desde la primera Seleccion
+            CB_MaxLong.Items.Add("-")
             While seleccion < 35
                 CB_MaxLong.Items.Add(seleccion + 1)
                 seleccion = seleccion + 1
@@ -72,6 +73,22 @@
                 Randomize()
                 Dim NewPass As String = ""
                 Dim TempPass As String = ""
+
+                'Cuando el Operador quiera resetear el CBMax RESETEAR
+                If CB_MaxLong.Text = "-" Then
+                    Dim seleccion As String = CB_MinLong.Text
+                    CB_MaxLong.Items.Clear()
+                    'Evita mantener el while activo
+                    If CB_MinLong.SelectedIndex <> -1 Then
+                        ' Contruir el Max CB desde la primera Seleccion
+                        CB_MaxLong.Items.Add("-")
+                        While seleccion < 35
+
+                            CB_MaxLong.Items.Add(seleccion + 1)
+                            seleccion = seleccion + 1
+                        End While
+                    End If
+                End If
 
                 ' Activacion de Max & Min o ELSE simplemente Min
                 If CB_MaxLong.Text.Length > 0 Then
