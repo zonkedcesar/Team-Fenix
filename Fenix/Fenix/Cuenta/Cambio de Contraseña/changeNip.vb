@@ -76,26 +76,32 @@ Public Class changeNip
 
     ' APARTADO PARA VALIDAR QUE SOLO SE INGRESEN NUMEROS EN NIP
     Private Sub TB_A_NIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TB_A_NIP.KeyPress
-        If Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
+        If Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Right Or Asc(e.KeyChar) = Keys.Left Or Asc(e.KeyChar) = Keys.Delete Or Asc(e.KeyChar) = Keys.Back Then
+            Return
         End If
+        e.Handled = True
     End Sub
 
     Private Sub TB_N_NIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TB_N_NIP.KeyPress
-        If Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
+        If Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Right Or Asc(e.KeyChar) = Keys.Left Or Asc(e.KeyChar) = Keys.Delete Or Asc(e.KeyChar) = Keys.Back Then
+            Return
         End If
+        e.Handled = True
     End Sub
 
     Private Sub TB_C_NIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TB_C_NIP.KeyPress
-        If Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
+        If Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Right Or Asc(e.KeyChar) = Keys.Left Or Asc(e.KeyChar) = Keys.Delete Or Asc(e.KeyChar) = Keys.Back Then
+            Return
         End If
+        e.Handled = True
     End Sub
 
     ' APARTADO PARA VALIDAR QUE EL NIP TIENE MINIMO 4 DIGITOS
     Private Sub TB_A_NIP_LostFocus(sender As Object, e As EventArgs) Handles TB_A_NIP.LostFocus
-        If TB_A_NIP.TextLength < 4 Then
+        If TB_A_NIP.TextLength < 4 And TB_A_NIP.TextLength > 0 Then
             MsgBox("El NIP se compone de 4 digitos")
             TB_A_NIP.Clear()
             TB_A_NIP.Focus()
@@ -103,7 +109,7 @@ Public Class changeNip
     End Sub
 
     Private Sub TB_N_NIP_LostFocus(sender As Object, e As EventArgs) Handles TB_N_NIP.LostFocus
-        If TB_N_NIP.TextLength < 4 Then
+        If TB_N_NIP.TextLength < 4 And TB_N_NIP.TextLength > 0 Then
             MsgBox("El NIP se compone de 4 digitos")
             TB_N_NIP.Clear()
             TB_N_NIP.Focus()
@@ -111,7 +117,7 @@ Public Class changeNip
     End Sub
 
     Private Sub TB_C_NIP_LostFocus(sender As Object, e As EventArgs) Handles TB_C_NIP.LostFocus
-        If TB_C_NIP.TextLength < 4 Then
+        If TB_C_NIP.TextLength < 4 And TB_C_NIP.TextLength > 0 Then
             MsgBox("El NIP se compone de 4 digitos")
             TB_C_NIP.Clear()
             TB_C_NIP.Focus()

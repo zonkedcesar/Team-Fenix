@@ -139,6 +139,16 @@ Public Class Inicio
     End Sub
 
     Private Sub usr_KeyPress(sender As Object, e As KeyPressEventArgs) Handles usr.KeyPress
+        If Char.IsLetterOrDigit(e.KeyChar) Or _
+            Char.IsLower(e.KeyChar) Or _
+            Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Right Or _
+           Asc(e.KeyChar) = Keys.Left Or _
+           Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Back Then
+            Return
+        End If
+        e.Handled = True
         If Asc(e.KeyChar) = 13 Then
             psw.Focus()
         End If

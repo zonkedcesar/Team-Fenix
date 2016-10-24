@@ -41,7 +41,7 @@ Partial Class Generador_de_Contraseñas
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.LevelPass = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Cifrar = New System.Windows.Forms.Button()
+        Me.Asignar = New System.Windows.Forms.Button()
         Me.Clear = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -202,14 +202,14 @@ Partial Class Generador_de_Contraseñas
         'Timer1
         '
         '
-        'Cifrar
+        'Asignar
         '
-        Me.Cifrar.Location = New System.Drawing.Point(384, 217)
-        Me.Cifrar.Name = "Cifrar"
-        Me.Cifrar.Size = New System.Drawing.Size(55, 23)
-        Me.Cifrar.TabIndex = 19
-        Me.Cifrar.Text = "Cifrar"
-        Me.Cifrar.UseVisualStyleBackColor = True
+        Me.Asignar.Location = New System.Drawing.Point(384, 217)
+        Me.Asignar.Name = "Asignar"
+        Me.Asignar.Size = New System.Drawing.Size(55, 23)
+        Me.Asignar.TabIndex = 19
+        Me.Asignar.Text = "Asignar"
+        Me.Asignar.UseVisualStyleBackColor = True
         '
         'Clear
         '
@@ -269,7 +269,7 @@ Partial Class Generador_de_Contraseñas
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Clear)
-        Me.Controls.Add(Me.Cifrar)
+        Me.Controls.Add(Me.Asignar)
         Me.Controls.Add(Me.LevelPass)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.CB_MaxLong)
@@ -311,7 +311,7 @@ Partial Class Generador_de_Contraseñas
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents LevelPass As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents Cifrar As System.Windows.Forms.Button
+    Friend WithEvents Asignar As System.Windows.Forms.Button
     Friend WithEvents Clear As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label

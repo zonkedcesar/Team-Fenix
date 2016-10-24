@@ -317,33 +317,10 @@ Public Class Generador_de_Contraseñas
         End If
     End Sub
 
-    Private Sub Cifrar_Click(sender As Object, e As EventArgs) Handles Cifrar.Click
-        Cifrar_contraseña.Show()
-
-        'Control de Cifear_contraseña
-        'Cifrar_contraseña.PassIN.Text = GenPass.Text   NUEVA VERSION EN controladores
-        Cifrar_contraseña.CB_Cipher.SelectedIndex = -1
-        Cifrar_contraseña.Key.Hide()
-        Cifrar_contraseña.LabelKey.Hide()
-        Cifrar_contraseña.SaltPass.Hide()
-        Cifrar_contraseña.LabelSalt.Hide()
-        Cifrar_contraseña.ViewPass2.Hide()
-        Cifrar_contraseña.ViewPass3.Hide()
-
-        Cifrar_contraseña.Key.Text = ""
-        Cifrar_contraseña.SaltPass.Text = ""
-        Cifrar_contraseña.HashOut.Text = ""
-
-        'Controladores
-        If GenPass.Text.Length <= 0 Then
-            Cifrar_contraseña.PassIN.PasswordChar = ""
-            Cifrar_contraseña.PassIN.Text = "INGRESAR PASSWORD"
-        Else
-            Cifrar_contraseña.PassIN.Text = GenPass.Text
-        End If
-
+    Private Sub Cifrar_Click(sender As Object, e As EventArgs) Handles Asignar.Click
         Me.Hide()
-
+        Registrar_Servidor.TB_Password.Text = Me.GenPass.Text
+        Registrar_Servidor.Show()
     End Sub
 
     Private Sub CB_MaxLong_Click(sender As Object, e As EventArgs) Handles CB_MaxLong.Click

@@ -47,7 +47,7 @@ Partial Class Servidores
         Me.OutAmbiente = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.B_Nuevo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -186,7 +186,10 @@ Partial Class Servidores
         '
         'CB_ServerSelect
         '
+        Me.CB_ServerSelect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.CB_ServerSelect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CB_ServerSelect.FormattingEnabled = True
+        Me.CB_ServerSelect.ItemHeight = 13
         Me.CB_ServerSelect.Location = New System.Drawing.Point(71, 12)
         Me.CB_ServerSelect.Name = "CB_ServerSelect"
         Me.CB_ServerSelect.Size = New System.Drawing.Size(156, 21)
@@ -206,36 +209,32 @@ Partial Class Servidores
         Me.OutHostname.AutoSize = True
         Me.OutHostname.Location = New System.Drawing.Point(79, 50)
         Me.OutHostname.Name = "OutHostname"
-        Me.OutHostname.Size = New System.Drawing.Size(30, 13)
+        Me.OutHostname.Size = New System.Drawing.Size(0, 13)
         Me.OutHostname.TabIndex = 22
-        Me.OutHostname.Text = "NBU"
         '
         'OutIP
         '
         Me.OutIP.AutoSize = True
         Me.OutIP.Location = New System.Drawing.Point(41, 68)
         Me.OutIP.Name = "OutIP"
-        Me.OutIP.Size = New System.Drawing.Size(76, 13)
+        Me.OutIP.Size = New System.Drawing.Size(0, 13)
         Me.OutIP.TabIndex = 23
-        Me.OutIP.Text = "10.255.207.69"
         '
         'OutSO
         '
         Me.OutSO.AutoSize = True
         Me.OutSO.Location = New System.Drawing.Point(219, 50)
         Me.OutSO.Name = "OutSO"
-        Me.OutSO.Size = New System.Drawing.Size(38, 13)
+        Me.OutSO.Size = New System.Drawing.Size(0, 13)
         Me.OutSO.TabIndex = 24
-        Me.OutSO.Text = "Solaris"
         '
         'OutAmbiente
         '
         Me.OutAmbiente.AutoSize = True
         Me.OutAmbiente.Location = New System.Drawing.Point(219, 68)
         Me.OutAmbiente.Name = "OutAmbiente"
-        Me.OutAmbiente.Size = New System.Drawing.Size(61, 13)
+        Me.OutAmbiente.Size = New System.Drawing.Size(0, 13)
         Me.OutAmbiente.TabIndex = 25
-        Me.OutAmbiente.Text = "Produccion"
         '
         'Timer1
         '
@@ -243,21 +242,21 @@ Partial Class Servidores
         'Timer2
         '
         '
-        'Button1
+        'B_Nuevo
         '
-        Me.Button1.Location = New System.Drawing.Point(197, 227)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Nuevo"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.B_Nuevo.Location = New System.Drawing.Point(197, 227)
+        Me.B_Nuevo.Name = "B_Nuevo"
+        Me.B_Nuevo.Size = New System.Drawing.Size(75, 23)
+        Me.B_Nuevo.TabIndex = 26
+        Me.B_Nuevo.Text = "Nuevo"
+        Me.B_Nuevo.UseVisualStyleBackColor = True
         '
         'Servidores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.B_Nuevo)
         Me.Controls.Add(Me.OutAmbiente)
         Me.Controls.Add(Me.OutSO)
         Me.Controls.Add(Me.OutIP)
@@ -309,5 +308,5 @@ Partial Class Servidores
     Friend WithEvents OutAmbiente As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents B_Nuevo As System.Windows.Forms.Button
 End Class

@@ -3,7 +3,9 @@ Imports System.IO
 
 Public Class Crear_cuenta
 
-
+    Dim PassON As Boolean = False
+    Dim PreguntaON As Boolean = False
+    Dim RespuestaON As Boolean = False
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Back.Click
         Me.Hide()
         Inicio.Show()
@@ -25,6 +27,27 @@ Public Class Crear_cuenta
         TB_Usuario.Text.Length > 0 And TB_Email.Text.Length > 0 And TB_pass.Text.Length > 0 And _
         TB_password.Text.Length > 0 And TB_Pregunta.Text.Length > 0 And TB_Respuesta.Text.Length > 0 And _
         TB_NIP.Text.Length > 0 And TB_C_NIP.Text.Length > 0
+    End Sub
+
+    Private Sub TB_Usuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TB_Usuario.KeyPress
+        If Char.IsLetterOrDigit(e.KeyChar) Or _
+            Char.IsLower(e.KeyChar) Or _
+            Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Right Or _
+           Asc(e.KeyChar) = Keys.Left Or _
+           Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Back Then
+            Return
+        End If
+        e.Handled = True
+    End Sub
+
+    Private Sub TB_Usuario_LostFocus(sender As Object, e As EventArgs) Handles TB_Usuario.LostFocus
+        If TB_Usuario.TextLength < 6 And TB_Usuario.TextLength > 0 Then
+            MsgBox("Tu usuario no debe ser menor a 8 caracteres")
+            TB_Usuario.Clear()
+            TB_Usuario.Focus()
+        End If
     End Sub
 
     Private Sub TB_Usuario_TextChanged(sender As Object, e As EventArgs) Handles TB_Usuario.TextChanged
@@ -49,16 +72,24 @@ Public Class Crear_cuenta
     End Sub
 
     Private Sub TB_pass_LostFocus(sender As Object, e As EventArgs) Handles TB_pass.LostFocus
-        If TB_pass.TextLength < 6 Then
+        If TB_pass.TextLength < 6 And TB_pass.TextLength > 0 Then
             MsgBox("La contraseña debe contener un minimo de 6 caracteres")
             TB_pass.Clear()
             TB_pass.Focus()
+        Else
+            If TB_pass.Text = TB_Usuario.Text Then
+                MsgBox("Tu usuario y contraseña no pueden ser igual")
+                TB_pass.Clear()
+                TB_pass.Focus()
+            Else
+                PassON = True
+            End If
         End If
     End Sub
 
 
     Private Sub TB_password_LostFocus(sender As Object, e As EventArgs) Handles TB_password.LostFocus
-        If TB_pass.Text <> TB_password.Text Then
+        If TB_pass.Text <> TB_password.Text And TB_pass.TextLength > 6 And PassON = True Then
             MsgBox("La contraseña no coincide")
             TB_pass.Clear()
             TB_password.Clear()
@@ -84,8 +115,12 @@ Public Class Crear_cuenta
     End Sub
 
     Private Sub TB_Pregunta_Enter(sender As Object, e As EventArgs) Handles TB_Pregunta.Enter
-        TB_Pregunta.Clear()
+        If PreguntaON = False Then
+            TB_Pregunta.Clear()
+            PreguntaON = True
+        End If
     End Sub
+
 
 
     Private Sub TB_Pregunta_TextChanged(sender As Object, e As EventArgs) Handles TB_Pregunta.TextChanged
@@ -96,7 +131,10 @@ Public Class Crear_cuenta
     End Sub
 
     Private Sub TB_Respuesta_Enter(sender As Object, e As EventArgs) Handles TB_Respuesta.Enter
-        TB_Respuesta.Clear()
+        If RespuestaON = False Then
+            TB_Respuesta.Clear()
+            RespuestaON = True
+        End If
     End Sub
 
     Private Sub TB_Respuesta_TextChanged(sender As Object, e As EventArgs) Handles TB_Respuesta.TextChanged
@@ -107,18 +145,22 @@ Public Class Crear_cuenta
     End Sub
 
     Private Sub TB_NIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TB_NIP.KeyPress
-        If Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
+        If Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Right Or Asc(e.KeyChar) = Keys.Left Or Asc(e.KeyChar) = Keys.Delete Or Asc(e.KeyChar) = Keys.Back Then
+            Return
         End If
+        e.Handled = True
     End Sub
     Private Sub TB_C_NIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TB_C_NIP.KeyPress
-        If Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
+        If Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = Keys.Delete Or _
+           Asc(e.KeyChar) = Keys.Right Or Asc(e.KeyChar) = Keys.Left Or Asc(e.KeyChar) = Keys.Delete Or Asc(e.KeyChar) = Keys.Back Then
+            Return
         End If
+        e.Handled = True
     End Sub
 
     Private Sub TB_NIP_LostFocus(sender As Object, e As EventArgs) Handles TB_NIP.LostFocus
-        If TB_NIP.TextLength < 4 Then
+        If TB_NIP.TextLength < 4 And TB_NIP.TextLength > 0 Then
             MsgBox("El NIP debe ser obligatoriamente de 4 digitos")
             TB_NIP.Clear()
             TB_NIP.Focus()

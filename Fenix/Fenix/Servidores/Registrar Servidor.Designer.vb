@@ -38,7 +38,6 @@ Partial Class Registrar_Servidor
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TB_IP = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -58,6 +57,7 @@ Partial Class Registrar_Servidor
         Me.TB_Sistema = New System.Windows.Forms.ComboBox()
         Me.TB_Version = New System.Windows.Forms.ComboBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TB_IP = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -180,14 +180,6 @@ Partial Class Registrar_Servidor
         Me.Label9.Size = New System.Drawing.Size(54, 13)
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Ambiente:"
-        '
-        'TB_IP
-        '
-        Me.TB_IP.Location = New System.Drawing.Point(277, 148)
-        Me.TB_IP.MaxLength = 30
-        Me.TB_IP.Name = "TB_IP"
-        Me.TB_IP.Size = New System.Drawing.Size(100, 20)
-        Me.TB_IP.TabIndex = 8
         '
         'Label10
         '
@@ -353,11 +345,21 @@ Partial Class Registrar_Servidor
         Me.TB_Version.Size = New System.Drawing.Size(100, 21)
         Me.TB_Version.TabIndex = 10
         '
+        'TB_IP
+        '
+        Me.TB_IP.Location = New System.Drawing.Point(277, 148)
+        Me.TB_IP.Name = "TB_IP"
+        Me.TB_IP.Size = New System.Drawing.Size(100, 20)
+        Me.TB_IP.TabIndex = 31
+        Me.TB_IP.Text = "127.0.0.1"
+        Me.ToolTip1.SetToolTip(Me.TB_IP, "IP del hosts")
+        '
         'Registrar_Servidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(392, 329)
+        Me.Controls.Add(Me.TB_IP)
         Me.Controls.Add(Me.TB_Version)
         Me.Controls.Add(Me.TB_Sistema)
         Me.Controls.Add(Me.TB_Ambiente)
@@ -376,7 +378,6 @@ Partial Class Registrar_Servidor
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TB_IP)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -412,7 +413,6 @@ Partial Class Registrar_Servidor
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TB_IP As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -432,4 +432,5 @@ Partial Class Registrar_Servidor
     Friend WithEvents TB_Sistema As System.Windows.Forms.ComboBox
     Friend WithEvents TB_Version As System.Windows.Forms.ComboBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents TB_IP As System.Windows.Forms.TextBox
 End Class

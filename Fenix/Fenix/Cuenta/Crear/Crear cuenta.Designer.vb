@@ -52,6 +52,8 @@ Partial Class Crear_cuenta
         Me.TB_C_NIP = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -224,12 +226,12 @@ Partial Class Crear_cuenta
         '
         'TB_Pregunta
         '
-        Me.TB_Pregunta.Location = New System.Drawing.Point(147, 193)
+        Me.TB_Pregunta.Location = New System.Drawing.Point(160, 193)
         Me.TB_Pregunta.MaxLength = 60
         Me.TB_Pregunta.Name = "TB_Pregunta"
-        Me.TB_Pregunta.Size = New System.Drawing.Size(298, 20)
+        Me.TB_Pregunta.Size = New System.Drawing.Size(249, 20)
         Me.TB_Pregunta.TabIndex = 7
-        Me.TB_Pregunta.Text = "¿Una pregunta que solo yo sepa la respuesta?"
+        Me.TB_Pregunta.Text = "Una pregunta que solo yo sepa la respuesta"
         '
         'Label12
         '
@@ -242,7 +244,7 @@ Partial Class Crear_cuenta
         '
         'TB_Respuesta
         '
-        Me.TB_Respuesta.Location = New System.Drawing.Point(147, 219)
+        Me.TB_Respuesta.Location = New System.Drawing.Point(160, 219)
         Me.TB_Respuesta.MaxLength = 30
         Me.TB_Respuesta.Name = "TB_Respuesta"
         Me.TB_Respuesta.Size = New System.Drawing.Size(170, 20)
@@ -294,11 +296,31 @@ Partial Class Crear_cuenta
         Me.Label15.TabIndex = 28
         Me.Label15.Text = "@ prosa.com.mx"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(146, 196)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(13, 13)
+        Me.Label16.TabIndex = 29
+        Me.Label16.Text = "¿"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(412, 196)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(13, 13)
+        Me.Label17.TabIndex = 30
+        Me.Label17.Text = "?"
+        '
         'Crear_cuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(459, 303)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.TB_C_NIP)
         Me.Controls.Add(Me.Label14)
@@ -361,4 +383,6 @@ Partial Class Crear_cuenta
     Friend WithEvents TB_C_NIP As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class

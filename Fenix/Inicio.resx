@@ -927,6 +927,9 @@
   <data name="&gt;&gt;psw.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="Login.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Login.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 227</value>
   </data>
