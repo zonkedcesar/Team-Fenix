@@ -40,14 +40,18 @@ Partial Class Servidores
         Me.Remote = New System.Windows.Forms.Button()
         Me.Actualiza = New System.Windows.Forms.Button()
         Me.CB_ServerSelect = New System.Windows.Forms.ComboBox()
-        Me.B_Ok = New System.Windows.Forms.Button()
         Me.OutHostname = New System.Windows.Forms.Label()
         Me.OutIP = New System.Windows.Forms.Label()
         Me.OutSO = New System.Windows.Forms.Label()
         Me.OutAmbiente = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.T_Token = New System.Windows.Forms.Timer(Me.components)
+        Me.T_Copy = New System.Windows.Forms.Timer(Me.components)
         Me.B_Nuevo = New System.Windows.Forms.Button()
+        Me.OutUsr = New System.Windows.Forms.Label()
+        Me.VerPass = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.T_lockPass = New System.Windows.Forms.Timer(Me.components)
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -61,11 +65,14 @@ Partial Class Servidores
         '
         'OutPassword
         '
+        Me.OutPassword.Enabled = False
         Me.OutPassword.Location = New System.Drawing.Point(71, 133)
         Me.OutPassword.Name = "OutPassword"
-        Me.OutPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.OutPassword.ReadOnly = True
         Me.OutPassword.Size = New System.Drawing.Size(156, 20)
         Me.OutPassword.TabIndex = 5
+        Me.OutPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.OutPassword.UseSystemPasswordChar = True
         '
         'Label2
         '
@@ -118,7 +125,8 @@ Partial Class Servidores
         Me.ClipBoard.Location = New System.Drawing.Point(233, 131)
         Me.ClipBoard.Name = "ClipBoard"
         Me.ClipBoard.Size = New System.Drawing.Size(26, 23)
-        Me.ClipBoard.TabIndex = 12
+        Me.ClipBoard.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.ClipBoard, "10 seg. copiado en el portapapeles")
         Me.ClipBoard.UseVisualStyleBackColor = True
         '
         'Label7
@@ -136,7 +144,7 @@ Partial Class Servidores
         Me.Shell.Location = New System.Drawing.Point(174, 178)
         Me.Shell.Name = "Shell"
         Me.Shell.Size = New System.Drawing.Size(30, 23)
-        Me.Shell.TabIndex = 14
+        Me.Shell.TabIndex = 5
         Me.Shell.UseVisualStyleBackColor = True
         '
         'Back
@@ -144,16 +152,17 @@ Partial Class Servidores
         Me.Back.Location = New System.Drawing.Point(12, 227)
         Me.Back.Name = "Back"
         Me.Back.Size = New System.Drawing.Size(75, 23)
-        Me.Back.TabIndex = 15
+        Me.Back.TabIndex = 9
         Me.Back.Text = "Regreso"
         Me.Back.UseVisualStyleBackColor = True
         '
         'Mas
         '
+        Me.Mas.Enabled = False
         Me.Mas.Location = New System.Drawing.Point(12, 96)
         Me.Mas.Name = "Mas"
         Me.Mas.Size = New System.Drawing.Size(35, 23)
-        Me.Mas.TabIndex = 16
+        Me.Mas.TabIndex = 6
         Me.Mas.Text = "Más"
         Me.Mas.UseVisualStyleBackColor = True
         '
@@ -172,15 +181,16 @@ Partial Class Servidores
         Me.Remote.Location = New System.Drawing.Point(103, 178)
         Me.Remote.Name = "Remote"
         Me.Remote.Size = New System.Drawing.Size(30, 23)
-        Me.Remote.TabIndex = 18
+        Me.Remote.TabIndex = 4
         Me.Remote.UseVisualStyleBackColor = True
         '
         'Actualiza
         '
+        Me.Actualiza.Enabled = False
         Me.Actualiza.Location = New System.Drawing.Point(210, 96)
         Me.Actualiza.Name = "Actualiza"
         Me.Actualiza.Size = New System.Drawing.Size(62, 23)
-        Me.Actualiza.TabIndex = 19
+        Me.Actualiza.TabIndex = 7
         Me.Actualiza.Text = "Actualizar"
         Me.Actualiza.UseVisualStyleBackColor = True
         '
@@ -193,16 +203,7 @@ Partial Class Servidores
         Me.CB_ServerSelect.Location = New System.Drawing.Point(71, 12)
         Me.CB_ServerSelect.Name = "CB_ServerSelect"
         Me.CB_ServerSelect.Size = New System.Drawing.Size(156, 21)
-        Me.CB_ServerSelect.TabIndex = 20
-        '
-        'B_Ok
-        '
-        Me.B_Ok.Location = New System.Drawing.Point(233, 12)
-        Me.B_Ok.Name = "B_Ok"
-        Me.B_Ok.Size = New System.Drawing.Size(39, 23)
-        Me.B_Ok.TabIndex = 21
-        Me.B_Ok.Text = "OK"
-        Me.B_Ok.UseVisualStyleBackColor = True
+        Me.CB_ServerSelect.TabIndex = 1
         '
         'OutHostname
         '
@@ -236,10 +237,10 @@ Partial Class Servidores
         Me.OutAmbiente.Size = New System.Drawing.Size(0, 13)
         Me.OutAmbiente.TabIndex = 25
         '
-        'Timer1
+        'T_Token
         '
         '
-        'Timer2
+        'T_Copy
         '
         '
         'B_Nuevo
@@ -247,21 +248,55 @@ Partial Class Servidores
         Me.B_Nuevo.Location = New System.Drawing.Point(197, 227)
         Me.B_Nuevo.Name = "B_Nuevo"
         Me.B_Nuevo.Size = New System.Drawing.Size(75, 23)
-        Me.B_Nuevo.TabIndex = 26
+        Me.B_Nuevo.TabIndex = 8
         Me.B_Nuevo.Text = "Nuevo"
         Me.B_Nuevo.UseVisualStyleBackColor = True
+        '
+        'OutUsr
+        '
+        Me.OutUsr.AutoSize = True
+        Me.OutUsr.Location = New System.Drawing.Point(100, 101)
+        Me.OutUsr.Name = "OutUsr"
+        Me.OutUsr.Size = New System.Drawing.Size(0, 13)
+        Me.OutUsr.TabIndex = 27
+        '
+        'VerPass
+        '
+        Me.VerPass.BackColor = System.Drawing.SystemColors.Control
+        Me.VerPass.Image = CType(resources.GetObject("VerPass.Image"), System.Drawing.Image)
+        Me.VerPass.Location = New System.Drawing.Point(15, 152)
+        Me.VerPass.Name = "VerPass"
+        Me.VerPass.Size = New System.Drawing.Size(30, 20)
+        Me.VerPass.TabIndex = 3
+        Me.VerPass.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.ToolTip1.SetToolTip(Me.VerPass, "3 Seg. Mostrar contraseña")
+        Me.VerPass.UseVisualStyleBackColor = False
+        '
+        'T_lockPass
+        '
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(67, 101)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(32, 13)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "User:"
         '
         'Servidores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.VerPass)
+        Me.Controls.Add(Me.OutUsr)
         Me.Controls.Add(Me.B_Nuevo)
         Me.Controls.Add(Me.OutAmbiente)
         Me.Controls.Add(Me.OutSO)
         Me.Controls.Add(Me.OutIP)
         Me.Controls.Add(Me.OutHostname)
-        Me.Controls.Add(Me.B_Ok)
         Me.Controls.Add(Me.Actualiza)
         Me.Controls.Add(Me.CB_ServerSelect)
         Me.Controls.Add(Me.Remote)
@@ -301,12 +336,16 @@ Partial Class Servidores
     Friend WithEvents Remote As System.Windows.Forms.Button
     Friend WithEvents Actualiza As System.Windows.Forms.Button
     Friend WithEvents CB_ServerSelect As System.Windows.Forms.ComboBox
-    Friend WithEvents B_Ok As System.Windows.Forms.Button
     Friend WithEvents OutHostname As System.Windows.Forms.Label
     Friend WithEvents OutIP As System.Windows.Forms.Label
     Friend WithEvents OutSO As System.Windows.Forms.Label
     Friend WithEvents OutAmbiente As System.Windows.Forms.Label
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents T_Token As System.Windows.Forms.Timer
+    Friend WithEvents T_Copy As System.Windows.Forms.Timer
     Friend WithEvents B_Nuevo As System.Windows.Forms.Button
+    Friend WithEvents OutUsr As System.Windows.Forms.Label
+    Friend WithEvents VerPass As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents T_lockPass As System.Windows.Forms.Timer
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

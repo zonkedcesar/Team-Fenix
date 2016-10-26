@@ -55,9 +55,9 @@ Partial Class Registrar_Servidor
         Me.TB_Site = New System.Windows.Forms.ComboBox()
         Me.TB_Ambiente = New System.Windows.Forms.ComboBox()
         Me.TB_Sistema = New System.Windows.Forms.ComboBox()
-        Me.TB_Version = New System.Windows.Forms.ComboBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TB_IP = New System.Windows.Forms.TextBox()
+        Me.TB_Version = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -123,11 +123,11 @@ Partial Class Registrar_Servidor
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(23, 123)
+        Me.Label5.Location = New System.Drawing.Point(45, 123)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 13)
+        Me.Label5.Size = New System.Drawing.Size(60, 13)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Control Domain:"
+        Me.Label5.Text = "Hypervisor:"
         '
         'TB_ControlDomain
         '
@@ -140,11 +140,11 @@ Partial Class Registrar_Servidor
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(50, 151)
+        Me.Label6.Location = New System.Drawing.Point(45, 151)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 13)
+        Me.Label6.Size = New System.Drawing.Size(58, 13)
         Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Hostname"
+        Me.Label6.Text = "Hostname:"
         '
         'TB_Hostname
         '
@@ -157,11 +157,11 @@ Partial Class Registrar_Servidor
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(254, 151)
+        Me.Label7.Location = New System.Drawing.Point(250, 151)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(17, 13)
+        Me.Label7.Size = New System.Drawing.Size(20, 13)
         Me.Label7.TabIndex = 12
-        Me.Label7.Text = "IP"
+        Me.Label7.Text = "IP:"
         '
         'Label8
         '
@@ -321,7 +321,7 @@ Partial Class Registrar_Servidor
         '
         Me.TB_Ambiente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TB_Ambiente.FormattingEnabled = True
-        Me.TB_Ambiente.Items.AddRange(New Object() {"Desarrollo", "Producción", "Proveedor", "QA"})
+        Me.TB_Ambiente.Items.AddRange(New Object() {"Desarrollo", "Produccion", "Proveedor", "QA"})
         Me.TB_Ambiente.Location = New System.Drawing.Point(277, 119)
         Me.TB_Ambiente.Name = "TB_Ambiente"
         Me.TB_Ambiente.Size = New System.Drawing.Size(100, 21)
@@ -331,19 +331,11 @@ Partial Class Registrar_Servidor
         '
         Me.TB_Sistema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TB_Sistema.FormattingEnabled = True
-        Me.TB_Sistema.Items.AddRange(New Object() {"AIX", "RedHat", "Solaris SPARC", "Solaris X86", "Ubuntu Server", "Windows Server"})
+        Me.TB_Sistema.Items.AddRange(New Object() {"AIX", "RedHat", "Solaris", "Windows"})
         Me.TB_Sistema.Location = New System.Drawing.Point(111, 176)
         Me.TB_Sistema.Name = "TB_Sistema"
         Me.TB_Sistema.Size = New System.Drawing.Size(100, 21)
         Me.TB_Sistema.TabIndex = 9
-        '
-        'TB_Version
-        '
-        Me.TB_Version.FormattingEnabled = True
-        Me.TB_Version.Location = New System.Drawing.Point(277, 176)
-        Me.TB_Version.Name = "TB_Version"
-        Me.TB_Version.Size = New System.Drawing.Size(100, 21)
-        Me.TB_Version.TabIndex = 10
         '
         'TB_IP
         '
@@ -354,13 +346,20 @@ Partial Class Registrar_Servidor
         Me.TB_IP.Text = "127.0.0.1"
         Me.ToolTip1.SetToolTip(Me.TB_IP, "IP del hosts")
         '
+        'TB_Version
+        '
+        Me.TB_Version.Location = New System.Drawing.Point(277, 177)
+        Me.TB_Version.Name = "TB_Version"
+        Me.TB_Version.Size = New System.Drawing.Size(100, 20)
+        Me.TB_Version.TabIndex = 32
+        '
         'Registrar_Servidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(392, 329)
-        Me.Controls.Add(Me.TB_IP)
         Me.Controls.Add(Me.TB_Version)
+        Me.Controls.Add(Me.TB_IP)
         Me.Controls.Add(Me.TB_Sistema)
         Me.Controls.Add(Me.TB_Ambiente)
         Me.Controls.Add(Me.TB_Site)
@@ -430,7 +429,7 @@ Partial Class Registrar_Servidor
     Friend WithEvents TB_Site As System.Windows.Forms.ComboBox
     Friend WithEvents TB_Ambiente As System.Windows.Forms.ComboBox
     Friend WithEvents TB_Sistema As System.Windows.Forms.ComboBox
-    Friend WithEvents TB_Version As System.Windows.Forms.ComboBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents TB_IP As System.Windows.Forms.TextBox
+    Friend WithEvents TB_Version As System.Windows.Forms.TextBox
 End Class

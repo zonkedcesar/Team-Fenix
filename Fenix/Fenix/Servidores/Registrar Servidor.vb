@@ -16,10 +16,7 @@ Public Class Registrar_Servidor
         'Limpiar Contenedores
         TB_ControlDomain.Clear()
         TB_Hostname.Clear()
-        TB_Ambiente.Items.Clear()
-        TB_IP.Clear()
-        TB_Version.Items.Clear()
-        TB_Version.Items.Clear()
+        TB_Version.Clear()
         TB_Usuario.Clear()
         TB_Password.Clear()
         Return 0

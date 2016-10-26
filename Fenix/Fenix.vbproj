@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationRevision>34</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -168,6 +168,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Global\Modulos\Base64.vb" />
+    <Compile Include="Fenix\Servidores\MoreServer.Designer.vb">
+      <DependentUpon>MoreServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Servidores\MoreServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Fenix\Servidores\Registrar Servidor.Designer.vb">
       <DependentUpon>Registrar Servidor.vb</DependentUpon>
     </Compile>
@@ -441,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Cuenta\Configuracion\Configuracion.resx">
       <DependentUpon>Configuracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Servidores\MoreServer.resx">
+      <DependentUpon>MoreServer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Servidores\Registrar Servidor.resx">
       <DependentUpon>Registrar Servidor.vb</DependentUpon>
