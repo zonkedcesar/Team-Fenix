@@ -86,8 +86,8 @@ Public Class Principal
     End Sub
 
     Private Sub B_Cartera_Click(sender As Object, e As EventArgs) Handles B_Cartera.Click
-        Cartera_de_Contraseñas.Show()
-        Me.Hide()
+        'Cartera_de_Contraseñas.Show()
+        'Me.Hide()
 
     End Sub
 
@@ -113,5 +113,18 @@ Public Class Principal
 
     Private Sub PreguntaSecretaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreguntaSecretaToolStripMenuItem.Click
         ChangeQuestion.Show()
+    End Sub
+
+    Private Sub Salir_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        Inicio.Show()
+        Inicio.psw.Clear()
+    End Sub
+
+    Private Sub logoff_Click(sender As Object, e As EventArgs) Handles logoff.Click
+        Me.Hide()
+        Inicio.Show()
+        Inicio.psw.Clear()
+        Inicio.psw.Focus()
     End Sub
 End Class

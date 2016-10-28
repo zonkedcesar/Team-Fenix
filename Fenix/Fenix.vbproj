@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationRevision>36</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -62,7 +62,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>91991530E75065D2A4BB9172D19ADE91C63BA204</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>FE25C050B1B919BB259E7CC53C71EA413F648132</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Fenix_TemporaryKey.pfx</ManifestKeyFile>
@@ -78,6 +78,13 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -570,6 +577,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Fenix_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -603,6 +611,7 @@
   <ItemGroup>
     <Content Include="FenixNew.ico" />
     <Content Include="Fenix\Global\Recursos\FenixNew.ico" />
+    <None Include="Resources\power5-16px.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

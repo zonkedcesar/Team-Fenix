@@ -23,32 +23,22 @@ Partial Class Principal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Principal))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.B_Generador = New System.Windows.Forms.Button()
         Me.B_Borrado = New System.Windows.Forms.Button()
         Me.B_Cartera = New System.Windows.Forms.Button()
         Me.B_Sesion = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CambiarNIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CambiarContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreguntaSecretaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.logoff = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(85, 23)
-        Me.PictureBox1.MaximumSize = New System.Drawing.Size(137, 175)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(103, 131)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'B_Generador
         '
@@ -86,16 +76,6 @@ Partial Class Principal
         Me.B_Sesion.Text = "Lanzador de Sesiones"
         Me.B_Sesion.UseVisualStyleBackColor = True
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(165, 23)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(96, 28)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 14
-        Me.PictureBox2.TabStop = False
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuarioToolStripMenuItem})
@@ -130,11 +110,42 @@ Partial Class Principal
         Me.PreguntaSecretaToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.PreguntaSecretaToolStripMenuItem.Text = "Pregunta Secreta"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(165, 23)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(96, 28)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 14
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(85, 23)
+        Me.PictureBox1.MaximumSize = New System.Drawing.Size(137, 175)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(103, 131)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'logoff
+        '
+        Me.logoff.Image = CType(resources.GetObject("logoff.Image"), System.Drawing.Image)
+        Me.logoff.Location = New System.Drawing.Point(24, 28)
+        Me.logoff.Name = "logoff"
+        Me.logoff.Size = New System.Drawing.Size(23, 23)
+        Me.logoff.TabIndex = 16
+        Me.logoff.UseVisualStyleBackColor = True
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.Controls.Add(Me.logoff)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.B_Sesion)
         Me.Controls.Add(Me.B_Cartera)
@@ -147,10 +158,10 @@ Partial Class Principal
         Me.MaximizeBox = False
         Me.Name = "Principal"
         Me.Text = "Menu"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -166,4 +177,5 @@ Partial Class Principal
     Friend WithEvents CambiarNIPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CambiarContraseñaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PreguntaSecretaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents logoff As System.Windows.Forms.Button
 End Class

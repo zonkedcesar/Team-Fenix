@@ -48,21 +48,20 @@ C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Fenix\Fenix\obj\Debu
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Fenix\Fenix\obj\Debug\Fenix.Borrado_Seguro.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Fenix\Fenix\obj\Debug\Fenix.SecureRemove.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Fenix\Fenix\obj\Debug\Fenix.ConfirmarSRM.resources
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.exe.config
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.exe.manifest
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.application
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.exe
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.pdb
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.xml
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Borrado_Seguro.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ConfirmarSRM.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.SecureRemove.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.changeNip.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ChangePassword.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ChangeQuestion.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ConfirmacionTotal.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Confirmar_Operacion.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ConfirmarOperacionNIP.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Configuracion.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.MoreServer.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Registrar_Servidor.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Almacenar_Contraseña.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Cartera_de_Contraseñas.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Pruebas.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.SaveAccount.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ValidateAccount.resources
@@ -99,13 +98,14 @@ C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Registro_Site.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Servidores.resources
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.vbproj.GenerateResource.Cache
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.exe.manifest
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.application
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.exe
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.xml
 C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.pdb
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.ConfirmacionTotal.resources
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Registrar_Servidor.resources
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Almacenar_Contraseña.resources
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.Cartera_de_Contraseñas.resources
-C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.MoreServer.resources
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.exe.config
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.exe.manifest
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.application
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.exe
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.pdb
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\bin\Debug\Fenix.xml
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.exe.manifest
+C:\Users\Zonked Cesar\Documents\Visual Studio 2013\Projects\Team Fenix\Fenix\obj\Debug\Fenix.application

@@ -19,8 +19,11 @@ Public Class Registrar_Servidor
         TB_Version.Clear()
         TB_Usuario.Clear()
         TB_Password.Clear()
+        TB_IP.Text = "127.0.0.1"
         Return 0
     End Function
+
+
 
     Private Function CargarXML()
         Dim UsuarioData As String = "nobody"
@@ -206,25 +209,30 @@ Public Class Registrar_Servidor
 
 
     Private Sub TB_IP_LostFocus(sender As Object, e As EventArgs) Handles TB_IP.LostFocus
-        Dim IP() As String = TB_IP.Text.Split(".")
-        Dim Test As Integer
-        If IP.Length = 4 Then 'If 3 "."
-            Dim Proper As Boolean = True
-            For I As Integer = 0 To 3
-                Test = Integer.Parse(IP(I)) 'Parse the string for an integer, if its not return -1
-                If Test < 0 Or Test > 255 Then 'If not between 0-255 then the ip is not a proper format
-                    MsgBox("IP Invalida no tiene un formato apropiado")
-                    TB_IP.Focus()
-                    TB_IP.SelectionStart = TB_IP.Text.Length
-                    TB_IP.Clear()
-                    Return
-                End If
-            Next
-        Else
-            MsgBox("IP Address No valida, debe tener un Formato XXX.XXX.XXX.XXX ")
-            TB_IP.Focus()
-            TB_IP.SelectionStart = TB_IP.Text.Length
-            TB_IP.Clear()
+        If TB_IP.TextLength > 0 Then ' Evita bucle infinito por estar vacio
+            Dim IP() As String = TB_IP.Text.Split(".")
+            Dim Test As Integer
+            If IP.Length = 4 Then 'If 3 "."
+                Dim Proper As Boolean = True
+                For I As Integer = 0 To 3
+                    Test = Integer.Parse(IP(I)) 'Parse the string for an integer, if its not return -1
+                    If Test < 0 Or Test > 255 Then 'If not between 0-255 then the ip is not a proper format
+                        MsgBox("IP Invalida no tiene un formato apropiado")
+                        TB_IP.Focus()
+                        TB_IP.SelectionStart = TB_IP.Text.Length
+                        TB_IP.Clear()
+                        Return
+                    End If
+                Next
+            Else
+                MsgBox("IP Address No valida, debe tener un Formato XXX.XXX.XXX.XXX ")
+                TB_IP.Focus()
+                TB_IP.SelectionStart = TB_IP.Text.Length
+                TB_IP.Clear()
+            End If
+            If TB_IP.TextLength > 0 Then
+                RevisaExiste()
+            End If
         End If
     End Sub
 
@@ -239,4 +247,74 @@ Public Class Registrar_Servidor
         End If
         e.Handled = True
     End Sub
+
+    Private Sub TB_Hostname_LostFocus(sender As Object, e As EventArgs) Handles TB_Hostname.LostFocus
+        If TB_Hostname.TextLength > 0 Then
+            RevisaExiste()
+        End If
+    End Sub
+
+    Private Function RevisaExiste()
+        Dim UsuarioData As String = "nobody"
+        Dim WD As String = "nobody"
+        Dim WC As String = "nobody"
+        Dim SD As String = "nobody"
+        Dim SC As String = "nobody"
+        Dim Ruta As String
+        Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + Inicio.UsuarioConect + ".Data"
+
+        'Validacion de archivos necesarios
+        If My.Computer.FileSystem.FileExists(Ruta) Then
+            Try
+                'Declaracion de variables de entorno
+                Dim Datos As XmlDocument
+                Dim Settings As XmlNodeList
+                Dim Variable, Variable2, Account As XmlNode
+                'Manipulacion de documentos XML con carga
+                Datos = New XmlDocument
+                Datos.Load(Ruta)
+                'Lectura de NODOS para acceder al panel principal
+                Settings = Datos.SelectNodes("/DataFenix/Settings")
+                For Each Account In Settings
+                    UsuarioData = Account.ChildNodes(0).InnerText
+                    WD = Account.ChildNodes(1).InnerText
+                    WC = Account.ChildNodes(2).InnerText
+                    SD = Account.ChildNodes(3).InnerText
+                    SC = Account.ChildNodes(4).InnerText
+                Next
+
+                If UsuarioData = LCase(Encode64(SHA512(Inicio.UsuarioConect))) Then
+                    If SC >= 1 Then
+                        For Lista As Integer = 0 To SC - 1
+                            Variable = Datos.SelectSingleNode("/DataFenix/Servers/Servidor[@id='" & Lista & "']/Hostname")
+                            Variable2 = Datos.SelectSingleNode("/DataFenix/Servers/Servidor[@id='" & Lista & "']/IP")
+                            If LCase(Decrypt(Variable.InnerText, Inicio.psw.Text, Inicio.usr.Text)) = LCase(TB_Hostname.Text) Then
+                                MsgBox("Ya hay un registro actualmente con este HOSTNAME")
+                                TB_Hostname.Clear()
+                                TB_Hostname.Focus()
+                                Lista = SC - 1
+                            End If
+                            If Decrypt(Variable2.InnerText, Inicio.psw.Text, Inicio.usr.Text) = TB_IP.Text Then
+                                MsgBox("Ya hay un registro actualmente con esta IP")
+                                TB_IP.Clear()
+                                TB_IP.Focus()
+                                Lista = SC - 1
+                            End If
+                            'MsgBox("Variable 1: " & LCase(Decrypt(Variable.InnerText, Inicio.psw.Text, Inicio.usr.Text)) & "=> " & LCase(TB_Hostname.Text))
+                            'MsgBox("Variable 2:" & Decrypt(Variable2.InnerText, Inicio.psw.Text, Inicio.usr.Text) & "=> " & TB_IP.Text)
+                        Next
+                    End If
+                ElseIf UsuarioData = "nobody" Or WD = "nobody" Or WC = "nobody" Or SD = "nobody" Or SC = "nobody" Then
+                    MsgBox("Error: la base de datos " & Inicio.UsuarioConect & ".data - Esta corrupta por favor de contactar al administrador")
+                Else
+                    MsgBox("Vaya usted esta intentando vulnerar este sistema, sin embargo juega con fuego por favor reconsidera tu accion")
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Error Inesperado por favor de contactar al administrador - Out: " & ex.Message)
+            End Try
+        Else
+            MsgBox("Error: No es posible leer la base de datos origen")
+        End If
+        Return 0
+    End Function
 End Class

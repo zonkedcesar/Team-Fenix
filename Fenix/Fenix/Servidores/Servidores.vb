@@ -54,11 +54,8 @@ Public Class Servidores
     Private Sub Shell_Click(sender As Object, e As EventArgs) Handles Shell.Click
         Dim comando As String
         If CB_ServerSelect.Text.Length > 0 And OutPassword.Text.Length > 0 Then
-
             comando = "-ssh " + OutUsr.Text + "@" + OutIP.Text + " -pw " + OutPassword.Text
-
             System.Diagnostics.Process.Start("C:\Fenix\putty.exe", comando)
-
         Else
             MsgBox("Por favor seleccione un servidor primero")
         End If
@@ -220,6 +217,7 @@ Public Class Servidores
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles B_Nuevo.Click
         Registrar_Servidor.Show()
+        CB_ServerSelect.SelectedIndex = -1
     End Sub
 
     Public Function ListandoHostnames()
@@ -267,7 +265,7 @@ Public Class Servidores
                         Next
                         'CB_MaxLong.Items.Add("-")
                     Else
-                        MsgBox("No tiene ningun servidor registrado - Por favor de registrar al menos 1 servidor")
+                        MsgBox("No tiene ningun servidor registrado - Por favor de registrar al menos un servidor")
                         B_Nuevo.Focus()
                     End If
 
@@ -288,17 +286,17 @@ Public Class Servidores
 
     Private Sub Servidores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListandoHostnames()
-        
     End Sub
-
-
 
     Private Sub CB_ServerSelect_SelectedValueChanged(sender As Object, e As EventArgs) Handles CB_ServerSelect.SelectedValueChanged
         'MsgBox(" other Enter?")
         OutPassword.UseSystemPasswordChar = True
+
         FastInformation()
         Mas.Enabled = True
         Actualiza.Enabled = True
+
+        'MsgBox(CB_ServerSelect.Text)
     End Sub
 
     Private Sub VerPass_Click(sender As Object, e As EventArgs) Handles VerPass.Click
