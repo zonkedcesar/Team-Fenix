@@ -1,3 +1,0 @@
-1.- Validar minimo una contraseña de 6 digitos
-2.- Consideracion de NIP o Autenticacion LDAP
-3.- Validar 4 digitos minimo en NIP

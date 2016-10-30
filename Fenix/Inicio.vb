@@ -171,4 +171,8 @@ Public Class Inicio
     Private Sub RecuperarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecuperarToolStripMenuItem.Click
         Recuperar_Contraseña.Show()
     End Sub
+
+    Private Sub SalirToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Me.Close()
+    End Sub
 End Class

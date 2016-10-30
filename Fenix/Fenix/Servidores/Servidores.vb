@@ -4,17 +4,12 @@ Public Class Servidores
     Dim Usedominio As Boolean
     Dim zombie, domainServer, SystemServer As String
     Dim TimeLeft As Integer
-    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
-    End Sub
-
+    Public puntero As Integer
+    
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles Back.Click
         Me.Hide()
         Principal.Show()
+        LimpiaPresentacion()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs)
@@ -67,13 +62,20 @@ Public Class Servidores
     End Sub
 
     
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Mas.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles B_Mas.Click
         MoreServer.Show()
         MoreServer.B_Close.Focus()
+        UpdateServer.Hide()
     End Sub
 
-    Private Sub Actualiza_Click(sender As Object, e As EventArgs) Handles Actualiza.Click
-
+    Private Sub Actualiza_Click(sender As Object, e As EventArgs) Handles B_Actualiza.Click
+        UpdateServer.TB_U_Site.SelectedValue = MoreServer.OutSite.Text
+        UpdateServer.TB_U_Rack.Text = MoreServer.OutRack.Text
+        UpdateServer.TB_U_Hostname.Text = OutHostname.Text
+        UpdateServer.TB_U_IP.Text = OutIP.Text
+        UpdateServer.TB_U_Usr.Text = OutUsr.Text
+        UpdateServer.Show()
+        MoreServer.Hide()
     End Sub
 
     Private Sub ClipBoard_Click(sender As Object, e As EventArgs) Handles ClipBoard.Click
@@ -86,10 +88,6 @@ Public Class Servidores
             T_Copy.Interval = 1000
             TimeLeft = 10
         End If
-    End Sub
-
-    Private Sub CB_ServerSelect_Click(sender As Object, e As EventArgs) Handles CB_ServerSelect.Click
-
     End Sub
 
     Private Function FastInformation()
@@ -123,7 +121,7 @@ Public Class Servidores
 
                 If UsuarioData = LCase(Encode64(SHA512(Inicio.UsuarioConect))) Then
                     'Obtener datos del servidor por ID ITEM
-                    Dim puntero As Integer
+
 
                     'MsgBox("Total de items " & CB_ServerSelect.Items.Count & "  Total de Registros " & SC)
 
@@ -217,8 +215,23 @@ Public Class Servidores
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles B_Nuevo.Click
         Registrar_Servidor.Show()
-        CB_ServerSelect.SelectedIndex = -1
+        LimpiaPresentacion()
     End Sub
+
+    Friend Function LimpiaPresentacion()
+        CB_ServerSelect.SelectedIndex = -1
+        B_Mas.Enabled = False
+        B_Actualiza.Enabled = False
+
+        OutAmbiente.Text = ""
+        OutHostname.Text = ""
+        OutIP.Text = ""
+        OutPassword.Text = ""
+        OutSO.Text = ""
+        OutUsr.Text = ""
+
+        Return 0
+    End Function
 
     Public Function ListandoHostnames()
         CB_ServerSelect.Items.Clear()
@@ -293,8 +306,11 @@ Public Class Servidores
         OutPassword.UseSystemPasswordChar = True
 
         FastInformation()
-        Mas.Enabled = True
-        Actualiza.Enabled = True
+        B_Mas.Enabled = True
+        B_Actualiza.Enabled = True
+
+        MoreServer.Hide()
+        UpdateServer.Hide()
 
         'MsgBox(CB_ServerSelect.Text)
     End Sub

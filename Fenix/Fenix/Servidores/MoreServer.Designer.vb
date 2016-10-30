@@ -40,6 +40,7 @@ Partial Class MoreServer
         Me.Label7 = New System.Windows.Forms.Label()
         Me.OutVersion = New System.Windows.Forms.Label()
         Me.B_Close = New System.Windows.Forms.Button()
+        Me.B_Baja = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'MoreHostname
@@ -192,11 +193,21 @@ Partial Class MoreServer
         Me.B_Close.Text = "Cerrar"
         Me.B_Close.UseVisualStyleBackColor = True
         '
+        'B_Baja
+        '
+        Me.B_Baja.Location = New System.Drawing.Point(12, 224)
+        Me.B_Baja.Name = "B_Baja"
+        Me.B_Baja.Size = New System.Drawing.Size(75, 23)
+        Me.B_Baja.TabIndex = 17
+        Me.B_Baja.Text = "Eliminar"
+        Me.B_Baja.UseVisualStyleBackColor = True
+        '
         'MoreServer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 259)
+        Me.Controls.Add(Me.B_Baja)
         Me.Controls.Add(Me.B_Close)
         Me.Controls.Add(Me.OutVersion)
         Me.Controls.Add(Me.Label7)
@@ -238,4 +249,5 @@ Partial Class MoreServer
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents OutVersion As System.Windows.Forms.Label
     Friend WithEvents B_Close As System.Windows.Forms.Button
+    Friend WithEvents B_Baja As System.Windows.Forms.Button
 End Class

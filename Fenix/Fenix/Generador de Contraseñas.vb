@@ -262,6 +262,7 @@ Public Class Generador_de_Contraseñas
         Me.Hide()
         List_Pass.Hide()
         Principal.Show()
+        LimpiarGen()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles VerPass.Click
@@ -328,8 +329,7 @@ Public Class Generador_de_Contraseñas
             MsgBox("Seleccione una minima longitud")
         End If
     End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Clear.Click
+    Private Function LimpiarGen()
         CB_MaxLong.SelectedIndex = -1
         CB_MinLong.SelectedIndex = -1
         Mayusculas.Checked = False
@@ -340,6 +340,10 @@ Public Class Generador_de_Contraseñas
         ProgressBar1.Value = 0
         LevelPass.Text = "Dificultad: ?"
         GenPass.PasswordChar = "*"
+        Return 0
+    End Function
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Clear.Click
+        LimpiarGen()
     End Sub
 
 

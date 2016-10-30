@@ -14,22 +14,22 @@ Public Class ConfirmarSRM
         Next x
         If SecureRemove.CB_SRM.SelectedIndex = 1 Then
             comando = " -" + "vfv" + "s" + " " + Ruta
-            Process.Start("C:\Fenix\srm.exe", comando)
+            Process.Start("C:\Fenix\delete.exe", comando)
         ElseIf SecureRemove.CB_SRM.SelectedIndex = 2 Then
             comando = " -" + "vfv" + "P" + " " + Ruta
-            Process.Start("C:\Fenix\srm.exe", comando)
+            Process.Start("C:\Fenix\delete.exe", comando)
         ElseIf SecureRemove.CB_SRM.SelectedIndex = 3 Then
             comando = " -" + "vfv" + "E" + " " + Ruta
-            Process.Start("C:\Fenix\srm.exe", comando)
+            Process.Start("C:\Fenix\delete.exe", comando)
         ElseIf SecureRemove.CB_SRM.SelectedIndex = 4 Then
             comando = " -" + "vfv" + "D" + " " + Ruta
-            Process.Start("C:\Fenix\srm.exe", comando)
+            Process.Start("C:\Fenix\delete.exe", comando)
         ElseIf SecureRemove.CB_SRM.SelectedIndex = 5 Then
             comando = " -" + "vfv" + "C" + " " + Ruta
-            Process.Start("C:\Fenix\srm.exe", comando)
+            Process.Start("C:\Fenix\delete.exe", comando)
         ElseIf SecureRemove.CB_SRM.SelectedIndex = 6 Then
             comando = " -" + "vfv" + "G" + " " + Ruta
-            Process.Start("C:\Fenix\srm.exe", comando)
+            Process.Start("C:\Fenix\delete.exe", comando)
         End If
 
         OutputSRM.Items.Clear()

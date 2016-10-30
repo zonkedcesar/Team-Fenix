@@ -23,8 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>36</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -114,12 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Fenix\Borrado Seguro\Borrado Seguro.Designer.vb">
-      <DependentUpon>Borrado Seguro.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Fenix\Borrado Seguro\Borrado Seguro.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Fenix\Borrado Seguro\ConfirmarSRM.Designer.vb">
       <DependentUpon>ConfirmarSRM.vb</DependentUpon>
     </Compile>
@@ -185,6 +179,12 @@
       <DependentUpon>Registrar Servidor.vb</DependentUpon>
     </Compile>
     <Compile Include="Fenix\Servidores\Registrar Servidor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fenix\Servidores\UpdateServer.Designer.vb">
+      <DependentUpon>UpdateServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fenix\Servidores\UpdateServer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Wallet\Almacenar Contraseña.Designer.vb">
@@ -425,9 +425,6 @@
     <Compile Include="Fenix\Global\Modulos\SQL.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Fenix\Borrado Seguro\Borrado Seguro.resx">
-      <DependentUpon>Borrado Seguro.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Borrado Seguro\ConfirmarSRM.resx">
       <DependentUpon>ConfirmarSRM.vb</DependentUpon>
     </EmbeddedResource>
@@ -460,6 +457,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Servidores\Registrar Servidor.resx">
       <DependentUpon>Registrar Servidor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fenix\Servidores\UpdateServer.resx">
+      <DependentUpon>UpdateServer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Wallet\Almacenar Contraseña.resx">
       <DependentUpon>Almacenar Contraseña.vb</DependentUpon>
@@ -611,7 +611,6 @@
   <ItemGroup>
     <Content Include="FenixNew.ico" />
     <Content Include="Fenix\Global\Recursos\FenixNew.ico" />
-    <None Include="Resources\power5-16px.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

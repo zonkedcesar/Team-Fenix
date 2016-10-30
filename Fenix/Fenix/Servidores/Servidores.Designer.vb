@@ -35,10 +35,10 @@ Partial Class Servidores
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Shell = New System.Windows.Forms.Button()
         Me.Back = New System.Windows.Forms.Button()
-        Me.Mas = New System.Windows.Forms.Button()
+        Me.B_Mas = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Remote = New System.Windows.Forms.Button()
-        Me.Actualiza = New System.Windows.Forms.Button()
+        Me.B_Actualiza = New System.Windows.Forms.Button()
         Me.CB_ServerSelect = New System.Windows.Forms.ComboBox()
         Me.OutHostname = New System.Windows.Forms.Label()
         Me.OutIP = New System.Windows.Forms.Label()
@@ -156,15 +156,15 @@ Partial Class Servidores
         Me.Back.Text = "Regreso"
         Me.Back.UseVisualStyleBackColor = True
         '
-        'Mas
+        'B_Mas
         '
-        Me.Mas.Enabled = False
-        Me.Mas.Location = New System.Drawing.Point(12, 96)
-        Me.Mas.Name = "Mas"
-        Me.Mas.Size = New System.Drawing.Size(35, 23)
-        Me.Mas.TabIndex = 6
-        Me.Mas.Text = "Más"
-        Me.Mas.UseVisualStyleBackColor = True
+        Me.B_Mas.Enabled = False
+        Me.B_Mas.Location = New System.Drawing.Point(12, 96)
+        Me.B_Mas.Name = "B_Mas"
+        Me.B_Mas.Size = New System.Drawing.Size(35, 23)
+        Me.B_Mas.TabIndex = 6
+        Me.B_Mas.Text = "Más"
+        Me.B_Mas.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -184,15 +184,15 @@ Partial Class Servidores
         Me.Remote.TabIndex = 4
         Me.Remote.UseVisualStyleBackColor = True
         '
-        'Actualiza
+        'B_Actualiza
         '
-        Me.Actualiza.Enabled = False
-        Me.Actualiza.Location = New System.Drawing.Point(210, 96)
-        Me.Actualiza.Name = "Actualiza"
-        Me.Actualiza.Size = New System.Drawing.Size(62, 23)
-        Me.Actualiza.TabIndex = 7
-        Me.Actualiza.Text = "Actualizar"
-        Me.Actualiza.UseVisualStyleBackColor = True
+        Me.B_Actualiza.Enabled = False
+        Me.B_Actualiza.Location = New System.Drawing.Point(210, 96)
+        Me.B_Actualiza.Name = "B_Actualiza"
+        Me.B_Actualiza.Size = New System.Drawing.Size(62, 23)
+        Me.B_Actualiza.TabIndex = 7
+        Me.B_Actualiza.Text = "Actualizar"
+        Me.B_Actualiza.UseVisualStyleBackColor = True
         '
         'CB_ServerSelect
         '
@@ -297,11 +297,11 @@ Partial Class Servidores
         Me.Controls.Add(Me.OutSO)
         Me.Controls.Add(Me.OutIP)
         Me.Controls.Add(Me.OutHostname)
-        Me.Controls.Add(Me.Actualiza)
+        Me.Controls.Add(Me.B_Actualiza)
         Me.Controls.Add(Me.CB_ServerSelect)
         Me.Controls.Add(Me.Remote)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Mas)
+        Me.Controls.Add(Me.B_Mas)
         Me.Controls.Add(Me.Back)
         Me.Controls.Add(Me.Shell)
         Me.Controls.Add(Me.Label7)
@@ -331,10 +331,10 @@ Partial Class Servidores
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Shell As System.Windows.Forms.Button
     Friend WithEvents Back As System.Windows.Forms.Button
-    Friend WithEvents Mas As System.Windows.Forms.Button
+    Friend WithEvents B_Mas As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Remote As System.Windows.Forms.Button
-    Friend WithEvents Actualiza As System.Windows.Forms.Button
+    Friend WithEvents B_Actualiza As System.Windows.Forms.Button
     Friend WithEvents CB_ServerSelect As System.Windows.Forms.ComboBox
     Friend WithEvents OutHostname As System.Windows.Forms.Label
     Friend WithEvents OutIP As System.Windows.Forms.Label

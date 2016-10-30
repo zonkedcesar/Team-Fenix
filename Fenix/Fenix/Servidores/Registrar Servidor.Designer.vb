@@ -304,7 +304,7 @@ Partial Class Registrar_Servidor
         Me.VerPass.Name = "VerPass"
         Me.VerPass.Size = New System.Drawing.Size(30, 20)
         Me.VerPass.TabIndex = 30
-        Me.VerPass.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.VerPass.Text = "cc"
         Me.VerPass.UseVisualStyleBackColor = False
         '
         'TB_Site

@@ -122,9 +122,15 @@ Public Class Principal
     End Sub
 
     Private Sub logoff_Click(sender As Object, e As EventArgs) Handles logoff.Click
-        Me.Hide()
+        Me.Close()
         Inicio.Show()
         Inicio.psw.Clear()
         Inicio.psw.Focus()
     End Sub
+    Private Function Liberando()
+        Servidores.Close()
+        Generador_de_Contraseñas.Close()
+        SecureRemove.Close()
+        Return 0
+    End Function
 End Class

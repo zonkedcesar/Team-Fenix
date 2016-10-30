@@ -50,22 +50,22 @@ Public Class SecureRemove
 
             If CB_SRM.SelectedIndex = 1 Then
                 comando = " -" + "vfvr" + "s" + " " + "C:\$Recycle.Bin\*"
-                Process.Start("C:\Fenix\srm.exe", comando)
+                Process.Start("C:\Fenix\delete.exe", comando)
             ElseIf CB_SRM.SelectedIndex = 2 Then
                 comando = " -" + "vfvr" + "P" + " " + "C:\$Recycle.Bin\*"
-                Process.Start("C:\Fenix\srm.exe", comando)
+                Process.Start("C:\Fenix\delete.exe", comando)
             ElseIf CB_SRM.SelectedIndex = 3 Then
                 comando = " -" + "vfvr" + "E" + " " + "C:\$Recycle.Bin\*"
-                Process.Start("C:\Fenix\srm.exe", comando)
+                Process.Start("C:\Fenix\delete.exe", comando)
             ElseIf CB_SRM.SelectedIndex = 4 Then
                 comando = " -" + "vfvr" + "D" + " " + "C:\$Recycle.Bin\*"
-                Process.Start("C:\Fenix\srm.exe", comando)
+                Process.Start("C:\Fenix\delete.exe", comando)
             ElseIf CB_SRM.SelectedIndex = 5 Then
                 comando = " -" + "vfvr" + "C" + " " + "C:\$Recycle.Bin\*"
-                Process.Start("C:\Fenix\srm.exe", comando)
+                Process.Start("C:\Fenix\delete.exe", comando)
             ElseIf CB_SRM.SelectedIndex = 6 Then
                 comando = " -" + "vfvr" + "G" + " " + "C:\$Recycle.Bin\*"
-                Process.Start("C:\Fenix\srm.exe", comando)
+                Process.Start("C:\Fenix\delete.exe", comando)
             End If
             Process.Start("shell:RecycleBinFolder")
         End If
@@ -82,22 +82,22 @@ Public Class SecureRemove
 
                 If CB_SRM.SelectedIndex = 1 Then
                     comando = " -" + "vfvr" + "s" + " " + """" + PATH + """"
-                    Process.Start("C:\Fenix\srm.exe", comando)
+                    Process.Start("C:\Fenix\delete.exe", comando)
                 ElseIf CB_SRM.SelectedIndex = 2 Then
                     comando = " -" + "vfvr" + "P" + " " + """" + PATH + """"
-                    Process.Start("C:\Fenix\srm.exe", comando)
+                    Process.Start("C:\Fenix\delete.exe", comando)
                 ElseIf CB_SRM.SelectedIndex = 3 Then
                     comando = " -" + "vfvr" + "E" + " " + """" + PATH + """"
-                    Process.Start("C:\Fenix\srm.exe", comando)
+                    Process.Start("C:\Fenix\delete.exe", comando)
                 ElseIf CB_SRM.SelectedIndex = 4 Then
                     comando = " -" + "vfvr" + "D" + " " + """" + PATH + """"
-                    Process.Start("C:\Fenix\srm.exe", comando)
+                    Process.Start("C:\Fenix\delete.exe", comando)
                 ElseIf CB_SRM.SelectedIndex = 5 Then
                     comando = " -" + "vfvr" + "C" + " " + """" + PATH + """"
-                    Process.Start("C:\Fenix\srm.exe", comando)
+                    Process.Start("C:\Fenix\delete.exe", comando)
                 ElseIf CB_SRM.SelectedIndex = 6 Then
                     comando = " -" + "vfvr" + "G" + " " + """" + PATH + """"
-                    Process.Start("C:\Fenix\srm.exe", comando)
+                    Process.Start("C:\Fenix\delete.exe", comando)
                 End If
             End If
         End If
