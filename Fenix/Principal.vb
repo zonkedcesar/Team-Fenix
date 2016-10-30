@@ -74,32 +74,25 @@ Public Class Principal
 
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs)
-        Catalogo.Show()
-        Me.Hide()
-
-    End Sub
-
     Private Sub B_Generador_Click(sender As Object, e As EventArgs) Handles B_Generador.Click
         Generador_de_Contraseñas.Show()
-        Me.Hide()
+
     End Sub
 
     Private Sub B_Cartera_Click(sender As Object, e As EventArgs) Handles B_Cartera.Click
-        'Cartera_de_Contraseñas.Show()
+        Wallet.Show()
         'Me.Hide()
-
     End Sub
 
     Private Sub B_Sesion_Click(sender As Object, e As EventArgs) Handles B_Sesion.Click
         Servidores.Show()
-        Me.Hide()
+
 
     End Sub
 
     Private Sub B_Borrado_Click(sender As Object, e As EventArgs) Handles B_Borrado.Click
         SecureRemove.Show()
-        Me.Hide()
+
     End Sub
 
     

@@ -78,6 +78,8 @@ Public Class Inicio
 
                     If Username.InnerText <> LCase(SHA512(usr.Text + psw.Text)) And Password.InnerText <> LCase(SHA512(psw.Text + usr.Text)) Then
                         MsgBox("Usuario y/o Contraseña Incorrecta")
+                        psw.Clear()
+                        psw.Focus()
                     Else
                         'Establecer Variable de entorno para ejecucion interna
                         UsuarioConect = usr.Text
@@ -85,7 +87,12 @@ Public Class Inicio
                         Me.Hide()
                     End If
                 Catch ex As Exception
-                    MessageBox.Show("Error Inesperado " & ex.Message)
+                    'MessageBox.Show("Error Inesperado " & ex.Message)
+                    MsgBox("No existe cuenta en la carpeta predeterminada")
+                    MsgBox("Intente Importando su cuenta o Creando una cuenta en este equipo")
+                    psw.Clear()
+                    psw.Focus()
+
                 End Try
             End If
         Else
@@ -122,6 +129,8 @@ Public Class Inicio
 
                         If Username.InnerText <> LCase(SHA512(usr.Text + psw.Text)) And Password.InnerText <> LCase(SHA512(psw.Text + usr.Text)) Then
                             MsgBox("Usuario y/o Contraseña Incorrecta")
+                            psw.Clear()
+                            psw.Focus()
                         Else
                             'Establecer Variable de entorno para ejecucion interna
                             UsuarioConect = usr.Text
@@ -129,7 +138,12 @@ Public Class Inicio
                             Me.Hide()
                         End If
                     Catch ex As Exception
-                        MessageBox.Show("Error Inesperado " & ex.Message)
+                        'MessageBox.Show("Error Inesperado " & ex.Message)
+                        MsgBox("No existe cuenta en la carpeta predeterminada")
+                        MsgBox("Intente Importando su cuenta o Creando una cuenta en este equipo")
+                        psw.Clear()
+                        psw.Focus()
+
                     End Try
                 End If
             Else

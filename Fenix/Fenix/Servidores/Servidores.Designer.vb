@@ -52,6 +52,7 @@ Partial Class Servidores
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.T_lockPass = New System.Windows.Forms.Timer(Me.components)
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Out_Time_Life = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -284,11 +285,24 @@ Partial Class Servidores
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "User:"
         '
+        'Out_Time_Life
+        '
+        Me.Out_Time_Life.AutoSize = True
+        Me.Out_Time_Life.Location = New System.Drawing.Point(41, 207)
+        Me.Out_Time_Life.MaximumSize = New System.Drawing.Size(200, 13)
+        Me.Out_Time_Life.MinimumSize = New System.Drawing.Size(200, 13)
+        Me.Out_Time_Life.Name = "Out_Time_Life"
+        Me.Out_Time_Life.Size = New System.Drawing.Size(200, 13)
+        Me.Out_Time_Life.TabIndex = 29
+        Me.Out_Time_Life.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Out_Time_Life.Visible = False
+        '
         'Servidores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.Controls.Add(Me.Out_Time_Life)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.VerPass)
         Me.Controls.Add(Me.OutUsr)
@@ -348,4 +362,5 @@ Partial Class Servidores
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents T_lockPass As System.Windows.Forms.Timer
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Out_Time_Life As System.Windows.Forms.Label
 End Class

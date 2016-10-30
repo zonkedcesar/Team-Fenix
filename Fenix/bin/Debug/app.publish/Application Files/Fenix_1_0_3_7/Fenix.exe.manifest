@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Fenix.exe" version="1.0.3.7" publicKeyToken="ab7efbce08a37600" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Fenix\Global\Recursos\FenixNew.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Fenix" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Fenix.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Opciones del manifiesto de Control de cuentas de usuario
+             Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+             nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            La especificación del nodo requestedExecutionLevel deshabilitará la virtualización de archivos y del Registro.
+            Si desea usar la virtualización de archivos y del Registro para la compatibilidad 
+            con versiones anteriores, elimine el nodo requestedExecutionLevel.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fenix.exe" size="4924376">
+      <assemblyIdentity name="Fenix" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>YJwecCoIvLbvFR9POhFGaxaYKBM8z4iZ9rAjO0eAsYM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Fenix.exe.config" size="1451">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>460dhl/W4LF9l8KSqJPWQrCRDa6NFGgdHZhF4IXAr88=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Fenix\Global\Recursos\FenixNew.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LE81LRaLI2Euei38k8ieuxssemrKh+GIIcefozfDLFQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="FenixNew.ico" size="22486">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JAU+J+u0JHgxouapRJ3s0UEbTKWamHWkTvexVyPbNvI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <fileAssociation extension=".znk" description="Fenix Keys" progid="1" defaultIcon="FenixNew.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Lista de todas las versiones de Windows con las que esta aplicación está diseñada para funcionar. 
+      Windows seleccionará automáticamente el entorno de mayor compatibilidad.-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows Vista, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows 7, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows 8, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows 8.1, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=android\Zonked Cesar" issuerKeyHash="c5b190df26e77925748a4fe91dc42d4c9f9c35ec" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>UFj5/f9lvKZa/txrhPsnW7uvgta1ZkPYT+iRvNu4Hfk=</DigestValue></Reference></SignedInfo><SignatureValue>PoCP4gXYKiHpw/YLJJHsLZ6GcTfwRUN6UrQcePg2bLpU9qs+ZoO907EmmDM4ybDuGeUDRAQtsq3m7fKS3JEji6Y4vD5UjLml4visrBPYmhfNtmGbg4niKR/cjGrpuc00xSyeL3DKsc9qhQKi25dHztOXNKKZ9qQBGSN6ePpqjXs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pqBmjxiJBrr66F7p+LsQ5Mss18W87l+isBASekOJ8mZZnF8166T0Qo84fuFSqRykz5Cgt3Xq5CVP/RaLZl54xBRdqbPnnL8Vs/j5LrPehUWrk/3pBb5UcKm/VrFfitJhBkXK8Piq/XxtrkaFPvlivPlUM87YIY2azZMfH0Y+x10=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f91db8dbbc91e84fd84366b5d682afbb5b27fb846bdcfe5aa6bc65fffdf95850" Description="" Url=""><as:assemblyIdentity name="Fenix.exe" version="1.0.3.7" publicKeyToken="ab7efbce08a37600" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=android\Zonked Cesar</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KmqSBfl6fBF1buXCJ9r/eMPZs8jNN8l/MK7RtNIW9c8=</DigestValue></Reference></SignedInfo><SignatureValue>fADtK/IkEBlI+vhO27EY0wJsHXM9y58F6OCFO0nyMIKN8/FqJmVrT7TxGqUKHSZ9jc0ivvdvtny/HSPqyBbgogqyOj4JadXXHHDIjWqr2mVj+PMa+hz6tjSg6hrm9TbtmvGlT9hukpsyrGNFQDaBuDs2z/Vn0K7TGMmSJWuFLLs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pqBmjxiJBrr66F7p+LsQ5Mss18W87l+isBASekOJ8mZZnF8166T0Qo84fuFSqRykz5Cgt3Xq5CVP/RaLZl54xBRdqbPnnL8Vs/j5LrPehUWrk/3pBb5UcKm/VrFfitJhBkXK8Piq/XxtrkaFPvlivPlUM87YIY2azZMfH0Y+x10=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQViiuFtuTS4JCcH531YbHWTANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigAYQBuAGQAcgBvAGkAZABcAFoAbwBuAGsAZQBkACAAQwBlAHMAYQByMB4XDTE2MTAyODAyMTg0N1oXDTE3MTAyODA4MTg0N1owMzExMC8GA1UEAx4oAGEAbgBkAHIAbwBpAGQAXABaAG8AbgBrAGUAZAAgAEMAZQBzAGEAcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEApqBmjxiJBrr66F7p+LsQ5Mss18W87l+isBASekOJ8mZZnF8166T0Qo84fuFSqRykz5Cgt3Xq5CVP/RaLZl54xBRdqbPnnL8Vs/j5LrPehUWrk/3pBb5UcKm/VrFfitJhBkXK8Piq/XxtrkaFPvlivPlUM87YIY2azZMfH0Y+x10CAwEAATANBgkqhkiG9w0BAQsFAAOBgQA+V36qSwZLKCmJZB+M7hW845Py4Xop6CZZ3VbRZrZ/J8u+e2tqRTYRfU+Dr98H1jzFLvxfno7nzuCrA6900anJBCpk/CH9SHXRBko9bHsgZ3qCA7wZqlun52wkuvNkIolNVF9BDExtij4E02G3IetojumpeI1aTBeRUfgF//0Fmw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

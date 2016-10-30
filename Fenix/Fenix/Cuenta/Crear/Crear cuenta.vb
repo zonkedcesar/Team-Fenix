@@ -258,6 +258,7 @@ Public Class Crear_cuenta
             archivo.WriteLine("<Wallet>")
             archivo.WriteLine("<Cartera id='0'>")
             archivo.WriteLine("<Tipo>	</Tipo>")
+            archivo.WriteLine("<Titulo> 	</Titulo>")
             archivo.WriteLine("<Usuario> 	</Usuario>")
             archivo.WriteLine("<Contrasenia>	</Contrasenia>")
             archivo.WriteLine("<URL>	</URL>")

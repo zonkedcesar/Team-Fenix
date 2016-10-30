@@ -12,11 +12,6 @@ Public Class Servidores
         LimpiaPresentacion()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        Catalogo.Show()
-    End Sub
-
     Private Sub Remote_Click(sender As Object, e As EventArgs) Handles Remote.Click
 
         If CB_ServerSelect.Text.Length > 0 And OutPassword.Text.Length > 0 Then
@@ -87,6 +82,7 @@ Public Class Servidores
             T_Copy.Start()
             T_Copy.Interval = 1000
             TimeLeft = 10
+            Out_Time_Life.Visible = True
         End If
     End Sub
 
@@ -206,10 +202,12 @@ Public Class Servidores
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles T_Copy.Tick
         If TimeLeft > 0 Then
+            Out_Time_Life.Text = "Copiado en portapapeles: " & TimeLeft & " Segundos"
             TimeLeft -= 1
         Else ' Cuando TimeLeft es 0 Limpia el PortaPeles y Detiene el Temporizador
             My.Computer.Clipboard.Clear()
             T_Copy.Stop()
+            Out_Time_Life.Visible = False
         End If
     End Sub
 
@@ -324,6 +322,7 @@ Public Class Servidores
             TimeLeft = 3
         Else
             OutPassword.UseSystemPasswordChar = True
+            TimeLeft = -1
         End If
     End Sub
 

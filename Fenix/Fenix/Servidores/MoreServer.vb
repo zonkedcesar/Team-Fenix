@@ -107,6 +107,16 @@ Public Class MoreServer
     End Sub
 
     Private Sub B_Baja_Click(sender As Object, e As EventArgs) Handles B_Baja.Click
-        ElimianrServer()
+        Dim YesOrNot As String
+        Dim Pregunta As String
+
+        Pregunta = "¿Estas Seguro de Eliminar esta Servidor?"
+        YesOrNot = MsgBox(Pregunta, vbYesNo, "Confirmar Operación")
+
+        If YesOrNot = vbNo Then
+            'Si elige no no pasa nada xD
+        Else        ' YES YES
+            ElimianrServer()
+        End If
     End Sub
 End Class

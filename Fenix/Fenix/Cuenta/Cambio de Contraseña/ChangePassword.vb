@@ -87,6 +87,7 @@ Public Class ChangePassword
             MsgBox("Error: No es posible leer la base de datos origen")
             Return False
         End If
+        Return 0
     End Function
     Private Function CloseAll()
         Me.Close()
@@ -95,6 +96,7 @@ Public Class ChangePassword
         Inicio.Show()
         Inicio.psw.Clear()
         Inicio.psw.Focus()
+        Return 0
     End Function
     Protected Friend Function ActualizacionPassword(ByVal NIPplain As String) As String
         Dim Ruta, Ruta2 As String

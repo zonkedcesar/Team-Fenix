@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -91,6 +91,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
@@ -187,34 +188,22 @@
     <Compile Include="Fenix\Servidores\UpdateServer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fenix\Wallet\Almacenar Contraseña.Designer.vb">
-      <DependentUpon>Almacenar Contraseña.vb</DependentUpon>
+    <Compile Include="Fenix\Wallet\ModificarWaller.Designer.vb">
+      <DependentUpon>ModificarWaller.vb</DependentUpon>
     </Compile>
-    <Compile Include="Fenix\Wallet\Almacenar Contraseña.vb">
+    <Compile Include="Fenix\Wallet\ModificarWaller.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fenix\Wallet\Cartera de Contraseñas.Designer.vb">
-      <DependentUpon>Cartera de Contraseñas.vb</DependentUpon>
+    <Compile Include="Fenix\Wallet\Nuevo Wallet.Designer.vb">
+      <DependentUpon>Nuevo Wallet.vb</DependentUpon>
     </Compile>
-    <Compile Include="Fenix\Wallet\Cartera de Contraseñas.vb">
+    <Compile Include="Fenix\Wallet\Nuevo Wallet.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OLD\Pruebas.Designer.vb">
-      <DependentUpon>Pruebas.vb</DependentUpon>
+    <Compile Include="Fenix\Wallet\Wallet.Designer.vb">
+      <DependentUpon>Wallet.vb</DependentUpon>
     </Compile>
-    <Compile Include="OLD\Pruebas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\SaveAccount.Designer.vb">
-      <DependentUpon>SaveAccount.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\SaveAccount.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\ValidateAccount.Designer.vb">
-      <DependentUpon>ValidateAccount.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\ValidateAccount.vb">
+    <Compile Include="Fenix\Wallet\Wallet.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Cuenta\Recuperar Cuenta\Recuperar Contraseña.Designer.vb">
@@ -253,64 +242,10 @@
     <Compile Include="Fenix\Invitado\Invitado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OLD\Introduccion\Crear\Contraseña.Designer.vb">
-      <DependentUpon>Contraseña.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Introduccion\Crear\Contraseña.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Introduccion\Crear\New Account.Designer.vb">
-      <DependentUpon>New Account.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Introduccion\Crear\New Account.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Fenix\Herramientas\List Pass.Designer.vb">
       <DependentUpon>List Pass.vb</DependentUpon>
     </Compile>
     <Compile Include="Fenix\Herramientas\List Pass.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo.Designer.vb">
-      <DependentUpon>Catalogo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\useradd\add.Designer.vb">
-      <DependentUpon>add.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\useradd\add.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Reestructurar\Herramientas\Cifrar contraseña.Designer.vb">
-      <DependentUpon>Cifrar contraseña.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Reestructurar\Herramientas\Cifrar contraseña.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Reestructurar\Herramientas\Descifrar Contraseña.Designer.vb">
-      <DependentUpon>Descifrar Contraseña.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Reestructurar\Herramientas\Descifrar Contraseña.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\useradd.Designer.vb">
-      <DependentUpon>useradd.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\useradd.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\userdel.Designer.vb">
-      <DependentUpon>userdel.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\userdel.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\usermod.Designer.vb">
-      <DependentUpon>usermod.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Credenciales\usermod.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fenix\Global\Modulos\Cipher.vb" />
@@ -362,60 +297,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="OLD\Reestructurar\PruebasTEST\Complementador.Designer.vb">
-      <DependentUpon>Complementador.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Reestructurar\PruebasTEST\Complementador.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Info\Info Network.Designer.vb">
-      <DependentUpon>Info Network.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Info\Info Network.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Info\Info Procesador.Designer.vb">
-      <DependentUpon>Info Procesador.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Info\Info Procesador.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Info\Info Storage.Designer.vb">
-      <DependentUpon>Info Storage.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Info\Info Storage.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Ip\Añadir IP.Designer.vb">
-      <DependentUpon>Añadir IP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Ip\Añadir IP.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Equipo.Designer.vb">
-      <DependentUpon>Registro Equipo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Equipo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Rack.Designer.vb">
-      <DependentUpon>Registro Rack.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Rack.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Servidor.Designer.vb">
-      <DependentUpon>Registro Servidor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Servidor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Site.Designer.vb">
-      <DependentUpon>Registro Site.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OLD\Principal\Catalogo\Registro\Registro Site.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Fenix\Servidores\Servidores.Designer.vb">
       <DependentUpon>Servidores.vb</DependentUpon>
     </Compile>
@@ -461,20 +342,14 @@
     <EmbeddedResource Include="Fenix\Servidores\UpdateServer.resx">
       <DependentUpon>UpdateServer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fenix\Wallet\Almacenar Contraseña.resx">
-      <DependentUpon>Almacenar Contraseña.vb</DependentUpon>
+    <EmbeddedResource Include="Fenix\Wallet\ModificarWaller.resx">
+      <DependentUpon>ModificarWaller.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fenix\Wallet\Cartera de Contraseñas.resx">
-      <DependentUpon>Cartera de Contraseñas.vb</DependentUpon>
+    <EmbeddedResource Include="Fenix\Wallet\Nuevo Wallet.resx">
+      <DependentUpon>Nuevo Wallet.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Pruebas.resx">
-      <DependentUpon>Pruebas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\SaveAccount.resx">
-      <DependentUpon>SaveAccount.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\ValidateAccount.resx">
-      <DependentUpon>ValidateAccount.vb</DependentUpon>
+    <EmbeddedResource Include="Fenix\Wallet\Wallet.resx">
+      <DependentUpon>Wallet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Cuenta\Recuperar Cuenta\Recuperar Contraseña.resx">
       <DependentUpon>Recuperar Contraseña.vb</DependentUpon>
@@ -494,38 +369,11 @@
     <EmbeddedResource Include="Fenix\Invitado\Invitado.resx">
       <DependentUpon>Invitado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Introduccion\Crear\Contraseña.resx">
-      <DependentUpon>Contraseña.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Introduccion\Crear\New Account.resx">
-      <DependentUpon>New Account.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Herramientas\List Pass.resx">
       <DependentUpon>List Pass.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo.resx">
-      <DependentUpon>Catalogo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Credenciales\useradd.resx">
-      <DependentUpon>useradd.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Credenciales\useradd\add.resx">
-      <DependentUpon>add.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Credenciales\userdel.resx">
-      <DependentUpon>userdel.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Credenciales\usermod.resx">
-      <DependentUpon>usermod.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Generador de Contraseñas.resx">
       <DependentUpon>Generador de Contraseñas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Reestructurar\Herramientas\Cifrar contraseña.resx">
-      <DependentUpon>Cifrar contraseña.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Reestructurar\Herramientas\Descifrar Contraseña.resx">
-      <DependentUpon>Descifrar Contraseña.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
@@ -544,33 +392,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Reestructurar\PruebasTEST\Complementador.resx">
-      <DependentUpon>Complementador.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Info\Info Network.resx">
-      <DependentUpon>Info Network.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Info\Info Procesador.resx">
-      <DependentUpon>Info Procesador.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Info\Info Storage.resx">
-      <DependentUpon>Info Storage.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Ip\Añadir IP.resx">
-      <DependentUpon>Añadir IP.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Equipo.resx">
-      <DependentUpon>Registro Equipo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Rack.resx">
-      <DependentUpon>Registro Rack.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Servidor.resx">
-      <DependentUpon>Registro Servidor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OLD\Principal\Catalogo\Registro\Registro Site.resx">
-      <DependentUpon>Registro Site.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fenix\Servidores\Servidores.resx">
       <DependentUpon>Servidores.vb</DependentUpon>
