@@ -100,6 +100,7 @@ Partial Class SecureRemove
         Me.Check_Log.TabIndex = 11
         Me.Check_Log.Text = "Guardar Log de Operacion"
         Me.Check_Log.UseVisualStyleBackColor = True
+        Me.Check_Log.Visible = False
         '
         'Label2
         '
