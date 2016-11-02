@@ -227,9 +227,12 @@ Partial Class Wallet
         Me.Controls.Add(Me.PanelDePassword)
         Me.Controls.Add(Me.MenuWallet)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(350, 150)
         Me.MainMenuStrip = Me.MenuWallet
         Me.MaximumSize = New System.Drawing.Size(700, 300)
+        Me.MinimumSize = New System.Drawing.Size(700, 300)
         Me.Name = "Wallet"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Cartera de Contraseñas"
         Me.MenuWallet.ResumeLayout(False)
         Me.MenuWallet.PerformLayout()

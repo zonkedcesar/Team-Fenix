@@ -392,6 +392,8 @@ Partial Class Registrar_Servidor
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(408, 368)
+        Me.MinimumSize = New System.Drawing.Size(408, 368)
         Me.Name = "Registrar_Servidor"
         Me.Text = "Registrar Servidor"
         Me.ResumeLayout(False)

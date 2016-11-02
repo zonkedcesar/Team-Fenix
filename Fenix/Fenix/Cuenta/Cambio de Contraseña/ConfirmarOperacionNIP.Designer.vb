@@ -64,6 +64,8 @@ Partial Class ConfirmarOperacionNIP
         Me.Controls.Add(Me.TB_NIP)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(300, 131)
+        Me.MinimumSize = New System.Drawing.Size(300, 131)
         Me.Name = "ConfirmarOperacionNIP"
         Me.Text = "Confirmar Operacion"
         Me.ResumeLayout(False)

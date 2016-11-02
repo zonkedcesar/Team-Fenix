@@ -154,9 +154,13 @@ Partial Class Principal
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(150, 150)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(300, 301)
+        Me.MinimumSize = New System.Drawing.Size(300, 301)
         Me.Name = "Principal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Menu"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

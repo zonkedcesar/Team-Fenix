@@ -247,6 +247,8 @@ Partial Class UpdateServer
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TB_U_Site)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(257, 326)
+        Me.MinimumSize = New System.Drawing.Size(257, 326)
         Me.Name = "UpdateServer"
         Me.Text = "Actualizar Servidor"
         Me.ResumeLayout(False)

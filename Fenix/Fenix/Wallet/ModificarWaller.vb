@@ -126,4 +126,5 @@ Public Class ModificarWaller
         Me.Hide()
         Wallet.Show()
     End Sub
+
 End Class

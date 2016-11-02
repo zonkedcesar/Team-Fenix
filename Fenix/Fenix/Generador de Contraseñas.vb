@@ -10,54 +10,57 @@ Public Class Generador_de_Contraseñas
     Dim Minuscula() As String = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "w", "v", "x", "y", "z"}
     Dim Mayuscula() As String = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "W", "V", "X", "Y", "Z"}
     Dim Caracteres() As String = {"!", "@", "#", "$", "%", "&", "*", "(", ")", "_", "-", "+", "=", "¿", "?", "[", "]", "{", "}", "|", ":", ".", ";", "<", ">", ","}
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Generar.Click
+
+    Protected Friend Function GenMultiple()
+        List_Pass.ListB_Pass.Items.Clear()
+
         If Number_Gen.Value.ToString < 2 Then
-        
-        Dim Dificultad As Integer = 0
-        ' Pasar numero de combinaciones a valores
 
-        If Mayusculas.CheckState = CheckState.Checked Then
-            activos = activos + 1
-            If GranString Is Nothing Then
-                GranString = Mayuscula
-            Else
-                GranString = GranString.Concat(Mayuscula).ToArray
-            End If
-        End If
-        If Minusculas.CheckState = CheckState.Checked Then
-            activos = activos + 1
-            If GranString Is Nothing Then
-                GranString = Minuscula
-            Else
-                GranString = GranString.Concat(Minuscula).ToArray
-            End If
-        End If
-        If Numeros.CheckState = CheckState.Checked Then
-            activos = activos + 1
-            If GranString Is Nothing Then
-                GranString = Numero
-            Else
-                GranString = GranString.Concat(Numero).ToArray
-            End If
-        End If
-        If Simbolos.CheckState = CheckState.Checked Then
-            activos = activos + 1
-            If GranString Is Nothing Then
-                GranString = Caracteres
-            Else
-                GranString = GranString.Concat(Caracteres).ToArray
-            End If
-        End If
+            Dim Dificultad As Integer = 0
+            ' Pasar numero de combinaciones a valores
 
-        ' Almenos 1 checked Activado & MinLong Establecido
-        If activos < 1 Then
-            MsgBox("Debe Seleccionar Minimo Una Opcion Para Generar Un Password")
-        ElseIf CB_MinLong.Text.Length = 0 Then
-            MsgBox("Debe establecer una minima Longitud")
-        Else
-            ' Limita el Maximo dependiendo los parametros
-            Randomize()
-            Dim NewPass As String = ""
+            If Mayusculas.CheckState = CheckState.Checked Then
+                activos = activos + 1
+                If GranString Is Nothing Then
+                    GranString = Mayuscula
+                Else
+                    GranString = GranString.Concat(Mayuscula).ToArray
+                End If
+            End If
+            If Minusculas.CheckState = CheckState.Checked Then
+                activos = activos + 1
+                If GranString Is Nothing Then
+                    GranString = Minuscula
+                Else
+                    GranString = GranString.Concat(Minuscula).ToArray
+                End If
+            End If
+            If Numeros.CheckState = CheckState.Checked Then
+                activos = activos + 1
+                If GranString Is Nothing Then
+                    GranString = Numero
+                Else
+                    GranString = GranString.Concat(Numero).ToArray
+                End If
+            End If
+            If Simbolos.CheckState = CheckState.Checked Then
+                activos = activos + 1
+                If GranString Is Nothing Then
+                    GranString = Caracteres
+                Else
+                    GranString = GranString.Concat(Caracteres).ToArray
+                End If
+            End If
+
+            ' Almenos 1 checked Activado & MinLong Establecido
+            If activos < 1 Then
+                MsgBox("Debe Seleccionar Minimo Una Opcion Para Generar Un Password")
+            ElseIf CB_MinLong.Text.Length = 0 Then
+                MsgBox("Debe establecer una minima Longitud")
+            Else
+                ' Limita el Maximo dependiendo los parametros
+                Randomize()
+                Dim NewPass As String = ""
                 Dim TempPass As String = ""
 
                 'Cuando el Operador quiera resetear el CBMax RESETEAR
@@ -76,68 +79,68 @@ Public Class Generador_de_Contraseñas
                     End If
                 End If
 
-            ' Activacion de Max & Min o ELSE simplemente Min
-            If CB_MaxLong.Text.Length > 0 Then
-                Dim Longitud As Integer = 0
-                ' Filtra la longitud Max y Min con 2 filtros de reajuste
-                While Longitud > CB_MaxLong.Text Or Longitud < CB_MinLong.Text
-                    Longitud = CInt(Int((CB_MaxLong.Text * Rnd()) + CB_MinLong.Text))
-                End While
+                ' Activacion de Max & Min o ELSE simplemente Min
+                If CB_MaxLong.Text.Length > 0 Then
+                    Dim Longitud As Integer = 0
+                    ' Filtra la longitud Max y Min con 2 filtros de reajuste
+                    While Longitud > CB_MaxLong.Text Or Longitud < CB_MinLong.Text
+                        Longitud = CInt(Int((CB_MaxLong.Text * Rnd()) + CB_MinLong.Text))
+                    End While
 
-                Dim Absoluto As Integer = GranString.Length
+                    Dim Absoluto As Integer = GranString.Length
 
-                While Longitud > 0
-                    Dim variantes As Integer = CInt(Int((Absoluto * Rnd()) + 1)) - 1
-                    TempPass = GranString(variantes)
+                    While Longitud > 0
+                        Dim variantes As Integer = CInt(Int((Absoluto * Rnd()) + 1)) - 1
+                        TempPass = GranString(variantes)
 
-                    If NewPass.Length > 0 Then
-                        NewPass = NewPass + TempPass
-                    Else
-                        NewPass = TempPass
-                    End If
-                    Longitud -= 1
-                End While
-            Else
-                Dim Longitud As Integer = CB_MinLong.Text
-                Dim Absoluto As Integer = GranString.Length
-                ' While para formar la cadena de de longitud MIN
-                While Longitud > 0
-                    Dim variantes As Integer = CInt(Int((Absoluto * Rnd()) + 1)) - 1
-                    TempPass = GranString(variantes)
+                        If NewPass.Length > 0 Then
+                            NewPass = NewPass + TempPass
+                        Else
+                            NewPass = TempPass
+                        End If
+                        Longitud -= 1
+                    End While
+                Else
+                    Dim Longitud As Integer = CB_MinLong.Text
+                    Dim Absoluto As Integer = GranString.Length
+                    ' While para formar la cadena de de longitud MIN
+                    While Longitud > 0
+                        Dim variantes As Integer = CInt(Int((Absoluto * Rnd()) + 1)) - 1
+                        TempPass = GranString(variantes)
 
-                    If NewPass.Length > 0 Then
-                        NewPass = NewPass + TempPass
-                    Else
-                        NewPass = TempPass
-                    End If
-                    Longitud -= 1
-                End While
-            End If
+                        If NewPass.Length > 0 Then
+                            NewPass = NewPass + TempPass
+                        Else
+                            NewPass = TempPass
+                        End If
+                        Longitud -= 1
+                    End While
+                End If
 
-            GenPass.Text = NewPass
-            GranString = Nothing
-            activos = 0
+                GenPass.Text = NewPass
+                GranString = Nothing
+                activos = 0
 
-            ' Inicia el Tester de dificultad para la password 
+                ' Inicia el Tester de dificultad para la password 
 
-            Dificultad = LevelPassword.Medir(GenPass.Text)
+                Dificultad = LevelPassword.Medir(GenPass.Text)
 
-            If Dificultad > 5 And Dificultad <= 35 Then
-                LevelPass.Text = "Dificultad: Facil "
-            ElseIf Dificultad > 35 And Dificultad <= 50 Then
-                LevelPass.Text = "Dificultad: Regular "
-            ElseIf Dificultad > 50 And Dificultad <= 75 Then
-                LevelPass.Text = "Dificultad: Media "
-            ElseIf Dificultad > 75 And Dificultad <= 90 Then
-                LevelPass.Text = "Dificultad: Alta "
-            ElseIf Dificultad > 90 And Dificultad <= 100 Then
-                LevelPass.Text = "Dificultad: Muy Alta "
-            Else
-                LevelPass.Text = "Contraseña Vacio"
-            End If
-            ProgressBar1.Minimum = 0%
-            ProgressBar1.Maximum = 100%
-            ProgressBar1.Value = Dificultad%
+                If Dificultad > 5 And Dificultad <= 35 Then
+                    LevelPass.Text = "Dificultad: Facil "
+                ElseIf Dificultad > 35 And Dificultad <= 50 Then
+                    LevelPass.Text = "Dificultad: Regular "
+                ElseIf Dificultad > 50 And Dificultad <= 75 Then
+                    LevelPass.Text = "Dificultad: Media "
+                ElseIf Dificultad > 75 And Dificultad <= 90 Then
+                    LevelPass.Text = "Dificultad: Alta "
+                ElseIf Dificultad > 90 And Dificultad <= 100 Then
+                    LevelPass.Text = "Dificultad: Muy Alta "
+                Else
+                    LevelPass.Text = "Contraseña Vacio"
+                End If
+                ProgressBar1.Minimum = 0%
+                ProgressBar1.Maximum = 100%
+                ProgressBar1.Value = Dificultad%
             End If
 
             'Si selecciona 1 y esta abierta la ventana de lista cerrar
@@ -197,7 +200,7 @@ Public Class Generador_de_Contraseñas
                 'Termina la limpieza
 
                 Dim ListGen As Integer = Number_Gen.Value.ToString
-                List_Pass.ListB_Pass.Items.Add("******   Lista Generada   ******")
+                'List_Pass.ListB_Pass.Items.Add("******   Lista Generada   ******")
                 While ListGen > 0
 
 
@@ -251,10 +254,18 @@ Public Class Generador_de_Contraseñas
                     ListGen -= 1
                 End While
                 List_Pass.Show()
+                Me.Hide()
                 ' Termina Ciclo WHILE
                 GranString = Nothing
             End If
-            End If
+        End If
+        Return 0
+    End Function
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Generar.Click
+        GenMultiple()
+
     End Sub
 
 

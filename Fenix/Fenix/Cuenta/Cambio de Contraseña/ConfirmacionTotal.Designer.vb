@@ -95,6 +95,8 @@ Partial Class ConfirmacionTotal
         Me.Controls.Add(Me.TB_NIP)
         Me.Controls.Add(Me.TB_Pass)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(315, 183)
+        Me.MinimumSize = New System.Drawing.Size(315, 183)
         Me.Name = "ConfirmacionTotal"
         Me.Text = "Confirmar Operaracion"
         Me.ResumeLayout(False)

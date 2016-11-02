@@ -95,6 +95,8 @@ Partial Class ChangeQuestion
         Me.Controls.Add(Me.B_Cancelar)
         Me.Controls.Add(Me.B_Actualizar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(300, 194)
+        Me.MinimumSize = New System.Drawing.Size(300, 194)
         Me.Name = "ChangeQuestion"
         Me.Text = "Pregunta Secreta"
         Me.ResumeLayout(False)

@@ -64,6 +64,8 @@ Partial Class Confirmar_Operacion
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TB_Conf_Pass)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(323, 138)
+        Me.MinimumSize = New System.Drawing.Size(323, 138)
         Me.Name = "Confirmar_Operacion"
         Me.Text = "Confirmar Operacion"
         Me.ResumeLayout(False)

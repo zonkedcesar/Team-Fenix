@@ -90,6 +90,8 @@ Partial Class Invitado
         Me.Controls.Add(Me.B_Generar)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(300, 251)
+        Me.MinimumSize = New System.Drawing.Size(300, 251)
         Me.Name = "Invitado"
         Me.Text = "Invitado"
         Me.ResumeLayout(False)

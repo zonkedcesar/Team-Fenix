@@ -274,6 +274,8 @@ Partial Class Generador_Invitado
         Me.Controls.Add(Me.Mayusculas)
         Me.Controls.Add(Me.Minusculas)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(472, 295)
+        Me.MinimumSize = New System.Drawing.Size(472, 295)
         Me.Name = "Generador_Invitado"
         Me.Text = "Generador de Contraseñas"
         CType(Me.Number_Gen, System.ComponentModel.ISupportInitialize).EndInit()

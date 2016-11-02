@@ -287,7 +287,11 @@ Partial Class Generador_de_Contraseñas
         Me.Controls.Add(Me.Mayusculas)
         Me.Controls.Add(Me.Minusculas)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(450, 150)
+        Me.MaximumSize = New System.Drawing.Size(468, 292)
+        Me.MinimumSize = New System.Drawing.Size(468, 292)
         Me.Name = "Generador_de_Contraseñas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Generador de Contraseñas"
         CType(Me.Number_Gen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

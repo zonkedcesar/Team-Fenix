@@ -120,6 +120,8 @@ Partial Class Acerca
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(538, 240)
+        Me.MinimumSize = New System.Drawing.Size(538, 240)
         Me.Name = "Acerca"
         Me.Text = "Acerca de Fénix"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

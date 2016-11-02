@@ -122,6 +122,8 @@ Partial Class Analizar_Contraseña_Invitado
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.validar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(300, 282)
+        Me.MinimumSize = New System.Drawing.Size(300, 282)
         Me.Name = "Analizar_Contraseña_Invitado"
         Me.Text = "Analizar Contraseña"
         Me.ResumeLayout(False)

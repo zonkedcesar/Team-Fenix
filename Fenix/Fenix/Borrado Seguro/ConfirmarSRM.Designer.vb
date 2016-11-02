@@ -53,7 +53,11 @@ Partial Class ConfirmarSRM
         Me.Controls.Add(Me.Borrar)
         Me.Controls.Add(Me.OutputSRM)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(500, 150)
+        Me.MaximumSize = New System.Drawing.Size(533, 185)
+        Me.MinimumSize = New System.Drawing.Size(533, 185)
         Me.Name = "ConfirmarSRM"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Borrar"
         Me.ResumeLayout(False)
 

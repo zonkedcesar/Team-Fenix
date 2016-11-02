@@ -145,7 +145,11 @@ Partial Class SecureRemove
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(500, 150)
+        Me.MaximumSize = New System.Drawing.Size(297, 300)
+        Me.MinimumSize = New System.Drawing.Size(297, 300)
         Me.Name = "SecureRemove"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Borrado Seguro"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

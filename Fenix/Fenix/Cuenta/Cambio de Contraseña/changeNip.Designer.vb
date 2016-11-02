@@ -119,6 +119,8 @@ Partial Class changeNip
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(300, 207)
+        Me.MinimumSize = New System.Drawing.Size(300, 207)
         Me.Name = "changeNip"
         Me.Text = "Cambio de NIP"
         Me.ResumeLayout(False)

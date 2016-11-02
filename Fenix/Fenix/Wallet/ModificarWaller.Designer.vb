@@ -230,6 +230,8 @@ Partial Class ModificarWaller
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CB_tipe)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(300, 330)
+        Me.MinimumSize = New System.Drawing.Size(300, 330)
         Me.Name = "ModificarWaller"
         Me.Text = "Actualizar Datos"
         Me.ResumeLayout(False)

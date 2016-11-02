@@ -226,6 +226,8 @@ Partial Class MoreServer
         Me.Controls.Add(Me.MoreAmbiente)
         Me.Controls.Add(Me.MoreHostname)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(300, 298)
+        Me.MinimumSize = New System.Drawing.Size(300, 298)
         Me.Name = "MoreServer"
         Me.Text = "Mas Informacion"
         Me.ResumeLayout(False)

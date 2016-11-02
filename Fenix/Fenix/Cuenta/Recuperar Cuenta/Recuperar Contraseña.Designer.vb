@@ -194,6 +194,8 @@ Partial Class Recuperar_Contraseña
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(302, 281)
+        Me.MinimumSize = New System.Drawing.Size(302, 281)
         Me.Name = "Recuperar_Contraseña"
         Me.Text = "Recuperar Contraseña"
         Me.ResumeLayout(False)

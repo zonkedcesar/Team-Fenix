@@ -328,7 +328,11 @@ Partial Class Servidores
         Me.Controls.Add(Me.OutPassword)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(450, 150)
+        Me.MaximumSize = New System.Drawing.Size(300, 301)
+        Me.MinimumSize = New System.Drawing.Size(300, 301)
         Me.Name = "Servidores"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Servidores"
         Me.ResumeLayout(False)
         Me.PerformLayout()

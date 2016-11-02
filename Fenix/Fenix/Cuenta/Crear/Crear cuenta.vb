@@ -6,6 +6,7 @@ Public Class Crear_cuenta
     Dim PassON As Boolean = False
     Dim PreguntaON As Boolean = False
     Dim RespuestaON As Boolean = False
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Back.Click
         Me.Hide()
         Inicio.Show()

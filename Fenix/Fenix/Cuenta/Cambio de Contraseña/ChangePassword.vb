@@ -71,6 +71,22 @@ Public Class ChangePassword
                             Return True
                         Next
                     End If
+
+                    If WC >= 1 Then
+                        For Lista As Integer = 0 To WC - 1
+                            Conjunto = Datos.SelectNodes("/DataFenix/Wallet/Cartera[@id='" & Lista & "']")
+
+                            For Each Variable In Conjunto
+                                Variable.ChildNodes(1).InnerText = Encrypt(Decrypt(Variable.ChildNodes(1).InnerText, Inicio.psw.Text, Inicio.usr.Text), TB_N_PSW.Text, Inicio.usr.Text)
+                                Variable.ChildNodes(2).InnerText = Encrypt(Decrypt(Variable.ChildNodes(2).InnerText, Inicio.psw.Text, Inicio.usr.Text), TB_N_PSW.Text, Inicio.usr.Text)
+                                Variable.ChildNodes(3).InnerText = Encrypt(Decrypt(Variable.ChildNodes(3).InnerText, Inicio.psw.Text, Inicio.usr.Text), TB_N_PSW.Text, Inicio.usr.Text)
+                                Variable.ChildNodes(5).InnerText = Encrypt(Decrypt(Variable.ChildNodes(5).InnerText, Inicio.psw.Text, Inicio.usr.Text), TB_N_PSW.Text, Inicio.usr.Text)
+                            Next
+                            Datos.Save(Ruta3)
+                            Return True
+                        Next
+                    End If
+
                     'Se planea que tambien aplique lo mismo para la Cartera de contraseñas XD XD XD XD XD
                 ElseIf UsuarioData = "nobody" Or WD = "nobody" Or WC = "nobody" Or SD = "nobody" Or SC = "nobody" Then
                     MsgBox("Error: la base de datos " & Inicio.UsuarioConect & ".data - Esta corrupta por favor de contactar al administrador")
@@ -137,6 +153,7 @@ Public Class ChangePassword
                     MsgBox("Contraseña Actualizada Correctamente")
                     cuenta.Save(Ruta)
                     recovery.Save(Ruta2)
+                    MsgBox("Debe Iniciar Sesion nuevamente")
                     CloseAll()
                 Else
                     MsgBox("Ocurrio Grave Error al Aplicar los Cambios ")

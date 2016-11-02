@@ -122,7 +122,11 @@ Partial Class TestPassword
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.validar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(500, 150)
+        Me.MaximumSize = New System.Drawing.Size(300, 288)
+        Me.MinimumSize = New System.Drawing.Size(300, 288)
         Me.Name = "TestPassword"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Analizar Contraseñas"
         Me.ResumeLayout(False)
         Me.PerformLayout()
