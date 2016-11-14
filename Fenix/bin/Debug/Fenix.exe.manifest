@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fenix.exe" size="4931544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fenix.exe" size="4933592">
       <assemblyIdentity name="Fenix" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>n4VIThv0KkAXzksfpRCo5hpotV8H9AAaS6/FKS8zObI=</dsig:DigestValue>
+        <dsig:DigestValue>sPESi8bhwhhL11CCf49DJy+tr3D8oqsGfEgJ6qTpYiU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

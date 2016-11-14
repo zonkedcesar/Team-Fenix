@@ -134,6 +134,7 @@ Public Class Inicio
                         Else
                             'Establecer Variable de entorno para ejecucion interna
                             UsuarioConect = usr.Text
+                            Principal.LoginUsuario = UsuarioConect
                             Principal.Show()
                             Me.Hide()
                         End If

@@ -35,6 +35,8 @@ Partial Class Principal
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.logoff = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.L_NombreUSR = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,11 +142,35 @@ Partial Class Principal
         Me.logoff.TabIndex = 16
         Me.logoff.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(209, 68)
+        Me.Label1.MaximumSize = New System.Drawing.Size(60, 13)
+        Me.Label1.MinimumSize = New System.Drawing.Size(60, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(60, 13)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "Bienvenido"
+        '
+        'L_NombreUSR
+        '
+        Me.L_NombreUSR.AutoSize = True
+        Me.L_NombreUSR.Location = New System.Drawing.Point(194, 90)
+        Me.L_NombreUSR.MaximumSize = New System.Drawing.Size(86, 13)
+        Me.L_NombreUSR.MinimumSize = New System.Drawing.Size(86, 13)
+        Me.L_NombreUSR.Name = "L_NombreUSR"
+        Me.L_NombreUSR.Size = New System.Drawing.Size(86, 13)
+        Me.L_NombreUSR.TabIndex = 18
+        Me.L_NombreUSR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.Controls.Add(Me.L_NombreUSR)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.logoff)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.B_Sesion)
@@ -182,4 +208,6 @@ Partial Class Principal
     Friend WithEvents CambiarContraseñaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PreguntaSecretaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents logoff As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents L_NombreUSR As System.Windows.Forms.Label
 End Class

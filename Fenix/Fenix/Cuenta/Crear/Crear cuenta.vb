@@ -131,11 +131,20 @@ Public Class Crear_cuenta
         TB_NIP.Text.Length > 0 And TB_C_NIP.Text.Length > 0
     End Sub
 
+    Private Sub TB_Respuesta_Click(sender As Object, e As EventArgs) Handles TB_Respuesta.Click
+        TB_Respuesta.PasswordChar = ""
+    End Sub
+
+
     Private Sub TB_Respuesta_Enter(sender As Object, e As EventArgs) Handles TB_Respuesta.Enter
         If RespuestaON = False Then
             TB_Respuesta.Clear()
             RespuestaON = True
         End If
+    End Sub
+
+    Private Sub TB_Respuesta_LostFocus(sender As Object, e As EventArgs) Handles TB_Respuesta.LostFocus
+        TB_Respuesta.PasswordChar = "*"
     End Sub
 
     Private Sub TB_Respuesta_TextChanged(sender As Object, e As EventArgs) Handles TB_Respuesta.TextChanged
@@ -185,6 +194,31 @@ Public Class Crear_cuenta
     End Sub
 
     Private Sub B_Registrar_Click(sender As Object, e As EventArgs) Handles B_Registrar.Click
+
+        Dim TMPRuta As String = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".fnx"
+
+        If My.Computer.FileSystem.FileExists(TMPRuta) Then
+
+            Dim YesOrNot As String
+            Dim Pregunta As String
+
+            Pregunta = "¿Ya existe una cuenta para este usuario, desea sobreescribirla? - Perdera toda la informacion de la cuenta"
+            YesOrNot = MsgBox(Pregunta, vbYesNo, "Sobreescribir Cuenta")
+
+            If YesOrNot = vbNo Then
+                Me.Close()
+                Inicio.Show()
+            Else
+                creaaccount()
+            End If
+        Else
+            creaaccount()
+        End If
+
+        
+    End Sub
+
+    Private Function creaaccount()
         Dim obj As Object
         Dim archivo As Object
         Dim x As Integer = 0
@@ -200,8 +234,9 @@ Public Class Crear_cuenta
             archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
             archivo.WriteLine("<Fenix>")
             archivo.WriteLine("<Personal>")
-            archivo.WriteLine("<Nombre>" + TB_Nombres.Text + "</Nombre>")
-            archivo.WriteLine("<Apellido>" + TB_Apellidos.Text + "</Apellido>")
+            archivo.WriteLine("<Username>" + TB_Usuario.Text + "</Username>")
+            archivo.WriteLine("<Nombre>" + Encode64(TB_Nombres.Text) + "</Nombre>")
+            archivo.WriteLine("<Apellido>" + Encode64(TB_Apellidos.Text) + "</Apellido>")
             archivo.WriteLine("</Personal>")
             archivo.WriteLine("<Perfil>")
             'USUARIO + CONTRASEÑA
@@ -245,7 +280,7 @@ Public Class Crear_cuenta
             Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + TB_Usuario.Text + ".Data"
             archivo = obj.CreateTextFile(Ruta, True)
             archivo.WriteLine("<?xml version='1.0' encoding='utf-8'?>")
-            
+
             archivo.WriteLine("<DataFenix>")
 
             archivo.writeLine("<Settings>")
@@ -305,9 +340,13 @@ Public Class Crear_cuenta
         TB_NIP.Clear()
         TB_C_NIP.Clear()
         TB_Nombres.Focus()
-    End Sub
+        Return 0
+    End Function
 
     Private Sub Crear_cuenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    
+
 End Class

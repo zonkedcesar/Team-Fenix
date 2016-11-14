@@ -1,4 +1,6 @@
 ﻿Imports System.Data
+Imports System.Xml
+
 Public Class Principal
     Friend LoginUsuario As String
     Private Sub Label1_Click(sender As Object, e As EventArgs)
@@ -21,39 +23,34 @@ Public Class Principal
     End Sub
 
     Private Sub Inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'MsgBox(hora())
+        If Inicio.usr.Text <> LoginUsuario Or LoginUsuario.Length <= 0 Then
+            MsgBox("Usted es habil con sus intenciones, no ha iniciado sesión")
+            Me.Close()
+        Else
+            'Todo lo demas
+            Dim Ruta As String
+            Ruta = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Documents\Fenix\" + LoginUsuario + ".fnx"
+            Try
+                'Declaracion de variables de entorno
+                Dim cuenta As XmlDocument
+                Dim Nombre As XmlNode
+                'Manipulacion de documentos XML con carga
+                cuenta = New XmlDocument
 
-        'Comentar aqui
+                cuenta.Load(Ruta)
 
+                'Lectura de NODOS para acceder al panel principal
+                Nombre = cuenta.SelectSingleNode("Fenix/Personal/Nombre")
+                L_NombreUSR.Text = Decode64(Nombre.InnerText)
+                
+            Catch ex As Exception
+                'MessageBox.Show("Error Inesperado " & ex.Message)
+                MsgBox("Error 80")
+                MsgBox("Por favor contactar al administrador inmediatamente")
+                Close()
+            End Try
 
-        'Dim dt = New DataTable()
-        'Dim SentenciaSQL As String
-        'Dim Control As New SqlClient.SqlCommand
-        'Dim rundata As New SqlClient.SqlDataAdapter
-
-        'SentenciaSQL = "SELECT Nombre,Apellidos FROM fenix.dbo.Usuarios WHERE Usuario = @Usuario"
-
-        'Control = New SqlClient.SqlCommand(SentenciaSQL, Con_BD)
-        'Control.Parameters.AddWithValue("@Usuario", LoginUsuario)
-
-        'rundata = New SqlClient.SqlDataAdapter(Control)
-        'rundata.Fill(dt)
-
-        'If (dt.Rows.Count > 0) Then
-        '    For Each row In dt.Rows
-        '        LoginUsuario = row("Nombre") + row("Apellidos")
-        '    Next
-        'Else
-        '    MsgBox("Error: Al parecer hay un error con los datos de usuario")
-        'End If
-
-        'NameUser.Text = LoginUsuario
-
-        'Termina comentarios
-
-
-        'td.Dispose()   //PARA LIBERAR LA MEMORIA UTILIZAR DISPOSE
-        'rundata.Dispose()
+        End If
     End Sub
 
     Private Sub LogOut_Click(sender As Object, e As EventArgs)
@@ -95,7 +92,7 @@ Public Class Principal
 
     End Sub
 
-    
+
     Private Sub CambiarNIPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarNIPToolStripMenuItem.Click
         changeNip.Show()
     End Sub
